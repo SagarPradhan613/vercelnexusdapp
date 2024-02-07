@@ -22,4 +22,8 @@ const ReadexProMedium = localFont({
     src : "./ReadexPro-Medium.ttf"
 })
 
-export { Inter, Poppins, RedRose, ReadexProBold, ReadexProMedium }
+const Sen = localFont({
+    src : "./Sen.ttf"
+})
+
+export { Inter, Poppins, RedRose, ReadexProBold, ReadexProMedium , Sen }
