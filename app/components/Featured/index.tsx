@@ -12,10 +12,17 @@ import TWITTER_ICON from "@/assets/twitter_icon.png"
 import DISCROD_ICON from "@/assets/discord_icon.png"
 import KYC_INFO_ICON from "@/assets/kyc_info_icon.png"
 
+import FEATURED_LEFT_RINGS from "@/assets/featured_left_rings.png"
+import FEATURED_RIGHT_RINGS from "@/assets/featured_right_rings.png"
+import FEATURED_LEFT_RINGS_CENTER from "@/assets/featured_left_rings_center.png"
 
 export const Featured = () => {
     return (
         <section className="py-16 w-full relative">
+
+            <Image src={FEATURED_LEFT_RINGS} alt="Featured Left Rings" className="absolute top-20 -left-72 w-[800px] h-[800px]" />
+            <Image src={FEATURED_LEFT_RINGS_CENTER} alt="Featured Left Rings Center" className="absolute top-[356px] -left-4 z-50 w-[250px] h-[250px]" />
+            <Image src={FEATURED_RIGHT_RINGS} alt="Featured Right Rings" className="absolute top-12 -right-72 w-[800px] h-[800px]" />
 
             <h1 className={`text-center ${Sen.className} my-8 font-bold text-7xl`}>
                 Featured
@@ -28,7 +35,7 @@ export const Featured = () => {
 
             <div className="flex items-center justify-center w-full">
 
-                <div className="bg-black max-w-[1280.49px] h-full w-[1000px] rounded-[36px] p-2 flex justify-between">
+                <div className="bg-black max-w-[1280.49px] h-full w-[1000px] z-10 rounded-[36px] p-2 flex justify-between">
 
                     <div className="w-full flex-col p-8 h-full text-white">
 
@@ -81,15 +88,15 @@ export const Featured = () => {
                         </div>
 
                         <div>
-                            <div className="flex items-center justify-center space-x-4 py-2 mt-8">
+                            <div className="flex items-center justify-center space-x-2 py-2 mt-8">
                                 <Image src={KYC_INFO_ICON} alt="KYC Info Icon" className="w-[12px] h-[12px]" />
                                 <h1 className="text-xs">No KYC required</h1>
                             </div>
 
                             <div style={{
                                 backgroundColor: BLUE,
-                            }} className='w-full h-[50px] rounded-[36px] px-4 text-white flex items-center justify-between'>
-                                <h1 className={`${Poppins.className} w-full text-base font-semibold`}>
+                            }} className='w-full h-[50px] rounded-[36px] px-2 text-white flex items-center justify-between'>
+                                <h1 className={`${Poppins.className} w-full ml-8 text-sm font-semibold`}>
                                     Participate Now
                                 </h1>
                                 <div className='bg-white rounded-full w-[53.82px] h-[39.82px] flex items-center justify-center'>
@@ -100,7 +107,7 @@ export const Featured = () => {
 
                     </div>
                     <div>
-                        <Image src={FEATURED_RIGHT_BANNER} alt="Featured Right Banner" className="min-w-[600px] h-[482.86px]" />
+                        <Image src={FEATURED_RIGHT_BANNER} alt="Featured Right Banner" className="min-w-[600px] h-full" />
                     </div>
 
                 </div>
