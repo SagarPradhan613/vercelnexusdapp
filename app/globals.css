@@ -9,3 +9,7 @@
   box-sizing: border-box;
   -moz-user-select: none;
 }
+
+body {
+  overflow-x: hidden;
+}

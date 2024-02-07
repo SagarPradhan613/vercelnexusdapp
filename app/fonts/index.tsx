@@ -19,7 +19,7 @@ const ReadexProBold = localFont({
 })
 
 const ReadexProMedium = localFont({
-    src : "./ReadexPro-medium.ttf"
+    src : "./ReadexPro-Medium.ttf"
 })
 
 export { Inter, Poppins, RedRose, ReadexProBold, ReadexProMedium }
