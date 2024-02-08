@@ -1,4 +1,3 @@
-
 'use client'
 
 import { BLUE } from "@/app/constants"
@@ -16,9 +15,8 @@ import ARROW_LEFT_ICON from "@/assets/arrow_left_icon.png"
 
 import TELEGRAM_ICON from "@/assets/telegram_icon.png"
 import TWITTER_ICON from "@/assets/twitter_icon.png"
-import DISCROD_ICON from "@/assets/discord_icon.png"
-import { useRef, useState } from "react"
-
+import DISCORD_ICON from "@/assets/discord_icon.png"
+import { useRef } from "react"
 
 export const Upcoming = () => {
 
@@ -27,14 +25,20 @@ export const Upcoming = () => {
     const prev = () => {
         const container = carouselContainer.current
         if (container) {
-            container.scrollLeft -= 200
+            container.scrollTo({
+                left: container.scrollLeft - 1000,
+                behavior: 'smooth'
+            })
         }
     }
 
     const next = () => {
         const container = carouselContainer.current
         if (container) {
-            container.scrollLeft += 200
+            container.scrollTo({
+                left: container.scrollLeft + 1000,
+                behavior: 'smooth',
+            })
         }
     }
 
@@ -60,7 +64,7 @@ export const Upcoming = () => {
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert rotate-180 w-[14.16px] h-[14.56px]' />
                 </div>
 
-                <div ref={carouselContainer} className="max-w-[1280.49px] carousel_container overflow-hidden slider-container h-full w-[1000px] gap-4 z-10 rounded-[36px] flex p-2">
+                <div ref={carouselContainer} className="max-w-[1280.49px] mx-4 overflow-hidden slider-container h-full w-[1000px] gap-4 z-10 rounded-[36px] flex p-2" style={{ scrollBehavior: 'smooth' }}>
 
                     {Array(9)
                         .fill(0)
@@ -90,7 +94,7 @@ const UpcomingCards = () => {
                     <div className="flex items-center justify-start">
                         <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[28px] h-[28px]" />
                         <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[28px] h-[28px]" />
-                        <Image src={DISCROD_ICON} alt="Discord Icon" className="w-[28px] h-[28px]" />
+                        <Image src={DISCORD_ICON} alt="Discord Icon" className="w-[28px] h-[28px]" />
                     </div></div>
             </div>
 

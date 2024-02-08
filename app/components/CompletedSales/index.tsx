@@ -21,14 +21,20 @@ export const CompletedSales = () => {
     const prev = () => {
         const container = carouselContainer.current
         if (container) {
-            container.scrollLeft -= 200
+            container.scrollTo({
+                left: container.scrollLeft - 1000,
+                behavior: 'smooth'
+            })
         }
     }
 
     const next = () => {
         const container = carouselContainer.current
         if (container) {
-            container.scrollLeft += 200
+            container.scrollTo({
+                left: container.scrollLeft + 1000,
+                behavior: 'smooth',
+            })
         }
     }
 
@@ -51,7 +57,7 @@ export const CompletedSales = () => {
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert rotate-180 w-[14.16px] h-[14.56px]' />
                 </div>
 
-                <div ref={carouselContainer} className="max-w-[1280.49px] overflow-hidden h-full w-[1000px] gap-4 z-10 rounded-[36px] flex p-2">
+                <div ref={carouselContainer} className="max-w-[1280.49px] overflow-hidden h-full w-[1000px] gap-4 mx-4 z-10 rounded-[36px] flex p-2">
                     {Array(9).fill(0).map((_, i) => (
                         <SalesCard key={i} />
                     ))}
