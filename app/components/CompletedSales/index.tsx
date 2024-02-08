@@ -6,21 +6,15 @@ import { Poppins, ReadexProBold, ReadexProMedium, Sen } from "@/app/fonts"
 
 import Image from "next/image"
 
-import UPCOMING_CARD_1_BANNER from "@/assets/upcoming_card_1_banner.png"
-import UPCOMING_BACKGROUND from "@/assets/upcoming_background.png"
-import UPCOMING_CARD_2_BANNER from "@/assets/upcoming_card_2_banner.png"
-import UPCOMING_CARD_3_BANNER from "@/assets/upcoming_card_3_banner.png"
-
 import RECT_IMAGE_UPCOMING_CARD from "@/assets/rect_image_upcoming_card.png"
 import ARROW_LEFT_ICON from "@/assets/arrow_left_icon.png"
 
 import TELEGRAM_ICON from "@/assets/telegram_icon.png"
 import TWITTER_ICON from "@/assets/twitter_icon.png"
 import DISCROD_ICON from "@/assets/discord_icon.png"
-import { useRef, useState } from "react"
+import { useRef } from "react"
 
-
-export const Upcoming = () => {
+export const CompletedSales = () => {
 
     const carouselContainer = useRef<HTMLDivElement>(null)
 
@@ -43,16 +37,13 @@ export const Upcoming = () => {
             <h1 style={{
                 color: BLUE
             }} className={`text-center ${Sen.className} my-8 font-bold text-7xl`}>
-                Live
                 <span className="text-black mx-4">
-                    and
+                    Completed
                 </span>
-                Upcoming
+                Sales
             </h1>
 
             <div className="flex relative items-center justify-center w-full">
-
-                <Image src={UPCOMING_BACKGROUND} alt="upcoming background" className="absolute bottom-0" />
 
                 <div onClick={prev} style={{
                     backgroundColor: BLUE
@@ -60,14 +51,10 @@ export const Upcoming = () => {
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert rotate-180 w-[14.16px] h-[14.56px]' />
                 </div>
 
-                <div ref={carouselContainer} className="max-w-[1280.49px] carousel_container overflow-hidden slider-container h-full w-[1000px] gap-4 z-10 rounded-[36px] flex p-2">
-
-                    {Array(9)
-                        .fill(0)
-                        .map((_, i) => (
-                            <UpcomingCards key={i} />
-                        ))}
-
+                <div ref={carouselContainer} className="max-w-[1280.49px] overflow-hidden h-full w-[1000px] gap-4 z-10 rounded-[36px] flex p-2">
+                    {Array(9).fill(0).map((_, i) => (
+                        <SalesCard key={i} />
+                    ))}
                 </div>
 
                 <div onClick={next} style={{
@@ -80,23 +67,19 @@ export const Upcoming = () => {
     )
 }
 
-const UpcomingCards = () => {
+const SalesCard = () => {
     return (
-        <div className="text-white h-full p-3 min-w-[315px] bg-[#191F25] rounded-[36px]">
-
-            <div className="w-full relative">
-                <Image src={UPCOMING_CARD_1_BANNER} alt="upcoming card 1 banner" className="w-[378.56px] h-[218.44px] rounded-[26px]" />
-                <div className="absolute right-4 bottom-4 rounded-[36px] px-2 py-1 bg-black">
+        <div className=" text-white h-full p-3 min-w-[317px] bg-[#191F25] rounded-[36px]">
+            <div className="flex items-start m-4">
+                <Image src={RECT_IMAGE_UPCOMING_CARD} alt="rect image upcoming card" className="w-[48.91px]" />
+                <div className="flex items-start px-4 justify-start w-full space-x-2 flex-col">
+                    <h1 className={`${ReadexProBold.className} text-lg`}>Lorem Ipsum</h1>
                     <div className="flex items-center justify-start">
                         <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[28px] h-[28px]" />
                         <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[28px] h-[28px]" />
                         <Image src={DISCROD_ICON} alt="Discord Icon" className="w-[28px] h-[28px]" />
-                    </div></div>
-            </div>
-
-            <div className=" flex items-center space-x-2 m-4">
-                <Image src={RECT_IMAGE_UPCOMING_CARD} alt="rect image upcoming card" className="w-[48.91px]" />
-                <h1 className={`${ReadexProBold.className} text-lg`}>Lorem Ipsum</h1>
+                    </div>
+                </div>
             </div>
 
             <div className="w-full px-4">

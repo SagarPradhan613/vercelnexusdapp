@@ -1,3 +1,4 @@
+import { CompletedSales } from "./components/CompletedSales";
 import { Featured } from "./components/Featured";
 import { Landing } from "./components/Landing";
 import { Upcoming } from "./components/Upcoming";
@@ -8,6 +9,7 @@ export default function Home() {
       <Landing />
       <Featured />
       <Upcoming />
+      <CompletedSales />
     </>
   );
 }
