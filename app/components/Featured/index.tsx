@@ -107,7 +107,7 @@ export const Featured = () => {
 
                     </div>
                     <div>
-                        <Image src={FEATURED_RIGHT_BANNER} alt="Featured Right Banner" className="min-w-[600px] h-full" />
+                        <Image src={FEATURED_RIGHT_BANNER} alt="Featured Right Banner" className="max-w-[600px] h-full" />
                     </div>
 
                 </div>
