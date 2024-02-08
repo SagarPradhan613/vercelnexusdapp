@@ -9,17 +9,23 @@ import TELEGRAM_ICON from '@/assets/telegram_icon.png'
 import TWITTER_ICON from '@/assets/twitter_icon.png'
 import DISCROD_ICON from '@/assets/discord_icon.png'
 import LAUNCH_BANNER from '@/assets/launch_banner.png'
+import ARROW_LEFT_ICON from '@/assets/arrow_left_icon.png'
 
 export const Footer: React.FC = () => {
     return (
         <>
-            <div className="flex items-center justify-center w-full p-8 lg:px-28">
+            <div className="flex items-center relative justify-center w-full p-8 lg:px-28">
                 <Image src={LAUNCH_BANNER} alt="Launch Banner" className="w-full" />
+                <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 flex items-center justify-center">
+                    <div className='bg-white hover:scale-105 cursor-pointer rounded-full w-[95.4px] h-[95.4px] flex items-center justify-center'>
+                        <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[28px]' />
+                    </div>
+                </div>
             </div>
+
             <div style={{
                 backgroundColor: BLUE
             }} className='mx-8 lg:mx-28 mb-12 rounded-[50px] py-4 px-8 flex items-center justify-between'>
-
 
                 <div className={`space-x-2 flex items-center justify-center tracking-widest uppercase `}>
                     <Image src={NEXUS_LOGO} alt="Nexus Logo" className='w-[14.16px] h-[14.56px]' />
