@@ -22,7 +22,7 @@ export const CompletedSales = () => {
         const container = carouselContainer.current
         if (container) {
             container.scrollTo({
-                left: container.scrollLeft - 1000,
+                left: container.scrollLeft - 300,
                 behavior: 'smooth'
             })
         }
@@ -32,7 +32,7 @@ export const CompletedSales = () => {
         const container = carouselContainer.current
         if (container) {
             container.scrollTo({
-                left: container.scrollLeft + 1000,
+                left: container.scrollLeft + 300,
                 behavior: 'smooth',
             })
         }
@@ -42,7 +42,7 @@ export const CompletedSales = () => {
         <section className="py-16 w-full relative">
             <h1 style={{
                 color: BLUE
-            }} className={`text-center ${Sen.className} my-8 font-bold text-7xl`}>
+            }} className={`text-center ${Sen.className} my-8 font-bold text-4xl lg:text-7xl`}>
                 <span className="text-black mx-4">
                     Completed
                 </span>
@@ -53,11 +53,11 @@ export const CompletedSales = () => {
 
                 <div onClick={prev} style={{
                     backgroundColor: BLUE
-                }} className='cursor-pointer rounded-full w-[40px] h-[40px] flex items-center justify-center'>
+                }} className='cursor-pointer ml-4 rounded-full w-[40px] h-[40px] flex items-center justify-center'>
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert rotate-180 w-[14.16px] h-[14.56px]' />
                 </div>
 
-                <div ref={carouselContainer} className="max-w-[1280.49px] overflow-hidden h-full w-[1000px] gap-4 mx-4 z-10 rounded-[36px] flex p-2">
+                <div ref={carouselContainer} className="w-full overflow-hidden h-full lg:w-[1000px] gap-4 mx-4 z-10 rounded-[36px] flex p-2">
                     {Array(9).fill(0).map((_, i) => (
                         <SalesCard key={i} />
                     ))}
@@ -65,7 +65,7 @@ export const CompletedSales = () => {
 
                 <div onClick={next} style={{
                     backgroundColor: BLUE
-                }} className='cursor-pointer rounded-full w-[40px] h-[40px] flex items-center justify-center'>
+                }} className='cursor-pointer mr-4 rounded-full w-[40px] h-[40px] flex items-center justify-center'>
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert w-[14.16px] h-[14.56px]' />
                 </div>
             </div>

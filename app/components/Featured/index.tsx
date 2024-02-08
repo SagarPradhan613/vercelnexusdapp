@@ -20,9 +20,9 @@ export const Featured = () => {
     return (
         <section className="w-full relative py-8">
 
-            <Image src={FEATURED_LEFT_RINGS} alt="Featured Left Rings" className="absolute top-20 -left-72 w-[800px] h-[800px]" />
-            <Image src={FEATURED_LEFT_RINGS_CENTER} alt="Featured Left Rings Center" className="absolute top-[356px] -left-4 z-50 w-[250px] h-[250px]" />
-            <Image src={FEATURED_RIGHT_RINGS} alt="Featured Right Rings" className="absolute top-12 -right-72 w-[800px] h-[800px]" />
+            <Image src={FEATURED_LEFT_RINGS} alt="Featured Left Rings" className="hidden lg:block absolute top-20 -left-72 w-[800px] h-[800px]" />
+            <Image src={FEATURED_LEFT_RINGS_CENTER} alt="Featured Left Rings Center" className="hidden lg:block absolute top-[356px] -left-4 z-50 w-[250px] h-[250px]" />
+            <Image src={FEATURED_RIGHT_RINGS} alt="Featured Right Rings" className="hidden lg:block absolute top-12 -right-72 w-[800px] h-[800px]" />
 
             <h1 className={`text-center hidden lg:block ${Sen.className} my-8 font-bold text-7xl`}>
                 Featured
@@ -34,7 +34,7 @@ export const Featured = () => {
             </h1>
 
 
-            <h1 className={`text-center block lg:hidden ${Sen.className} my-8 font-bold text-4xl  lg:text-7xl`}>
+            <h1 className={`text-center block lg:hidden ${Sen.className} my-8 font-bold text-4xl  g:text-7xl`}>
                 Makes Us
                 <span style={{
                     color: BLUE
@@ -43,9 +43,9 @@ export const Featured = () => {
                 </span>
             </h1>
 
-            <div className="flex items-center justify-center px-8 lg:px-0 w-full">
+            <div className="flex items-center justify-center px-6 lg:px-0 w-full">
 
-                <div className="bg-black  h-full max-w-[1000px] z-10 rounded-[36px] p-2 flex flex-col lg:flex-row justify-between">
+                <div className="bg-black h-full w-full lg:max-w-[1000px] z-10 rounded-[36px] p-2 flex flex-col lg:flex-row justify-between">
 
                     <div className="w-full flex-col p-8 h-full text-white">
 
@@ -117,7 +117,7 @@ export const Featured = () => {
 
                     </div>
                     <div>
-                        <Image src={FEATURED_RIGHT_BANNER} alt="Featured Right Banner" className="max-w-[600px] h-full" />
+                        <Image src={FEATURED_RIGHT_BANNER} alt="Featured Right Banner" className="w-full lg:max-w-[600px] h-full" />
                     </div>
 
                 </div>
