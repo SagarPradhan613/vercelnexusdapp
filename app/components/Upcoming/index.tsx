@@ -7,17 +7,14 @@ import Image from "next/image"
 
 import UPCOMING_CARD_1_BANNER from "@/assets/upcoming_card_1_banner.png"
 import UPCOMING_BACKGROUND from "@/assets/upcoming_background.png"
-import UPCOMING_CARD_2_BANNER from "@/assets/upcoming_card_2_banner.png"
-import UPCOMING_CARD_3_BANNER from "@/assets/upcoming_card_3_banner.png"
-
+ 
 import RECT_IMAGE_UPCOMING_CARD from "@/assets/rect_image_upcoming_card.png"
 import ARROW_LEFT_ICON from "@/assets/arrow_left_icon.png"
 
 import TELEGRAM_ICON from "@/assets/telegram_icon.png"
 import TWITTER_ICON from "@/assets/twitter_icon.png"
 import DISCORD_ICON from "@/assets/discord_icon.png"
-import { useRef } from "react"
-import { isMobile } from "@/app/helpers/isMobile"
+import { useRef } from "react" 
 
 export const Upcoming = () => {
 

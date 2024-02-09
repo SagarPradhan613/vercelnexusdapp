@@ -9,8 +9,56 @@
   overflow-x: hidden;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1224px) {
-  .featured_rings {
-    left: -5%;
+.featured_ellipse_right {
+  position: absolute;
+  top: 10;
+  right: -20%;
+}
+
+.featured_ellipse_left {
+  position: absolute;
+  top: -100;
+  left: 0%;
+}
+
+.featured_left_rings{
+  position: absolute;
+  top: 40%;
+  left: 0%;
+}
+
+ 
+
+@media screen and (min-width:1500px) {
+  .featured_ellipse_right {
+    right: -10%;
   }
+
+  .featured_ellipse_left {
+    left: 5%;
+  }
+}
+
+@media screen and (min-width:1800px) {
+  .featured_ellipse_right {
+    right: 1%
+  }
+
+  .featured_ellipse_left {
+    left: 0%
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .featured_left_rings {
+    left: 5%;
+    top: 37%;
+  }
+}
+
+
+.featured_ellipse_left {
+  position: absolute;
+  top: 10;
+  left: -15%;
 }
