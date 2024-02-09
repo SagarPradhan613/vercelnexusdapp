@@ -40,15 +40,15 @@ export const Landing: React.FC = () => {
                         <div className='hidden lg:flex items-start space-x-4 my-16'>
                             <div style={{
                                 backgroundColor: BLUE,
-                            }} className='w-full h-[50px] rounded-[36px] px-4 text-white flex items-center justify-center'>
+                            }} className='w-full h-[50px] z-10 hover:scale-[1.009] cursor-pointer rounded-[36px] px-4 text-white flex items-center justify-center'>
                                 <h1 className={`${Poppins.className} w-full text-base font-semibold`}>Get Started</h1>
                                 <div className='bg-white rounded-full w-[53.82px] h-[39.82px] flex items-center justify-center'>
                                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[14.16px] h-[14.56px]' />
                                 </div>
                             </div>
 
-                            <div className='w-[161.11px] h-[50px] border-2 rounded-[36px] text-white flex items-center justify-center'>
-                                <h1 className={`${Inter.className} text-black text-sm font-medium`}>
+                            <div className='w-[161.11px] z-10 hover:scale-[1.009] hover:bg-[#0075FF] text-black hover:text-white transition-all delay-75 cursor-pointer h-[50px] border-2 rounded-[36px] flex items-center justify-center'>
+                                <h1 className={`${Inter.className} text-sm font-medium`}>
                                     Know More
                                 </h1>
                             </div>

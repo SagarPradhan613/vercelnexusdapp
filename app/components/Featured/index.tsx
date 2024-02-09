@@ -105,7 +105,7 @@ export const Featured = () => {
 
                             <div style={{
                                 backgroundColor: BLUE,
-                            }} className='w-full h-[50px] rounded-[36px] px-2 text-white flex items-center justify-between'>
+                            }} className='w-full h-[50px] z-10 hover:scale-[1.009] cursor-pointer  rounded-[36px] px-2 text-white flex items-center justify-between'>
                                 <h1 className={`${Poppins.className} w-full ml-8 text-sm font-semibold`}>
                                     Participate Now
                                 </h1>

@@ -29,7 +29,6 @@ export const Navbar: React.FC = () => {
         }
     }, [isNavbarOpen])
 
-
     return (
         <div className='flex items-center justify-center w-full'>
             <nav className="w-screen max-w-[2660px] h-[68.6px] lg:h-[144.55px] flex items-center px-4 lg:px-28 justify-between">
@@ -48,7 +47,7 @@ export const Navbar: React.FC = () => {
                         <h1 className={`text-base font-medium ${Inter.className}`}>Launchpad</h1>
                     </div>
 
-                    <div className='px-4 hidden lg:block py-2 rounded-[36px]'>
+                    <div className='px-4 hidden z-10 cursor-pointer hover:bg-[#0075FF] lg:block py-2 rounded-[36px]'>
                         <h1 className={`text-base font-medium ${Inter.className}`}>Nexus</h1>
                     </div>
                 </div>
@@ -67,10 +66,10 @@ export const Navbar: React.FC = () => {
                     </div>
                     <div style={{
                         backgroundColor: BLUE,
-                    }} className='max-w-[215.1px] h-[56.85px]  w-full rounded-[36px] px-4 text-white p-2 hidden lg:flex items-center justify-between'>
+                    }} className='max-w-[215.1px] h-[56.85px] z-10 hover:scale-[1.009] cursor-pointer w-full rounded-[36px] px-4 text-white p-2 hidden lg:flex items-center justify-between'>
                         <h1 className={`${Poppins.className} w-full whitespace-nowrap text-base font-bold`}>Connect Wallet</h1>
                         <div className='bg-white rounded-full w-[49.82px] h-[39.82px] flex items-center justify-center'>
-                            <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[14.16px] h-[14.56px]' />
+                            <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[14.16px] hover:translate-x-[1.009] h-[14.56px]' />
                         </div>
                     </div>
                 </div>
