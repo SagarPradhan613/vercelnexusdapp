@@ -13,6 +13,7 @@ import HAMBURGER_ICON from '@/assets/hamburger_icon.png'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
+
 export const Navbar: React.FC = () => {
 
     const [isNavbarOpen, setIsNavbarOpen] = useState(false)
@@ -55,7 +56,9 @@ export const Navbar: React.FC = () => {
                 <div className='bg-black hidden lg:flex lg:w-[50px] lg:h-[48px] w-[32px] h-[32px] rounded-full items-center justify-center'>
                     <Image src={USER_ICON} alt="User Icon" className='w-[15.28px] hidden lg:block h-[19.65px]' />
                 </div>
-                <div onClick={navbarToggle} className='bg-black lg:w-[50px] cursor-pointer flex lg:hidden lg:h-[48px] w-[32px] h-[32px] rounded-full items-center justify-center'>
+                <div onClick={navbarToggle} style={{
+                    zIndex: 1000,
+                }} className='bg-black lg:w-[50px] cursor-pointer flex lg:hidden lg:h-[48px] w-[32px] h-[32px] rounded-full items-center justify-center'>
                     <Image src={HAMBURGER_ICON} alt="Hamburger Icon" className='w-[8.76px] h-[8.73px]' />
                 </div>
                 <div className='bg-black hidden lg:flex w-[50px] h-[48px] rounded-full items-center justify-center'>
@@ -82,7 +85,7 @@ const NavbarMobile = () => {
             animate={{ y: 0 }}
             exit={{ y: '-100%' }}
             transition={{ duration: 0.5, type: 'tween' }}
-            className='fixed top-[70px] text-white flex lg:hidden left-0 w-screen h-screen bg-white z-50 flex-col items-center justify-start py-16'>
+            className='fixed top-0 text-white flex lg:hidden left-0 w-screen h-screen bg-white z-50 flex-col items-center justify-start py-16'>
             <ul className='w-full space-y-8 px-16 py-8 flex flex-col h-full justify-between'>
                 <div className='space-y-8'>
                     <li className='w-full'>

@@ -18,13 +18,13 @@ import FEATURED_LEFT_RINGS_CENTER from "@/assets/featured_left_rings_center.png"
 
 export const Featured = () => {
     return (
-        <section className="w-full relative py-8">
+        <section className="w-full overflow-hidden relative py-4">
 
             <Image src={FEATURED_LEFT_RINGS} alt="Featured Left Rings" className="hidden lg:block absolute top-20 -left-72 w-[800px] h-[800px]" />
             <Image src={FEATURED_LEFT_RINGS_CENTER} alt="Featured Left Rings Center" className="hidden lg:block absolute top-[356px] -left-4 z-50 w-[250px] h-[250px]" />
             <Image src={FEATURED_RIGHT_RINGS} alt="Featured Right Rings" className="hidden lg:block absolute top-12 -right-72 w-[800px] h-[800px]" />
 
-            <h1 className={`text-center hidden lg:block ${Sen.className} my-8 font-bold text-7xl`}>
+            <h1 className={`text-center overflow-hidden hidden lg:block ${Sen.className} my-8 font-bold text-7xl`}>
                 Featured
                 <span style={{
                     color: BLUE
@@ -43,20 +43,20 @@ export const Featured = () => {
                 </span>
             </h1>
 
-            <div className="flex items-center justify-center px-6 lg:px-0 w-full">
+            <div className="flex items-center justify-center px-4 lg:px-0 w-full">
 
                 <div className="bg-black h-full w-full lg:max-w-[1000px] z-10 rounded-[36px] p-2 flex flex-col lg:flex-row justify-between">
 
-                    <div className="w-full flex-col p-8 h-full text-white">
+                    <div className="w-full h-full flex-col p-8 text-white">
 
-                        <div className=" flex items-start space-x-8 justify-start">
+                        <div className="flex items-start space-x-8 justify-start">
                             <div style={{
                                 backgroundColor: BLUE
-                            }} className="w-[69.95px] flex items-center justify-center rounded-[15px] h-[69.95px]">
+                            }} className="min-w-[69.95px] flex items-center justify-center rounded-[15px] min-h-[69.95px]">
                                 <Image src={FEATURED_ARTYFACT} alt="Featured Artyfact" className="w-[50.95px] h-[50.95px]" />
                             </div>
 
-                            <div className="space-y-2">
+                            <div className="space-y-2 w-full">
                                 <h1 className={`text-2xl font-semibold ${ReadexProMedium.className}`}>Lorem Ipsum</h1>
                                 <div className="flex items-center space-x-2">
                                     <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[39.71px] h-[39.71px]" />
@@ -66,7 +66,7 @@ export const Featured = () => {
                             </div>
                         </div>
 
-                        <div className="flex space-x-2 py-2 mt-4">
+                        <div className="flex space-x-2 py-2 mt-4 w-full items-center justify-center lg:justify-start">
                             <div className="rounded-[12px] px-4 py-2 bg-[#00316A]">
                                 <h1 className={`text-xs ${ReadexProMedium.className}`}>BRC 20</h1>
                             </div>
@@ -75,16 +75,16 @@ export const Featured = () => {
                             </div>
                         </div>
 
-                        <h1 className={`text-3xl font-semibold ${ReadexProMedium.className}`}>
-                            Synthesizing BRX-20 <br />
+                        <h1 className={`text-xl lg:text-3xl lg:text-start py-1 text-center font-semibold ${ReadexProMedium.className}`}>
+                            Synthesizing BRX-20 <br className="hidden lg:block"/>
                             Trading
                         </h1>
 
-                        <h1 className="text-sm py-4">
-                            Total Raise <span className="text-[#83BCFE] text-lg">$600,000</span>
+                        <h1 className="text-lg lg:text-lg lg:text-start py-2 text-center ">
+                            Total Raise <span className="text-[#83BCFE] text-xl">$600,000</span>
                         </h1>
 
-                        <div>
+                        <div className="py-1">
                             <div>
                                 <div className="flex items-center justify-start space-x-4 border-2 rounded-[8px] py-4 px-4">
                                     <h1 className="text-xs">
@@ -116,8 +116,8 @@ export const Featured = () => {
                         </div>
 
                     </div>
-                    <div>
-                        <Image src={FEATURED_RIGHT_BANNER} alt="Featured Right Banner" className="w-full lg:max-w-[600px] h-full" />
+                    <div className="p-1 lg:p-0">
+                        <Image src={FEATURED_RIGHT_BANNER} alt="Featured Right Banner" className="w-full max-w-[1200px] rounded-[19px] h-full" />
                     </div>
 
                 </div>
