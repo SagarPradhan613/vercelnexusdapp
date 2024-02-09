@@ -66,7 +66,7 @@ export const Navbar: React.FC = () => {
                 </div>
                 <div style={{
                     backgroundColor: BLUE,
-                }} className='max-w-[215.1px] h-[56.85px] w-full rounded-[36px] px-4 text-white p-2 hidden lg:flex items-center justify-between'>
+                }} className='max-w-[215.1px] h-[56.85px]  w-full rounded-[36px] px-4 text-white p-2 hidden lg:flex items-center justify-between'>
                     <h1 className={`${Poppins.className} w-full whitespace-nowrap text-base font-bold`}>Connect Wallet</h1>
                     <div className='bg-white rounded-full w-[49.82px] h-[39.82px] flex items-center justify-center'>
                         <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[14.16px] h-[14.56px]' />

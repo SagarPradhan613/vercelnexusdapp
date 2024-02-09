@@ -21,7 +21,7 @@ export const Featured = () => {
         <section className="w-full overflow-hidden relative py-4">
 
             <Image src={FEATURED_LEFT_RINGS} alt="Featured Left Rings" className="hidden lg:block absolute top-20 -left-72 w-[800px] h-[800px]" />
-            <Image src={FEATURED_LEFT_RINGS_CENTER} alt="Featured Left Rings Center" className="hidden lg:block absolute top-[356px] -left-4 z-50 w-[250px] h-[250px]" />
+            <Image src={FEATURED_LEFT_RINGS_CENTER} alt="Featured Left Rings Center" className="featured_rings hidden lg:block absolute top-[356px] -left-4 z-50 w-[250px] h-[250px]" />
             <Image src={FEATURED_RIGHT_RINGS} alt="Featured Right Rings" className="hidden lg:block absolute top-12 -right-72 w-[800px] h-[800px]" />
 
             <h1 className={`text-center overflow-hidden hidden lg:block ${Sen.className} my-8 font-bold text-7xl`}>

@@ -47,7 +47,7 @@ export const Landing: React.FC = () => {
                         </div>
 
                         <div className='w-[161.11px] h-[50px] border-2 rounded-[36px] text-white flex items-center justify-center'>
-                            <h1 className={`${Inter.className} text-black text-base font-medium`}>
+                            <h1 className={`${Inter.className} text-black text-sm font-medium`}>
                                 Know More
                             </h1>
                         </div>

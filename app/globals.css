@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none;
   overflow-x: hidden;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1224px) {
+  .featured_rings {
+    left: -5%;
+  }
 }
