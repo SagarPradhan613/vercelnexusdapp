@@ -17,8 +17,8 @@ export const Footer: React.FC = () => {
             <div className="flex items-center relative justify-center w-full p-8 lg:px-28">
                 <Image src={LAUNCH_BANNER} alt="Launch Banner" className="w-full" />
                 <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 flex items-center justify-center">
-                    <div className='bg-white hover:scale-105 cursor-pointer rounded-full w-[95.4px] h-[95.4px] flex items-center justify-center'>
-                        <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[28px]' />
+                    <div className='bg-white hover:scale-105 cursor-pointer rounded-full w-[50px] h-[50px] flex items-center justify-center'>
+                        <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[15px]' />
                     </div>
                 </div>
             </div>
@@ -34,9 +34,9 @@ export const Footer: React.FC = () => {
 
                 <div className="h-[32px] lg:h-[56.85px] flex text-white bg-black rounded-[36px] items-center justify-between px-4 space-x-2">
                     <div className="flex items-center space-x-2">
-                        <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[54.82px] h-[54.82px]" />
-                        <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[54.82px] h-[54.82px]" />
-                        <Image src={DISCROD_ICON} alt="Discord Icon" className="w-[54.82px] h-[54.82px]" />
+                        <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
+                        <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
+                        <Image src={DISCROD_ICON} alt="Discord Icon" className="w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
                     </div>
                 </div>
             </div>

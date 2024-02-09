@@ -18,7 +18,7 @@ import FEATURED_LEFT_RINGS_CENTER from "@/assets/featured_left_rings_center.png"
 
 export const Featured = () => {
     return (
-        <section className="w-full overflow-hidden relative py-4">
+        <section className="w-full overflow-hidden relative">
 
             <Image src={FEATURED_LEFT_RINGS} alt="Featured Left Rings" className="hidden lg:block absolute top-20 -left-72 w-[800px] h-[800px]" />
             <Image src={FEATURED_LEFT_RINGS_CENTER} alt="Featured Left Rings Center" className="featured_rings hidden lg:block absolute top-[356px] -left-4 z-50 w-[250px] h-[250px]" />
@@ -84,7 +84,7 @@ export const Featured = () => {
                             Total Raise <span className="text-[#83BCFE] text-xl">$600,000</span>
                         </h1>
 
-                        <div className="py-1">
+                        <div className="py-2">
                             <div>
                                 <div className="flex items-center justify-start space-x-4 border-2 rounded-[8px] py-4 px-4">
                                     <h1 className="text-xs">
@@ -98,7 +98,7 @@ export const Featured = () => {
                         </div>
 
                         <div>
-                            <div className="flex items-center justify-center space-x-2 py-2 mt-8">
+                            <div className="flex items-center justify-center space-x-2 py-4">
                                 <Image src={KYC_INFO_ICON} alt="KYC Info Icon" className="w-[12px] h-[12px]" />
                                 <h1 className="text-xs">No KYC required</h1>
                             </div>

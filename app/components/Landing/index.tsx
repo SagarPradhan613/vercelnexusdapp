@@ -16,7 +16,7 @@ import DISCROD_ICON from '@/assets/discord_icon.png'
 
 export const Landing: React.FC = () => {
     return (
-        <section className='py-8'>
+        <section className='py-4'>
             
             <div className='flex flex-col lg:flex-row w-full px-4 lg:px-28 justify-center'>
 
@@ -61,11 +61,11 @@ export const Landing: React.FC = () => {
                     <Image src={LANDING_BANNER_MOBILE} alt="Landing Banner Mobile" className=' w-full lg:px-0 lg:hidden' />
                 </div>
 
-                <div className='flex lg:hidden  items-center justify-center space-x-4 my-16'>
+                <div className='flex lg:hidden items-center justify-center space-x-4'>
 
                     <div style={{
                         backgroundColor: BLUE,
-                    }} className='w-full space-x-2 max-w-[350px] h-[50px] rounded-[36px] px-4 text-white flex items-center justify-center'>
+                    }} className='w-full max-w-[350px] h-[50px] rounded-[36px] px-2 text-white flex items-center justify-center'>
                         <h1 className={`${Poppins.className} w-full text-sm inline-block whitespace-nowrap font-semibold`}>Get Started</h1>
                         <div className='bg-white rounded-full w-[53.82px] h-[39.82px] flex items-center justify-center'>
                             <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[14.16px] h-[14.56px]' />

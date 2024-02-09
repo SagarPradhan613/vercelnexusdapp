@@ -20,9 +20,11 @@ export const CompletedSales = () => {
 
     const prev = () => {
         const container = carouselContainer.current
+          const clientWidth = container?.clientWidth
+
         if (container) {
             container.scrollTo({
-                left: container.scrollLeft - 315,
+                left: container.scrollLeft - clientWidth!,
                 behavior: 'smooth'
             })
         }
@@ -30,16 +32,18 @@ export const CompletedSales = () => {
 
     const next = () => {
         const container = carouselContainer.current
+          const clientWidth = container?.clientWidth
+
         if (container) {
             container.scrollTo({
-                left: container.scrollLeft + 315,
+                left: container.scrollLeft + clientWidth!,
                 behavior: 'smooth',
             })
         }
     }
 
     return (
-        <section className="py-16 w-full relative">
+        <section className="py-4 w-full relative">
             <h1 style={{
                 color: BLUE
             }} className={`text-center ${Sen.className} overflow-hidden my-8 font-bold text-4xl lg:text-7xl`}>
@@ -53,7 +57,7 @@ export const CompletedSales = () => {
 
                 <div onClick={prev} style={{
                     backgroundColor: BLUE
-                }} className='cursor-pointer ml-2 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
+                }} className='cursor-pointer mx-2 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert rotate-180 w-[14.16px] h-[14.56px]' />
                 </div>
 
@@ -65,7 +69,7 @@ export const CompletedSales = () => {
 
                 <div onClick={next} style={{
                     backgroundColor: BLUE
-                }} className='cursor-pointer mr-2 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
+                }} className='cursor-pointer mr-1 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert w-[14.16px] h-[14.56px]' />
                 </div>
             </div>
@@ -75,7 +79,7 @@ export const CompletedSales = () => {
 
 const SalesCard = () => {
     return (
-        <div className=" text-white h-full p-3 min-w-[300px] lg:min-w-[317px] bg-[#191F25] rounded-[36px]">
+        <div className=" text-white h-full p-3 md:min-w-[265px] min-w-[300px] lg:min-w-[317px] bg-[#191F25] rounded-[36px]">
             <div className="flex items-start m-4">
                 <Image src={RECT_IMAGE_UPCOMING_CARD} alt="rect image upcoming card" className="w-[48.91px]" />
                 <div className="flex items-start px-4 justify-start w-full space-x-2 flex-col">

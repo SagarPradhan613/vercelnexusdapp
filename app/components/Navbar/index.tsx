@@ -10,9 +10,8 @@ import ARROW_LEFT_ICON from '@/assets/arrow_left_icon.png'
 import USER_ICON from '@/assets/user_icon.png'
 import NOTIFICATION_BELL_ICON from '@/assets/notification_bell_icon.png'
 import HAMBURGER_ICON from '@/assets/hamburger_icon.png'
-import { useEffect, useState } from 'react'
+import { use, useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-
 
 export const Navbar: React.FC = () => {
 
@@ -29,9 +28,10 @@ export const Navbar: React.FC = () => {
             document.body.style.overflow = 'auto'
         }
     }, [isNavbarOpen])
+ 
 
     return (
-        <nav className="w-screen h-[68.6px] lg:h-[144.55px] flex items-center px-8 lg:px-28 justify-between">
+        <nav className="w-screen h-[68.6px] lg:h-[144.55px] flex items-center px-4 lg:px-28 justify-between">
 
             {isNavbarOpen && <NavbarMobile />}
 

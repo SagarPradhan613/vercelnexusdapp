@@ -17,6 +17,7 @@ import TELEGRAM_ICON from "@/assets/telegram_icon.png"
 import TWITTER_ICON from "@/assets/twitter_icon.png"
 import DISCORD_ICON from "@/assets/discord_icon.png"
 import { useRef } from "react"
+import { isMobile } from "@/app/helpers/isMobile"
 
 export const Upcoming = () => {
 
@@ -24,9 +25,11 @@ export const Upcoming = () => {
 
     const prev = () => {
         const container = carouselContainer.current
+        const clientWidth = container?.clientWidth
+
         if (container) {
             container.scrollTo({
-                left: container.scrollLeft - 310,
+                left: container.scrollLeft - clientWidth!,
                 behavior: 'smooth'
             })
         }
@@ -34,19 +37,22 @@ export const Upcoming = () => {
 
     const next = () => {
         const container = carouselContainer.current
+        const clientWidth = container?.clientWidth
+
         if (container) {
             container.scrollTo({
-                left: container.scrollLeft + 310,
+                left: container.scrollLeft + clientWidth!,
                 behavior: 'smooth',
             })
         }
     }
 
+
     return (
-        <section className="py-16 w-full relative">
+        <section className="w-full py-4 relative">
             <h1 style={{
                 color: BLUE
-            }} className={`text-center overflow-hidden ${Sen.className} my-8 font-bold text-4xl lg:text-7xl`}>
+            }} className={`text-center overflow-hidden ${Sen.className} py-8 font-bold text-4xl lg:text-7xl`}>
                 Live
                 <span className="text-black mx-4">
                     and
@@ -60,11 +66,11 @@ export const Upcoming = () => {
 
                 <div onClick={prev} style={{
                     backgroundColor: BLUE
-                }} className='cursor-pointer ml-2 lg:mr-4 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
+                }} className='cursor-pointer mx-1 lg:mx-2 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert rotate-180 w-[14.16px] h-[14.56px]' />
                 </div>
 
-                <div ref={carouselContainer} className="w-full overflow-hidden h-full lg:w-[1000px] gap-4 z-10 rounded-[36px] flex p-2" style={{ scrollBehavior: 'smooth' }}>
+                <div ref={carouselContainer} className="w-full overflow-hidden h-full lg:w-[1000px] z-10 gap-4 rounded-[36px] flex p-2 items-center" style={{ scrollBehavior: 'smooth' }}>
 
                     {Array(9)
                         .fill(0)
@@ -75,7 +81,7 @@ export const Upcoming = () => {
 
                 <div onClick={next} style={{
                     backgroundColor: BLUE
-                }} className='cursor-pointer mr-2 lg:ml-4 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
+                }} className='cursor-pointer mx-1 lg:mx-2 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert w-[14.16px] h-[14.56px]' />
                 </div>
             </div>
@@ -85,7 +91,7 @@ export const Upcoming = () => {
 
 const UpcomingCards = () => {
     return (
-        <div className="text-white h-full p-3 min-w-[295px] lg:min-w-[315px] bg-[#191F25] rounded-[36px]">
+        <div className="text-white h-full p-2 md:min-w-[265px] min-w-[300px] lg:min-w-[317px] bg-[#191F25] rounded-[36px]">
 
             <div className="w-full relative">
                 <Image src={UPCOMING_CARD_1_BANNER} alt="upcoming card 1 banner" className="w-[378.56px] h-[218.44px] rounded-[26px]" />
