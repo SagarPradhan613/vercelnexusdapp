@@ -21,7 +21,7 @@ export const Featured = () => {
         <section className="w-full overflow-hidden relative">
 
             <Image src={FEATURED_LEFT_RINGS} alt="Featured Left Rings" className="featured_ellipse_left hidden lg:block absolute w-[800px] h-[800px]" />
-            <Image src={FEATURED_LEFT_RINGS_CENTER} alt="Featured Left Rings Center" className="featured_left_rings hidden lg:block absolute left-24 z-50 w-[200px] h-[200px]" />
+            <Image src={FEATURED_LEFT_RINGS_CENTER} alt="Featured Left Rings Center" className="planet featured_left_rings hidden lg:block absolute left-24 z-50 w-[200px] h-[200px]" />
             <Image src={FEATURED_RIGHT_RINGS} alt="Featured Right Rings" className="featured_ellipse_right hidden lg:block absolute w-[800px] h-[800px]" />
 
             <h1 className={`text-center overflow-hidden hidden lg:block ${Sen.className} my-8 font-bold text-7xl`}>
@@ -37,7 +37,8 @@ export const Featured = () => {
             <h1 className={`text-center block lg:hidden ${Sen.className} my-8 font-bold text-4xl  g:text-7xl`}>
                 Makes Us
                 <span style={{
-                    color: BLUE
+                    color: BLUE,
+                    marginLeft:"10px",
                 }}>
                     Better
                 </span>
@@ -103,9 +104,9 @@ export const Featured = () => {
                                 <h1 className="text-xs">No KYC required</h1>
                             </div>
 
-                            <div style={{
+                            <div  style={{
                                 backgroundColor: BLUE,
-                            }} className='w-full h-[50px] z-10 hover:scale-[1.009] cursor-pointer  rounded-[36px] px-2 text-white flex items-center justify-between'>
+                            }} className='anireverse relative z-50  w-full h-[50px] cursor-pointer  rounded-[36px] px-2 text-white flex items-center justify-between'>
                                 <h1 className={`${Poppins.className} w-full ml-8 text-sm font-semibold`}>
                                     Participate Now
                                 </h1>

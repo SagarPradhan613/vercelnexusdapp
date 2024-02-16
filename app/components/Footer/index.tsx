@@ -14,18 +14,18 @@ import ARROW_LEFT_ICON from '@/assets/arrow_left_icon.png'
 export const Footer: React.FC = () => {
     return (
         <>
-            <div className="flex items-center relative justify-center w-full p-8 lg:px-28">
+            {/* <div className="flex items-center relative justify-center w-full p-8 lg:px-28">
                 <Image src={LAUNCH_BANNER} alt="Launch Banner" className="w-full" />
                 <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 flex items-center justify-center">
-                    <div className='bg-white z-10 hover:scale-[1.009] cursor-pointer rounded-full w-[50px] h-[50px] flex items-center justify-center'>
+                    <div className='bg-white z-10 ani cursor-pointer rounded-full w-[50px] h-[50px] flex items-center justify-center'>
                         <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[15px]' />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div style={{
                 backgroundColor: BLUE
-            }} className='mx-8 lg:mx-28 mb-12 rounded-[50px] py-4 px-8 flex items-center justify-between'>
+            }} className='mx-8 mt-20 lg:mx-28 mb-12 rounded-[50px] py-4 px-8 flex items-center justify-between'>
 
                 <div className={`space-x-2 flex items-center justify-center tracking-widest uppercase `}>
                     <Image src={NEXUS_LOGO} alt="Nexus Logo" className='w-[14.16px] h-[14.56px]' />
@@ -34,9 +34,9 @@ export const Footer: React.FC = () => {
 
                 <div className="h-[32px] lg:h-[56.85px] flex text-white bg-black rounded-[36px] items-center justify-between px-4 space-x-2">
                     <div className="flex items-center space-x-2">
-                        <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="z-10 hover:scale-[1.009] cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
-                        <Image src={TWITTER_ICON} alt="Twitter Icon" className="z-10 hover:scale-[1.009] cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
-                        <Image src={DISCROD_ICON} alt="Discord Icon" className="z-10 hover:scale-[1.009] cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
+                        <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
+                        <Image src={TWITTER_ICON} alt="Twitter Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
+                        <Image src={DISCROD_ICON} alt="Discord Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
                     </div>
                 </div>
             </div>

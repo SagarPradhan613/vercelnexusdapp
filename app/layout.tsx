@@ -18,9 +18,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={ReadexProMedium.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="relative">
+          <div className="absolute top-0 left-0">
+            <img src="/Images/masktopleft.png"></img>
+          </div>
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

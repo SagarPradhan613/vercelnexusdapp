@@ -53,20 +53,20 @@ export const Navbar: React.FC = () => {
                 </div>
 
                 <div className='flex items-center justify-center space-x-2'>
-                    <div className='bg-black hidden lg:flex lg:w-[50px] lg:h-[48px] w-[32px] h-[32px] rounded-full items-center justify-center'>
+                    <div className='bg-black anireverse hidden lg:flex lg:w-[55px] lg:h-[50px] w-[32px] h-[32px] rounded-[50%] items-center justify-center'>
                         <Image src={USER_ICON} alt="User Icon" className='w-[15.28px] hidden lg:block h-[19.65px]' />
                     </div>
                     <div onClick={navbarToggle} style={{
                         zIndex: 1000,
-                    }} className='bg-black lg:w-[50px] cursor-pointer flex lg:hidden lg:h-[48px] w-[32px] h-[32px] rounded-full items-center justify-center'>
+                    }} className='bg-black lg:w-[50px]  cursor-pointer flex lg:hidden lg:h-[48px] w-[32px] h-[32px] rounded-full items-center justify-center'>
                         <Image src={HAMBURGER_ICON} alt="Hamburger Icon" className='w-[8.76px] h-[8.73px]' />
                     </div>
-                    <div className='bg-black hidden lg:flex w-[50px] h-[48px] rounded-full items-center justify-center'>
+                    <div className='bg-black hidden anireverse lg:flex w-[55px] h-[50px] rounded-full items-center justify-center'>
                         <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' />
                     </div>
                     <div style={{
                         backgroundColor: BLUE,
-                    }} className='max-w-[215.1px] h-[56.85px] z-10 hover:scale-[1.009] cursor-pointer w-full rounded-[36px] px-4 text-white p-2 hidden lg:flex items-center justify-between'>
+                    }} className='max-w-[215.1px] h-[56.85px] z-10 anireverse cursor-pointer w-full rounded-[36px] px-4 text-white p-2 hidden lg:flex items-center justify-between'>
                         <h1 className={`${Poppins.className} w-full whitespace-nowrap text-base font-bold`}>Connect Wallet</h1>
                         <div className='bg-white rounded-full w-[49.82px] h-[39.82px] flex items-center justify-center'>
                             <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[14.16px] hover:translate-x-[1.009] h-[14.56px]' />

@@ -63,8 +63,8 @@ export const Upcoming = () => {
 
                 <div onClick={prev} style={{
                     backgroundColor: BLUE
-                }} className='z-10 hover:scale-[1.009] cursor-pointer   mx-1 lg:mx-2 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
-                    <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert rotate-180 w-[14.16px] h-[14.56px]' />
+                }} className='z-10 ani cursor-pointer   mx-1 lg:mx-2 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
+                    <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className=' invert rotate-180 w-[14.16px] h-[14.56px]' />
                 </div>
 
                 <div ref={carouselContainer} className="w-full overflow-hidden h-full lg:w-[1000px] z-10 gap-4 rounded-[36px] flex p-2 items-center" style={{ scrollBehavior: 'smooth' }}>
@@ -78,7 +78,7 @@ export const Upcoming = () => {
 
                 <div onClick={next} style={{
                     backgroundColor: BLUE
-                }} className='cursor-pointer z-10 hover:scale-[1.009]  mx-1 lg:mx-2 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
+                }} className='cursor-pointer z-10 ani  mx-1 lg:mx-2 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert w-[14.16px] h-[14.56px]' />
                 </div>
             </div>
@@ -144,7 +144,7 @@ const UpcomingCards = () => {
 
             <div style={{
                 backgroundColor: BLUE,
-            }} className='w-full h-[50px] z-10 hover:scale-[1.009] cursor-pointer  my-4 rounded-[36px] px-2 text-white flex items-center justify-between'>
+            }} className='w-full anireverse relative z-50  h-[50px]  cursor-pointer  my-4 rounded-[36px] px-2 text-white flex items-center justify-between'>
                 <h1 className={`${Poppins.className} w-full ml-8 text-sm font-semibold`}>
                     Participate Now
                 </h1>

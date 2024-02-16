@@ -57,7 +57,7 @@ export const CompletedSales = () => {
 
                 <div onClick={prev} style={{
                     backgroundColor: BLUE
-                }} className='z-10 hover:scale-[1.009] cursor-pointer mx-2 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
+                }} className='z-10 ani cursor-pointer mx-2 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert rotate-180 w-[14.16px] h-[14.56px]' />
                 </div>
 
@@ -69,7 +69,7 @@ export const CompletedSales = () => {
 
                 <div onClick={next} style={{
                     backgroundColor: BLUE
-                }} className='z-10 hover:scale-[1.009] cursor-pointer mr-1 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
+                }} className='z-10 ani cursor-pointer mr-1 rounded-full min-w-[40px] min-h-[40px] flex items-center justify-center'>
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert w-[14.16px] h-[14.56px]' />
                 </div>
             </div>
@@ -131,7 +131,7 @@ const SalesCard = () => {
 
             <div style={{
                 backgroundColor: BLUE,
-            }} className='w-full h-[50px] my-4 z-10 hover:scale-[1.009] cursor-pointer rounded-[36px] px-2 text-white flex items-center justify-between'>
+            }} className='w-full h-[50px] my-4 z-10 anireverse cursor-pointer rounded-[36px] px-2 text-white flex items-center justify-between'>
                 <h1 className={`${Poppins.className} w-full ml-8 text-sm font-semibold`}>
                     Participate Now
                 </h1>

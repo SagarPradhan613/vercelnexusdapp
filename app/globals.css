@@ -2,12 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Readex Pro;
+  src: url(/Fonts/readexpro/ReadexPro-Regular.ttf);
+}
+
+.readex{
+  font-family: Readex Pro;
+}
+
+@font-face {
+  font-family: Sen;
+  src: url(/Fonts/sen/Sen-Regular.ttf);
+}
+
+.sen{
+  font-family: Sen;
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /* overflow-x: hidden; */
 }
+
+
 
 .featured_ellipse_right {
   position: absolute;
@@ -61,4 +83,63 @@
   position: absolute;
   top: 10;
   left: -15%;
+}
+
+.ani{
+  transition: transform 0.5s ease;
+}
+.ani:hover{
+  transform: scale(1.1);
+}
+.anireverse{
+  transition: transform 0.5s ease;
+}
+.anireverse:hover{
+  transform: scale(0.9);
+}
+
+@keyframes float {
+  0% {
+   
+    transform: translatey(0px);
+  }
+  50% {
+    
+    transform: translatey(-20px);
+  }
+  100% {
+ 
+    transform: translatey(0px);
+  }
+}
+
+.planet {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% {
+   
+    transform: scale(1);
+  }
+  50% {
+    
+    transform: scale(1.2);
+  }
+  100% {
+ 
+    transform: scale(1);
+  }
+}
+
+.star {
+  animation: shine 2s ease-in-out infinite;
+}
+
+.bgchange{
+  transition: all 0.5s ease;
+  background-color: black;
+}
+.bgchange:hover{
+  background-color: #0075FF;
 }
