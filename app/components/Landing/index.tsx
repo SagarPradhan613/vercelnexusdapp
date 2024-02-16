@@ -16,10 +16,10 @@ import DISCROD_ICON from '@/assets/discord_icon.png'
 
 export const Landing: React.FC = () => {
     return (
-        <div className='flex items-center justify-center w-full'>
-            <section className='p-4  w-full max-w-[1680px]'>
+        <div className='flex items-center  w-full'>
+            <section className='p-4  w-full '>
 
-                <div className='flex flex-col lg:flex-row w-full px-4 lg:px-28 justify-center'>
+                <div className='flex flex-col lg:flex-row w-full px-4 lg:px-28 justify-between'>
 
                     <div className='flex flex-col w-full items-start'>
 
@@ -38,7 +38,7 @@ export const Landing: React.FC = () => {
                         </h1>
 
                         <div className='hidden lg:flex items-start space-x-4 my-16'>
-                            <div style={{
+                            {/* <div style={{
                                 backgroundColor: BLUE,
                             }} className='w-full h-[50px] z-10 hover:scale-[1.009] cursor-pointer rounded-[36px] px-4 text-white flex items-center justify-center'>
                                 <h1 className={`${Poppins.className} w-full text-base font-semibold`}>Get Started</h1>
@@ -51,6 +51,18 @@ export const Landing: React.FC = () => {
                                 <h1 className={`${Inter.className} text-sm font-medium`}>
                                     Know More
                                 </h1>
+                            </div> */}
+                            <div className='p-4'>
+                                <div>
+
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+
+                            <div>
+
                             </div>
 
                         </div>
