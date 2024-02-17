@@ -32,7 +32,7 @@ const FifthSection = () => {
                                 <p className="lg:text-4xl font-semibold text-xl text-[#0075FF] readex">Sandwich Automation</p>
                                 <p className="text-xs mt-2 lg:text-xl font-bold text-black">Put all your idle coins to work.</p>
 
-                                <p className="lg:mt-8 mt-4 font-medium lg:text-base text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <p className="lg:mt-8 mt-4 font-medium lg:text-base text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s</p>
 
 
                             </div>

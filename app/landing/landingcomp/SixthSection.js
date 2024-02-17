@@ -9,7 +9,7 @@ const SixthSection = () => {
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. survived not only five centuries, when an </p>
                             </div>
                             <div className="lg:my-8 my-4">
-                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer</p>
+                                <p>Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer</p>
                             </div>
                             <div>
                                 <p><span className="text-[#84BCFF]">took a galley of type and scrambled it to make a type specimen </span> book. It has survived not only five centuries, when an unknown printer</p>
