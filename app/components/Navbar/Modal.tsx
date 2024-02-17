@@ -2,15 +2,15 @@ import React, { ReactNode } from 'react';
 import './Modal.css';
 
 interface ModalProps {
-    onClose: () => void;
+    // onClose: () => void;
     children: ReactNode;
 }
 
-const Modal: React.FC<ModalProps> = ({ onClose, children }) => {
+const Modal: React.FC<ModalProps> = ({  children }) => {
     return (
         <div className="modal-overlay">
             <div className="modal">
-                <button onClick={onClose} className="modal-close-button">
+                <button  className="modal-close-button">
                     Close
                 </button>
                 {children}

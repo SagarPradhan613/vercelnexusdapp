@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
         <>
 
             {isModalOpen && (
-                <Modal className='bg-[#000000] rounded-[50px] w-full'>
+                <Modal>
                     {/* <button onClick={HideModal}>Close</button>
                     <h1>This is the modal content</h1> */}
                     <>
@@ -166,7 +166,7 @@ const NavbarMobile = () => {
     return (
         <>
             {isModalOpen && (
-                <Modal className='bg-[#000000] rounded-[50px] w-full'>
+                <Modal>
                     {/* <button onClick={HideModal}>Close</button>
                     <h1>This is the modal content</h1> */}
                     <>
@@ -226,17 +226,32 @@ const NavbarMobile = () => {
                 <ul className='w-full space-y-8 px-16 py-8 flex flex-col h-full justify-between'>
                     <div className='space-y-8'>
                         <li className='w-full'>
-                            <div onClick={ShowModal} className='bg-black px-4 py-2 space-x-8 flex w-full rounded-full items-center justify-center'>
-                                <Image src={USER_ICON} alt="User Icon" className='w-[15.28px] h-[19.65px]' />
-                                <h1> Profile </h1>
-                            </div>
+                            <a href='/'>
+                                <div  className='bg-black px-4 py-2 relative z-50 space-x-8 flex w-full rounded-full items-center justify-center'>
+                                    {/* <Image src={USER_ICON} alt="User Icon" className='w-[15.28px] h-[19.65px]' /> */}
+                                    <h1> Home </h1>
+                                </div>
+                            </a>
+
                         </li>
 
                         <li className='w-full '>
-                            <div className='bg-black px-4 py-2 space-x-8 flex w-full rounded-full items-center justify-center'>
-                                <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' />
-                                <h1> Notifications </h1>
-                            </div>
+                            <a href='/launchpad'>
+                                <div  className='bg-black px-4 py-2 space-x-8 flex w-full rounded-full items-center justify-center'>
+                                    {/* <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' /> */}
+                                    <h1> Launchpad </h1>
+                                </div>
+                            </a>
+
+                        </li>
+                        <li className='w-full '>
+                            <a href='/nexus'>
+                                <div  className='bg-black px-4 py-2 space-x-8 flex w-full rounded-full items-center justify-center'>
+                                    {/* <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' /> */}
+                                    <h1> Nexus </h1>
+                                </div>
+                            </a>
+
                         </li>
                     </div>
 
