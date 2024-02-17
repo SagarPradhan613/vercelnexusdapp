@@ -22,7 +22,7 @@ export default function RootLayout({
           <div className="absolute top-0 left-0">
             <img src="/Images/masktopleft.png"></img>
           </div>
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
           <Footer />
         </div>

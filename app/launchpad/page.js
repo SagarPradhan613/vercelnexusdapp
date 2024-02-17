@@ -14,6 +14,7 @@ import { Featured } from '../components/Featured'
 import { Upcoming } from '../components/Upcoming'
 import { CompletedSales } from '../components/CompletedSales'
 import UpperFooter from '../components/UpperFooter'
+import { Navbar } from '../components/Navbar'
 
 
 
@@ -21,7 +22,8 @@ const Launchpad = () => {
     return (
         <>
             <AnimatePresence>
-                <Image src={ELLIPSE_TOP_LEFT} alt="Ellipse Top Left" className='absolute -top-36 -left-36' />
+            <Navbar></Navbar>
+                <Image src={ELLIPSE_TOP_LEFT} alt="Ellipse Top Left" className='absolute z-10 -top-36 -left-36' />
                 <Landing />
                 <Featured />
                 <Upcoming />

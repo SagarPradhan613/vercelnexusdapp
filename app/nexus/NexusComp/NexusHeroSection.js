@@ -8,26 +8,31 @@ import DISCROD_ICON from '@/assets/discord_icon.png'
 import { BLUE } from '@/app/constants'
 import { Inter, Poppins, ReadexProBold, Sen } from '@/app/fonts'
 import PLUS_ICON from '@/assets/plus_icon.png'
+import NEXUS_LOGO from '@/assets/nexus_logo.png'
 
-const HeroSection = () => {
+
+const NexusHeroSection = () => {
     return (
         <>
             <div className="MainContainer lg:mb-32 lg:flex block px-4 lg:px-28">
-                <div className="LeftContainer flex flex-col mr-6 justify-between lg:pt-20  lg:w-1/2 w-full">
+                <div className="LeftContainer flex flex-col mr-6 justify-between  lg:w-1/2 w-full">
                     <div>
-                        <div>
-                            <p className="text-[#0075FF] responsive-heading-size font-bold sen text-6xl md:text-8xl">Ultimate,</p>
+                        <div className="h-[43.4px]  w-[180px] ani relative z-50  hidden lg:flex text-white my-4 bg-[#0075FF] rounded-[36px] items-center justify-center px-10 space-x-4">
+                            <div className={`space-x-2 flex items-center justify-center tracking-widest uppercase ${ReadexProBold.className}`}>
+                                <Image src={NEXUS_LOGO} alt="Nexus Logo" className='w-[14.16px] h-[14.56px]' />
+                                <h1 className='text-base'>Nexus</h1>
+                            </div>
                         </div>
                         <div className="flex items-center justify-start">
-                            <p className="text-black font-black sen text-6xl md:text-8xl responsive-heading-size">Crypto</p>
-                            <img className="ml-6" src="/Images/star.png"></img>
+                            <p className="text-black font-black sen text-5xl md:text-8xl responsive-heading-size">Community</p>
+                            {/* <img className="ml-6" src="/Images/star.png"></img> */}
                         </div>
                         <div>
-                            <p className="text-black font-black sen text-6xl md:text-8xl responsive-heading-size">Launchpad</p>
+                            <p className="text-black font-black sen text-5xl md:text-8xl responsive-heading-size">Hub</p>
                         </div>
                     </div>
 
-                    <div className="lg:flex responsive-mt hidden justify-between  items-center">
+                    <div className="lg:flex lg:mt-16 responsive-mt hidden justify-between  items-center">
                         <div className='flex gap-4'>
                             <div className='px-4 responsive-padding responsive-btn-size py-2 ani w-[210px] relative z-50 rounded-[40px] text-white bg-[#0075FF] flex justify-between items-center'>
                                 <div className='mx-6'>
@@ -51,16 +56,14 @@ const HeroSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="RightContainer flex justify-center items-center relative lg:w-1/2 w-full">
-                    <div className="absolute top-20 z-10 w-full h-full rounded-[30px] bg-[#D4E8FF]">
+                <div className="RightContainer flex justify-center items-center relative mt-4 lg:mt-0 lg:w-1/2 w-full">
+                    <div className=" z-10 w-full h-full flex justify-center items-center rounded-[30px] bg-[#D4E8FF]">
+                        <img src="/Images/nexusheroright.png" alt="bg img" className="h-full w-full"></img>
+                    </div>
 
-                    </div>
-                    <div className="w-full relative z-40 h-full flex justify-center items-center">
-                        <img src="/Images/heroright.png" alt="bg img" className="h-full w-full"></img>
-                    </div>
                 </div>
             </div>
-            <div className='flex mt-28 px-4 lg:hidden items-center justify-center space-x-1'>
+            <div className='flex mt-10 lg:mt-28 px-4 lg:hidden items-center justify-center space-x-1'>
 
                 <div style={{
                     backgroundColor: BLUE,
@@ -88,4 +91,4 @@ const HeroSection = () => {
     )
 }
 
-export default HeroSection;
+export default NexusHeroSection;

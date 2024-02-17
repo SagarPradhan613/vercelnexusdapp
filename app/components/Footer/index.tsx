@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
 
             <div style={{
                 backgroundColor: BLUE
-            }} className='mx-8 mt-20 lg:mx-28 mb-12 rounded-[50px] py-4 px-8 flex items-center justify-between'>
+            }} className='mx-8 mt-10 lg:mt-20 lg:mx-28 mb-12 rounded-[50px] py-4 px-8 flex items-center justify-between'>
 
                 <div className={`space-x-2 flex items-center justify-center tracking-widest uppercase `}>
                     <Image src={NEXUS_LOGO} alt="Nexus Logo" className='w-[14.16px] h-[14.56px]' />

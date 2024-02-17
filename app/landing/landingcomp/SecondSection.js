@@ -11,7 +11,7 @@ const SecondSection = () => {
                     <div>
                         <div className="flex items-center gap-6">
                             <img src="/Images/revolution.png" className="lg:w-1/4 w-1/6"></img>
-                            <p className="font-semibold mt-4 md:text-2xl text-base readex">Revolutionizing <br></br>Launchpad</p>
+                            <p className="font-semibold mt-4 md:text-2xl text-base readex responsive-font">Revolutionizing <br></br>Launchpad</p>
                         </div>
                     </div>
                     <div className='flex mt-4 items-center'>
