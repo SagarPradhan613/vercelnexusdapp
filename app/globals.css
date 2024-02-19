@@ -93,6 +93,14 @@
   transform: scale(1.1);
 }
 
+.anilogo {
+  transition: transform 0.5s ease;
+}
+
+.anilogo:hover {
+  transform: scale(1.3);
+}
+
 .anireverse {
   transition: transform 0.5s ease;
 }
@@ -141,6 +149,20 @@
 
 .star {
   animation: shine 2s ease-in-out infinite;
+}
+
+@keyframes moveup {
+  0% {
+    transform: translateY(100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.moveup{
+  animation: moveup 1s ease-out;
 }
 
 .bgchange {
@@ -196,22 +218,26 @@
     font-size: 1rem !important;
   }
 
-
-  .responsive-logo-size{
+.responsive-planet{
+  left:-2rem !important;
+}
+  .responsive-logo-size {
     width: 40px !important;
     height: 40px !important;
   }
-  .responsive-logo-container-margin{
+
+  .responsive-logo-container-margin {
     margin-right: 0.5rem !important;
   }
-  
+
 }
 
 @media screen and (min-width:1080px) and (max-width:1500px) {
   .responsive-hide {
     display: none !important;
   }
-  .responsive-card-width{
+
+  .responsive-card-width {
     width: 40%;
   }
 }
@@ -220,7 +246,8 @@
   .responsive-hide {
     display: none !important;
   }
-  .responsive-card-width{
+
+  .responsive-card-width {
     width: 32%;
   }
 }
@@ -239,10 +266,141 @@
 
   .responsive-nexus-padding {
     padding-left: 2rem !important;
-    padding-right: 2rem !important; 
+    padding-right: 2rem !important;
+  }
+  .responsive-salescard-width{
+    min-width: 315px !important;
   }
 }
 
-.active{
+.active {
   background-color: #0075FF;
+}
+
+.glow {
+  transition: all 0.6s ease-in-out;
+}
+
+.glow:hover {
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(45, 255, 196, 0.57);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(45, 255, 196, 0.57);
+  box-shadow: 0px 0px 24px 0px rgba(104, 157, 255, 0.57);
+}
+
+.big-glow {
+  transition: all 0.6s ease-in-out;
+}
+
+.big-glow:hover {
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(45, 255, 196, 0.57);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(45, 255, 196, 0.57);
+  box-shadow: 0px 0px 28px 4px rgba(104, 157, 255, 0.57);
+}
+
+
+
+@media screen and (min-width:1080px) and (max-width:1300px) {
+  .responsive-absolute-btn-width {
+    width: 150px !important;
+  }
+
+  .responsive-absolute-btn-pos {
+    left: 10.5vw !important;
+  }
+ 
+}
+
+@media screen and (min-width:1900px) {
+  .responsive-absolute-btn-width {
+    width: 230px !important;
+  }
+
+  .responsive-absolute-btn-pos {
+    left: 8.7vw !important;
+  }
+}
+
+@media screen and (min-width:1400px) {
+  .responsive-absolute-btn-width {
+    width: 180px !important;
+  }
+
+  .responsive-absolute-btn-pos {
+    left: 9.5vw !important;
+  }
+}
+
+@media screen and (min-width:1500px) {
+ .responsive-feature{
+  max-width: 1200px !important;
+ }
+ .responsive-upcoming-width{
+  width: 1200px !important;
+ }
+ .responsive-featureRight-img{
+  width: 700px !important;
+ }
+ .responsive-planet{
+  left: 2% !important;
+ }
+ .responsive-salescard-height{
+  min-height: 385px;
+ }
+ .responsive-salescard-width{
+  min-width: 385px !important;
+}
+}
+
+@media screen and (min-width:1800px) {
+  .responsive-absolute-btn-width {
+    width: 230px !important;
+  }
+
+  .responsive-absolute-btn-pos {
+    left: 8.5vw !important;
+  }
+}
+
+@media screen and (min-width:2500px) {
+  .responsive-absolute-btn-width {
+    width: 320px !important;
+  }
+
+  .responsive-absolute-btn-pos {
+    left: 7.7vw !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .responsive-absolute-btn-width {
+    width: 130px !important;
+  }
+
+  .responsive-absolute-btn-pos {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+  .responsive-absolute-btn-width {
+    width: 200px !important;
+  }
+
+  .responsive-absolute-btn-pos {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.transition-effect {
+  transition: opacity 0.5s ease; /* Adjust duration and easing */
+  opacity: 0; /* Initially hidden */
+}
+.transition-effect.visible {
+  opacity: 1; /* Visible when active */
 }

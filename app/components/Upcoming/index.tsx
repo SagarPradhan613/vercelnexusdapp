@@ -67,7 +67,7 @@ export const Upcoming = () => {
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className=' invert rotate-180 w-[14.16px] h-[14.56px]' />
                 </div>
 
-                <div ref={carouselContainer} className="w-full overflow-hidden h-full lg:w-[1000px] z-10 gap-4 rounded-[36px] flex p-2 items-center" style={{ scrollBehavior: 'smooth' }}>
+                <div ref={carouselContainer} className="w-full overflow-hidden h-full responsive-upcoming-width lg:w-[1000px] z-10 gap-4 rounded-[36px] flex p-2 items-center" style={{ scrollBehavior: 'smooth' }}>
 
                     {Array(9)
                         .fill(0)
@@ -88,18 +88,18 @@ export const Upcoming = () => {
 
 const UpcomingCards = () => {
     return (
-        <div className="text-white h-full p-2 md:min-w-[265px] min-w-[300px] lg:min-w-[317px] bg-[#191F25] rounded-[36px]">
+        <div className="text-white h-full p-2 md:min-w-[265px] min-w-[300px] responsive-salescard-width lg:min-w-[385px] bg-[#191F25] rounded-[36px]">
 
             <div className="w-full relative">
                 <Image src={UPCOMING_CARD_1_BANNER} alt="upcoming card 1 banner" className="w-[378.56px] h-[218.44px] rounded-[26px]" />
                 <div className="absolute right-4 bottom-4 rounded-[36px] px-2 py-1 bg-black">
                     <div className="flex items-center justify-start">
                         {/* <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[28px] h-[28px]" /> */}
-                        <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="w-[28px] h-[28px]" />
+                        <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="w-[28px] h-[28px] anilogo relative z-30" />
                         {/* <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[28px] h-[28px]" /> */}
-                        <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="w-[28px] h-[28px]" />
+                        <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="w-[28px] h-[28px] anilogo relative z-30" />
                         {/* <Image src={DISCORD_ICON} alt="Discord Icon" className="w-[28px] h-[28px]" /> */}
-                        <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[28px] h-[28px]" />
+                        <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[28px] h-[28px] anilogo relative z-30" />
                     </div></div>
             </div>
 
@@ -113,10 +113,10 @@ const UpcomingCards = () => {
             </div>
 
             <div className="flex space-x-2 py-2 mx-4 my-2">
-                <div className="rounded-[12px] px-4 py-2 bg-[#00316A]">
+                <div className="rounded-[12px] px-4 glow py-2 bg-[#00316A]">
                     <h1 className={`text-xs ${ReadexProMedium.className}`}>BRC 20</h1>
                 </div>
-                <div className="rounded-[12px] px-4 py-2 bg-[#00316A]">
+                <div className="rounded-[12px] px-4 glow py-2 bg-[#00316A]">
                     <h1 className={`text-xs ${ReadexProMedium.className}`}>Ordinals</h1>
                 </div>
             </div>

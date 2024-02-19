@@ -24,28 +24,29 @@ console.log(active)
                     <div className="lg:flex flex-wrap justify-center relative z-30 lg:mt-16 mt-6 gap-6">
                         <div  className={`responsive-card-width w-full rounded-[50px] bgchange  flex px-8 py-6 lg:px-8 lg:py-8`}>
                             <div className="w-1/2 mr-3  flex justify-center items-center">
-                                <img className="h-[75px] w-[75px]" src="/Images/forth1.png"></img>
+                                <img className="lg:h-[70px] lg:w-[70px] h-[40px] w-[40px]" src="https://nexusprotocol.s3.eu-north-1.amazonaws.com/NexusImages/Nexus-N.svg"></img>
                             </div>
-                            <div>
-                                <p className="text-white font-bold text-sm lg:text-xl">Native super-app + trading terminal <span className="font-medium">supported on desktop & mobile.</span> </p>
+                            <div className="flex items-center">
+                                <p className="text-white font-bold text-sm lg:text-xl">Community backed launches infused into an innovative platform.  </p>
                             </div>
                         </div>
 
                         <div  className={`responsive-card-width my-4 lg:my-0 w-full rounded-[50px] bgchange  flex px-8 py-6 lg:px-8 lg:py-8`}>
                             <div className="w-1/2  mr-3 flex justify-center items-center">
-                                <img className="h-[75px] w-[75px]" src="/Images/forth2.png"></img>
+                                <img className="lg:h-[70px] lg:w-[70px] h-[40px] w-[40px]" src="https://nexusprotocol.s3.eu-north-1.amazonaws.com/NexusImages/Hammer.svg"></img>
                             </div>
-                            <div>
-                                <p className="text-white font-bold text-sm lg:text-xl">Native super-app + trading terminal <span className="font-medium">supported on desktop & mobile.</span> </p>
+                            <div className="flex items-center">
+                                <p className="text-white font-bold text-sm lg:text-xl">Premium experience on all devices with user-friendly interface.  </p>
                             </div>
                         </div>
 
                         <div  className={`responsive-card-width  w-full rounded-[50px] bgchange  flex px-8 py-6 lg:px-8 lg:py-8`}>
                             <div className="w-1/2  mr-3 flex justify-center items-center">
-                                <img className="h-[75px] w-[75px]" src="/Images/forth3.png"></img>
+                                <img className="lg:h-[70px] lg:w-[70px] h-[40px] w-[40px]" src="https://nexusprotocol.s3.eu-north-1.amazonaws.com/NexusImages/Settings.svg"></img>
+                                
                             </div>
-                            <div>
-                                <p className="text-white font-bold text-sm lg:text-xl">Native super-app + trading terminal <span className="font-medium">supported on desktop & mobile.</span> </p>
+                            <div className="flex items-center">
+                                <p className="text-white font-bold text-sm lg:text-xl">Perfected crafted tools for all new launchpad experience.<span className="font-medium">supported on desktop & mobile.</span> </p>
                             </div>
                         </div>
 

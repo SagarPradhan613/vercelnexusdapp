@@ -105,8 +105,8 @@ export const Landing: React.FC = () => {
                             backgroundColor: BLUE,
                         }} className='w-full max-w-[350px] h-[50px] rounded-[36px] px-2 text-white flex items-center justify-between'>
                             <h1 className={`${Poppins.className}  mx-3 text-sm inline-block whitespace-nowrap font-semibold`}>Get Started</h1>
-                            <div className='bg-white rounded-[50%] w-[28px] h-[28px] flex items-center justify-center'>
-                                <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[14.16px] h-[14.56px]' />
+                            <div className='bg-white relative z-30 rounded-[50%] ani w-[28px] h-[28px] flex items-center justify-center'>
+                                <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[14.16px] h-[14.56px] ' />
                             </div>
                         </div>
 
@@ -116,11 +116,11 @@ export const Landing: React.FC = () => {
                         <div className='w-full h-[50px] max-w-[350px] rounded-[36px]  text-white bg-black flex items-center justify-center'>
                             <div className="flex items-center space-x-2">
                                 {/* <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[42px] h-[42px]" /> */}
-                                <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="w-[42px] h-[42px]" />
+                                <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="w-[42px] h-[42px] anilogo relative z-30" />
                                 {/* <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[42px] h-[42px]" /> */}
-                                <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="w-[42px] h-[42px]" />
+                                <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="w-[42px] h-[42px] anilogo relative z-30" />
                                 {/* <Image src={DISCROD_ICON} alt="Discord Icon" className="w-[42px] h-[42px]" /> */}
-                                <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[42px] h-[42px]" />
+                                <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[42px] h-[42px] anilogo relative z-30" />
                             </div>
                         </div>
 

@@ -21,13 +21,14 @@ export const Featured = () => {
         <section className="w-full overflow-hidden relative">
 
             <Image src={FEATURED_LEFT_RINGS} alt="Featured Left Rings" className="featured_ellipse_left hidden lg:block absolute w-[800px] h-[800px]" />
-            <Image src={FEATURED_LEFT_RINGS_CENTER} alt="Featured Left Rings Center" className="planet featured_left_rings hidden lg:block absolute left-24 z-50 w-[200px] h-[200px]" />
+            <Image src={FEATURED_LEFT_RINGS_CENTER} alt="Featured Left Rings Center" className="planet responsive-planet featured_left_rings hidden lg:block absolute left-24 z-50 w-[200px] h-[200px]" />
             <Image src={FEATURED_RIGHT_RINGS} alt="Featured Right Rings" className="featured_ellipse_right hidden lg:block absolute w-[800px] h-[800px]" />
 
             <h1 className={`text-center overflow-hidden hidden lg:block ${Sen.className} my-8 font-bold text-7xl`}>
                 Featured
                 <span style={{
-                    color: BLUE
+                    color: BLUE,
+                    marginLeft:"20px",
                 }}>
                     Launch
                 </span>
@@ -46,7 +47,7 @@ export const Featured = () => {
 
             <div className="flex items-center justify-center px-4 lg:px-0 w-full">
 
-                <div className="bg-black h-full w-full lg:max-w-[1000px] z-10 rounded-[36px] p-2 flex flex-col lg:flex-row justify-between">
+                <div className="bg-black h-full w-full responsive-feature lg:max-w-[1000px] z-10 rounded-[36px] p-2 flex flex-col lg:flex-row justify-between">
 
                     <div className="w-full h-full flex-col p-8 text-white">
 
@@ -61,20 +62,20 @@ export const Featured = () => {
                                 <h1 className={`text-2xl font-semibold ${ReadexProMedium.className}`}>Lorem Ipsum</h1>
                                 <div className="flex items-center space-x-2">
                                     {/* <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[39.71px] h-[39.71px]" /> */}
-                                    <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="w-[39.71px] h-[39.71px]" />
+                                    <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="w-[39.71px] h-[39.71px] anilogo relative z-30" />
                                     {/* <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[39.71px] h-[39.71px]" /> */}
-                                    <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="w-[39.71px] h-[39.71px]" />
+                                    <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="w-[39.71px] h-[39.71px] anilogo relative z-30" />
                                     {/* <Image src={DISCROD_ICON} alt="Discord Icon" className="w-[39.71px] h-[39.71px]" /> */}
-                                    <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[39.71px] h-[39.71px]" />
+                                    <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[39.71px] h-[39.71px] anilogo relative z-30" />
                                 </div>
                             </div>
                         </div>
 
-                        <div className="flex space-x-2 py-2 mt-4 w-full items-center justify-center lg:justify-start">
-                            <div className="rounded-[12px] px-4 py-2 bg-[#00316A]">
+                        <div className="flex space-x-3 py-2 mt-4 w-full items-center justify-center lg:justify-start">
+                            <div className="rounded-[12px] px-4 py-2 big-glow bg-[#00316A]">
                                 <h1 className={`text-xs ${ReadexProMedium.className}`}>BRC 20</h1>
                             </div>
-                            <div className="rounded-[12px] px-4 py-2 bg-[#00316A]">
+                            <div className="rounded-[12px] px-4 big-glow py-2 bg-[#00316A]">
                                 <h1 className={`text-xs ${ReadexProMedium.className}`}>Ordinals</h1>
                             </div>
                         </div>
@@ -121,7 +122,7 @@ export const Featured = () => {
 
                     </div>
                     <div className="p-1 lg:p-0">
-                        <Image src={FEATURED_RIGHT_BANNER} alt="Featured Right Banner" className="w-full max-w-[1200px] rounded-[19px] h-full" />
+                        <Image src={FEATURED_RIGHT_BANNER} alt="Featured Right Banner" className="w-full max-w-[1200px] responsive-featureRight-img rounded-[19px] h-full" />
                     </div>
 
                 </div>

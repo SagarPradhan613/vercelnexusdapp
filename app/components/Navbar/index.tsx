@@ -66,32 +66,32 @@ export const Navbar: React.FC = () => {
                         <div className='bg-[#000000] text-white sem px-10 py-8 rounded-[50px] w-full'>
                             <div className='flex justify-between items-center'>
                                 <p className='text-xl lg:text-3xl'>Sign in</p>
-                                <img src='/Images/modalarrow.png' onClick={HideModal} className='w-[40px] h-[40px]'></img>
+                                <img  src='/Images/modalarrow.png' onClick={HideModal} className='w-[40px] ani h-[40px]'></img>
                             </div>
                             <div className='w-full mt-10 flex justify-center items-center'>
-                                <p className='font-medium lg:text-base text-sm text-white opacity-55 readex'>Your Nexus wallet in one click</p>
+                                <p className='font-medium lg:text-base text-sm text-white opacity-55 readex'>Your Nexus experience is one click away</p>
                             </div>
 
-                            <div className='mt-6 rounded-[40px] py-4 bg-[#111928] flex justify-center items-center'>
+                            <div className='mt-6 rounded-[40px] ani py-4 bg-[#111928] flex justify-center items-center'>
                                 <img src='/Images/google.png'></img>
                             </div>
                             <div className='mt-4 gap-2 flex w-full'>
-                                <div className='w-1/3 bg-[#111928] py-2 rounded-[40px] flex justify-center items-center'>
+                                <div className='w-1/3 ani bg-[#111928] py-2 rounded-[40px] flex justify-center items-center'>
                                     <img src='/Images/twitter.png'></img>
                                 </div>
-                                <div className='w-1/3 bg-[#111928] py-2 rounded-[40px] flex justify-center items-center'>
+                                <div className='w-1/3 ani bg-[#111928] py-2 rounded-[40px] flex justify-center items-center'>
                                     <img src='/Images/fb.png'></img>
                                 </div>
-                                <div className='w-1/3 bg-[#111928] py-2 rounded-[40px] flex justify-center items-center'>
+                                <div className='w-1/3 ani bg-[#111928] py-2 rounded-[40px] flex justify-center items-center'>
                                     <img src='/Images/discord.png'></img>
                                 </div>
 
                             </div>
-                            <div className='mt-6 font-medium readex border-[#263043] border lg:text-lg text-[#0075FF] text-base rounded-[40px] py-4 flex justify-center items-center'>
+                            <div className='mt-6 ani font-medium readex border-[#263043] border lg:text-lg text-[#0075FF] text-base rounded-[40px] py-4 flex justify-center items-center'>
                                 View More Options
                             </div>
                             <div className='w-full mt-10 flex justify-center items-center'>
-                                <p className='font-medium lg:text-base text-sm text-white opacity-55 readex'>We do not store any data related to social login</p>
+                                <p className='font-medium lg:text-base text-sm text-white opacity-55 readex'>We do not store any personal information</p>
                             </div>
 
                             <div className='bg-[#FFFFFF40] w-full h-[1px] bg-white opacity-40 mt-10'>
@@ -102,7 +102,7 @@ export const Navbar: React.FC = () => {
 
                             </input>
 
-                            <div className='mt-6 px-8 rounded-[40px] py-4 bg-[#0075FF] w-full  flex justify-between items-center'>
+                            <div className='mt-6 ani px-8 rounded-[40px] py-4 bg-[#0075FF] w-full  flex justify-between items-center'>
                                 <p>Continue</p>
                                 <img src='/Images/continue.png'></img>
                             </div>

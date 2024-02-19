@@ -88,7 +88,7 @@ const NexusFaq = () => {
                 </div>
                 <div class="relative ac-container h-full rounded-[25px] bg-white py-3 transition-all duration-300 ease-in border border-[rgba(0,0,0,0.3)] my-3 sm:mx-40  lg:py-5">
                     <div className=''>
-                        <input id="ac-4" name="accordion-4" type="checkbox"   checked={accordionChecked === 'ac-1'}
+                        <input id="ac-4" name="accordion-4" type="checkbox"   checked={accordionChecked === 'ac-4'}
                                 onChange={() => handleAccordionChange('ac-4')} />
                         <span className='absolute right-2 top-2 lg:right-3 lg:top-5'>
                             {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 h-6 text-black">

@@ -44,12 +44,12 @@ const HeroSection = () => {
 
                         <div className="h-[32px] responsive-logo-container-margin lg:w-[200px] mr-4 responsive-margin lg:h-[56.85px] flex text-white bg-black rounded-[36px] items-center justify-center px-2 space-x-2">
                             <div className="flex justify-center items-center space-x-2">
-                                {/* <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" /> */}
-                                <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="relative z-50 ani cursor-pointer w-10 lg:w-[54.82px] responsive-logo-size lg:h-[54.82px]" />
-                                {/* <Image src={TWITTER_ICON} alt="Twitter Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" /> */}
-                                <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="relative z-50  ani cursor-pointer w-10 lg:w-[54.82px] responsive-logo-size lg:h-[54.82px]" />
-                                {/* <Image src={DISCROD_ICON} alt="Discord Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" /> */}
-                                <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="relative z-50  ani cursor-pointer w-10 lg:w-[54.82px] responsive-logo-size lg:h-[54.82px]" />
+                                {/* <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="z-10 anilogo cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" /> */}
+                                <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="relative z-50 anilogo cursor-pointer w-10 lg:w-[54.82px] responsive-logo-size lg:h-[54.82px]" />
+                                {/* <Image src={TWITTER_ICON} alt="Twitter Icon" className="z-10 anilogo cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" /> */}
+                                <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="relative z-50  anilogo cursor-pointer w-10 lg:w-[54.82px] responsive-logo-size lg:h-[54.82px]" />
+                                {/* <Image src={DISCROD_ICON} alt="Discord Icon" className="z-10 anilogo cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" /> */}
+                                <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="relative z-50  anilogo cursor-pointer w-10 lg:w-[54.82px] responsive-logo-size lg:h-[54.82px]" />
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@ const HeroSection = () => {
                     backgroundColor: BLUE,
                 }} className='w-full max-w-[350px] h-[50px] rounded-[36px] px-2 text-white flex items-center justify-between'>
                     <h1 className={`${Poppins.className}  mx-3 text-sm inline-block whitespace-nowrap font-semibold`}>Get Started</h1>
-                    <div className='bg-white rounded-[50%] w-[28px] h-[28px] flex items-center justify-center'>
+                    <div className='bg-white ani relative z-30 rounded-[50%] w-[28px] h-[28px] flex items-center justify-center'>
                         <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[14.16px] h-[14.56px]' />
                     </div>
                 </div>
@@ -84,11 +84,11 @@ const HeroSection = () => {
                 <div className='w-full h-[50px] max-w-[350px] rounded-[36px]  text-white bg-black flex items-center justify-center'>
                     <div className="flex items-center space-x-2">
                         {/* <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[42px] h-[42px]" /> */}
-                        <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="w-[42px] h-[42px]" />
+                        <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="w-[42px] h-[42px] anilogo relative z-30" />
                         {/* <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[42px] h-[42px]" /> */}
-                        <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="w-[42px] h-[42px]" />
+                        <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="w-[42px] h-[42px] anilogo relative z-30" />
                         {/* <Image src={DISCROD_ICON} alt="Discord Icon" className="w-[42px] h-[42px]" /> */}
-                        <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[42px] h-[42px]" />
+                        <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[42px] h-[42px] anilogo relative z-30" />
                     </div>
                 </div>
 

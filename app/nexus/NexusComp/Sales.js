@@ -22,18 +22,18 @@ const Sales = () => {
                             </div>
 
                             <div className="flex justify-center items-center">
-                                <div className="hidden border text-base font-semibold border-black rounded-[36px] px-10 py-3 lg:flex justify-center items-center">
+                                <div className="hidden ani border text-base font-semibold border-black rounded-[36px] px-10 py-3 lg:flex justify-center items-center">
                                     Proof
                                 </div>
 
-                                <div className="ml-4">
+                                <div className="ml-4 ani">
                                     <img className="h-[45px] w-[45px]" src="/Images/faqarrow.png"></img>
                                 </div>
                             </div>
 
                         </div>
                         <div className="px-4">
-                            <div className="lg:hidden py-2 w-full  border border-black rounded-[36px] flex flex-col justify-center items-center">
+                            <div className="lg:hidden ani py-2 w-full  border border-black rounded-[36px] flex flex-col justify-center items-center">
                                 Proof
                             </div>
                         </div>

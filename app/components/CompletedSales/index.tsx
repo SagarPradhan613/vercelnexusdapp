@@ -61,7 +61,7 @@ export const CompletedSales = () => {
                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='invert rotate-180 w-[14.16px] h-[14.56px]' />
                 </div>
 
-                <div ref={carouselContainer} className="w-full overflow-hidden h-full lg:w-[1000px] gap-4 z-10 rounded-[36px] flex p-2">
+                <div ref={carouselContainer} className="w-full overflow-hidden h-full responsive-upcoming-width responsive-salescard-height lg:w-[1000px] gap-4 z-10 rounded-[36px] flex p-2">
                     {Array(9).fill(0).map((_, i) => (
                         <SalesCard key={i} />
                     ))}
@@ -79,18 +79,18 @@ export const CompletedSales = () => {
 
 const SalesCard = () => {
     return (
-        <div className=" text-white h-full p-3 md:min-w-[265px] min-w-[300px] lg:min-w-[317px] bg-[#191F25] rounded-[36px]">
+        <div className=" text-white h-full p-3 md:min-w-[265px] min-w-[300px] responsive-salescard-height responsive-salescard-width  bg-[#191F25] rounded-[36px]">
             <div className="flex items-start m-4">
                 <Image src={RECT_IMAGE_UPCOMING_CARD} alt="rect image upcoming card" className="w-[48.91px]" />
                 <div className="flex items-start px-4 justify-start w-full space-x-2 flex-col">
                     <h1 className={`${ReadexProBold.className} text-lg`}>Lorem Ipsum</h1>
                     <div className="flex items-center justify-start">
                         {/* <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[28px] h-[28px]" /> */}
-                        <img src="/Images/hdtelegramlogo.png" alt="telegram icon" className=" w-[28px] h-[28px]"/>
+                        <img src="/Images/hdtelegramlogo.png" alt="telegram icon" className=" w-[28px] h-[28px] anilogo relative z-30"/>
                         {/* <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[28px] h-[28px]" /> */}
-                        <img src="/Images/hdtwitterlogo.png" alt="Twitter Icon" className="w-[28px] h-[28px]" />
+                        <img src="/Images/hdtwitterlogo.png" alt="Twitter Icon" className="w-[28px] h-[28px] anilogo relative z-30" />
                         {/* <Image src={DISCROD_ICON} alt="Discord Icon" className="w-[28px] h-[28px]" /> */}
-                        <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[28px] h-[28px]" />
+                        <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[28px] h-[28px] anilogo relative z-30" />
                     </div>
                 </div>
             </div>
@@ -99,11 +99,11 @@ const SalesCard = () => {
                 <div className="w-full h-[2px] bg-[#2D333A]"></div>
             </div>
 
-            <div className="flex space-x-2 py-2 mx-4 my-2">
-                <div className="rounded-[12px] px-4 py-2 bg-[#00316A]">
+            <div className="flex space-x-3 py-2 mx-4 my-2">
+                <div className="rounded-[12px] px-4 py-2 glow bg-[#00316A]">
                     <h1 className={`text-xs ${ReadexProMedium.className}`}>BRC 20</h1>
                 </div>
-                <div className="rounded-[12px] px-4 py-2 bg-[#00316A]">
+                <div className="rounded-[12px] px-4 py-2 glow bg-[#00316A]">
                     <h1 className={`text-xs ${ReadexProMedium.className}`}>Ordinals</h1>
                 </div>
             </div>
@@ -134,7 +134,7 @@ const SalesCard = () => {
 
             <div style={{
                 backgroundColor: BLUE,
-            }} className='w-full h-[50px] my-4 z-10 anireverse cursor-pointer rounded-[36px] px-2 text-white flex items-center justify-between'>
+            }} className='w-full h-[50px] my-10 z-10 anireverse cursor-pointer rounded-[36px] px-2 text-white flex items-center justify-between'>
                 <h1 className={`${Poppins.className} w-full ml-8 text-sm font-semibold`}>
                     Participate Now
                 </h1>
