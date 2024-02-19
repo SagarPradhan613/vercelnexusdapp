@@ -14,7 +14,7 @@ import NEXUS_LOGO from '@/assets/nexus_logo.png'
 const NexusHeroSection = () => {
     return (
         <>
-            <div className="MainContainer lg:mb-32 lg:flex block px-4 lg:px-28">
+            <div className="MainContainer lg:mb-32 lg:flex block px-4 lg:px-20">
                 <div className="LeftContainer flex flex-col mr-6 justify-between  lg:w-1/2 w-full">
                     <div>
                         <div className="h-[43.4px]  w-[180px] ani relative z-50  hidden lg:flex text-white my-4 bg-[#0075FF] rounded-[36px] items-center justify-center px-10 space-x-4">
@@ -32,26 +32,29 @@ const NexusHeroSection = () => {
                         </div>
                     </div>
 
-                    <div className="lg:flex lg:mt-16 responsive-mt hidden justify-between  items-center">
+                    <div className="lg:flex responsive-mt lg:mt-16 hidden justify-between  items-center">
                         <div className='flex gap-4'>
-                            <div className='px-4 responsive-padding responsive-btn-size py-2 ani w-[210px] relative z-50 rounded-[40px] text-white bg-[#0075FF] flex justify-between items-center'>
-                                <div className='mx-6'>
+                            <div className='px-4 responsive-padding responsive-btn-size py-2 ani w-[200px] relative z-50 rounded-[40px] text-white bg-[#0075FF] flex justify-between items-center'>
+                                <div className='mx-3'>
                                     <p className='font-semibold text-base whitespace-nowrap'>Get Started</p>
                                 </div>
                                 <div className='rounded-[50%] h-[39px] flex w-[39px] justify-center items-center bg-white'>
                                     <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-1/2' />
                                 </div>
                             </div>
-                            <div className='px-4 responsive-btn-size py-2 w-[210px] ani relative z-50 rounded-[100px] text-black bg-white border border-black flex text-center justify-center items-center'>
+                            <div className='px-4 responsive-btn-size py-2 w-[161px] ani relative z-50 rounded-[100px] text-black bg-white border border-black flex text-center justify-center items-center'>
                                 <p className='font-semibold text-base whitespace-nowrap'>Know More</p>
                             </div>
                         </div>
 
-                        <div className="h-[32px] responsive-margin lg:h-[56.85px] flex text-white bg-black rounded-[36px] items-center justify-between px-2 space-x-2">
-                            <div className="flex items-center space-x-2">
-                                <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
-                                <Image src={TWITTER_ICON} alt="Twitter Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
-                                <Image src={DISCROD_ICON} alt="Discord Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
+                        <div className="h-[32px] responsive-logo-container-margin lg:w-[200px] mr-4 responsive-margin lg:h-[56.85px] flex text-white bg-black rounded-[36px] items-center justify-center px-2 space-x-2">
+                            <div className="flex justify-center items-center space-x-2">
+                                {/* <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" /> */}
+                                <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="relative z-50 ani cursor-pointer w-10 lg:w-[54.82px] responsive-logo-size lg:h-[54.82px]" />
+                                {/* <Image src={TWITTER_ICON} alt="Twitter Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" /> */}
+                                <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="relative z-50  ani cursor-pointer w-10 lg:w-[54.82px] responsive-logo-size lg:h-[54.82px]" />
+                                {/* <Image src={DISCROD_ICON} alt="Discord Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" /> */}
+                                <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="relative z-50  ani cursor-pointer w-10 lg:w-[54.82px] responsive-logo-size lg:h-[54.82px]" />
                             </div>
                         </div>
                     </div>

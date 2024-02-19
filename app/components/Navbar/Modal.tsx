@@ -10,9 +10,9 @@ const Modal: React.FC<ModalProps> = ({  children }) => {
     return (
         <div className="modal-overlay">
             <div className="modal">
-                <button  className="modal-close-button">
+                {/* <button  className="modal-close-button">
                     Close
-                </button>
+                </button> */}
                 {children}
             </div>
         </div>

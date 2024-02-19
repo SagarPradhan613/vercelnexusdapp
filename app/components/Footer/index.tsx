@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
 
             <div style={{
                 backgroundColor: BLUE
-            }} className='mx-8 mt-10 lg:mt-20 lg:mx-28 mb-12 rounded-[50px] py-4 px-8 flex items-center justify-between'>
+            }} className='mx-8 mt-10 lg:mt-28 lg:mx-16 mb-12 rounded-[50px] py-4 px-8 flex items-center justify-between'>
 
                 <div className={`space-x-2 flex items-center justify-center tracking-widest uppercase `}>
                     <Image src={NEXUS_LOGO} alt="Nexus Logo" className='w-[14.16px] h-[14.56px]' />
@@ -34,9 +34,12 @@ export const Footer: React.FC = () => {
 
                 <div className="h-[32px] lg:h-[56.85px] flex text-white bg-black rounded-[36px] items-center justify-between px-4 space-x-2">
                     <div className="flex items-center space-x-2">
-                        <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
-                        <Image src={TWITTER_ICON} alt="Twitter Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
-                        <Image src={DISCROD_ICON} alt="Discord Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
+                        {/* <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" /> */}
+                        <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="relative z-50 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
+                        {/* <Image src={TWITTER_ICON} alt="Twitter Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" /> */}
+                        <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="relative z-50  ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
+                        {/* <Image src={DISCROD_ICON} alt="Discord Icon" className="z-10 ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" /> */}
+                        <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="relative z-50  ani cursor-pointer w-10 lg:w-[54.82px]  lg:h-[54.82px]" />
                     </div>
                 </div>
             </div>

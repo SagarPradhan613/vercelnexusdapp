@@ -19,7 +19,7 @@ const UpperFooter = () => {
                 </div>
             </div> */}
 
-            <div className="flex items-center relative justify-center w-full p-8 lg:px-28">
+            <div className="flex items-center relative justify-center w-full p-8 lg:px-20">
                 <Image src={LAUNCH_BANNER} alt="Launch Banner" className="w-full" />
                 <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 flex items-center justify-center">
                     <div className='bg-white z-10 ani cursor-pointer rounded-full w-[50px] h-[50px] flex items-center justify-center'>

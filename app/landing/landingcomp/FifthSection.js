@@ -3,7 +3,7 @@
 const FifthSection = () => {
     return (
         <>
-            <div className="mt-6 lg:mt-32 w-full lg:gap-7 px-4 lg:px-28">
+            <div className="mt-6 lg:mt-32 w-full lg:gap-7 px-4 lg:px-20">
                 <div className="flex flex-col w-full justify-center items-center">
                     <p className="text-black sen font-bold text-3xl lg:text-7xl text-center">Easy &<span className="text-[#0075FF] ml-6">Cutting Edge</span> </p>
                     <p className="text-center lg:mt-8 mt-2 font-medium lg:text-2xl text-sm">We provide straight forward tools that maximize <br></br> financial opportunities.</p>

@@ -6,7 +6,7 @@ import ARROW_LEFT_ICON from '@/assets/arrow_left_icon.png';
 const SecondSection = () => {
     return (
         <>
-            <div className="lg:flex mt-10 lg:mt-0 w-full lg:gap-7 px-4 lg:px-28">
+            <div className="lg:flex mt-10 lg:mt-0 w-full lg:gap-7 px-4 lg:px-20">
                 <div className="lg:w-[45%] w-full rounded-[50px] h-[80px] md:h-[140px] px-5 py-3 pb-5 bg-black items-center text-white flex justify-between ">
                     <div>
                         <div className="flex items-center gap-6">
@@ -15,9 +15,11 @@ const SecondSection = () => {
                         </div>
                     </div>
                     <div className='flex mt-4 items-center'>
-                        <div className='rounded-[50%] h-[39px] flex w-[39px] justify-center items-center bg-white'>
-                            <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-1/2' />
-                        </div>
+                        <a href='/launchpad'  >
+                            <div className='rounded-[50%] h-[39px] ani relative z-30 flex w-[39px] justify-center items-center bg-white'>
+                                <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-1/2' />
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div className="w-full mt-4 lg:mt-0 h-[80px] md:h-[140px] bg-[#0075FF] flex justify-around items-center py-3 lg:px-4 px-3 rounded-[50px]">

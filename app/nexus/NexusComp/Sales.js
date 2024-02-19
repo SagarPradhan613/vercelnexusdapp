@@ -1,7 +1,7 @@
 const Sales = () => {
     return (
         <>
-            <div className="MainContainer lg:mb-32 lg:flex block px-4 lg:px-28">
+            <div className="MainContainer lg:mb-32 lg:flex block px-4 lg:px-20">
                 <div className="w-full mt-6 lg:mt-24 flex flex-col justify-center items-center">
                     <p className="font-semibold text-[#0075FF] text-3xl lg:text-7xl "><span className="text-black readex  mr-3 lg:mr-6">Completed</span>Sales Report</p>
 

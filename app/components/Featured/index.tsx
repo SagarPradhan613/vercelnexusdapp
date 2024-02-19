@@ -60,9 +60,12 @@ export const Featured = () => {
                             <div className="space-y-2 w-full">
                                 <h1 className={`text-2xl font-semibold ${ReadexProMedium.className}`}>Lorem Ipsum</h1>
                                 <div className="flex items-center space-x-2">
-                                    <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[39.71px] h-[39.71px]" />
-                                    <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[39.71px] h-[39.71px]" />
-                                    <Image src={DISCROD_ICON} alt="Discord Icon" className="w-[39.71px] h-[39.71px]" />
+                                    {/* <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[39.71px] h-[39.71px]" /> */}
+                                    <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="w-[39.71px] h-[39.71px]" />
+                                    {/* <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[39.71px] h-[39.71px]" /> */}
+                                    <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="w-[39.71px] h-[39.71px]" />
+                                    {/* <Image src={DISCROD_ICON} alt="Discord Icon" className="w-[39.71px] h-[39.71px]" /> */}
+                                    <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[39.71px] h-[39.71px]" />
                                 </div>
                             </div>
                         </div>

@@ -17,11 +17,19 @@ import { usePathname } from "next/navigation";
 export const Navbar: React.FC = () => {
     const pathname = usePathname();
 
-    const [isNavbarOpen, setIsNavbarOpen] = useState(false)
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+    const[blueBg,setBlueBg] =useState(false);
 
     const navbarToggle = () => {
-        setIsNavbarOpen((prev) => !prev)
-    }
+        setIsNavbarOpen((prev) => !prev);
+    };
+
+    
+
+    const closeNavbar = () => {
+        setIsNavbarOpen(false);
+        ShowModal();
+    };
 
     useEffect(() => {
         if (isNavbarOpen) {
@@ -32,17 +40,19 @@ export const Navbar: React.FC = () => {
     }, [isNavbarOpen])
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-
+    console.log(isModalOpen,"modal open now")
     // const toggleModal = () => {
     //     setIsModalOpen((prev) => !prev);
     // };
 
     const ShowModal = () => {
         setIsModalOpen(true);
+        setBlueBg(true);
     }
 
     const HideModal = () => {
         setIsModalOpen(false);
+        setBlueBg(false);
     }
 
     return (
@@ -101,12 +111,12 @@ export const Navbar: React.FC = () => {
                 </Modal>
             )}
             <div className='flex relative z-50 items-center justify-center w-full'>
-                <nav className="w-screen max-w-[2660px] h-[68.6px] lg:h-[144.55px] flex items-center px-4 lg:px-28 justify-between">
+                <nav className="w-screen max-w-[2660px] h-[68.6px] lg:h-[144.55px] flex items-center px-4 lg:px-20 justify-between">
 
-                    {isNavbarOpen && <NavbarMobile />}
+                    {isNavbarOpen && <NavbarMobile closeNavbar={closeNavbar} />}
 
-                    <div className="h-[32px] lg:h-[56.85px] flex text-white bg-[#0075FF] lg:bg-black rounded-[36px] items-center justify-between lg:px-10 space-x-4">
-                        <div className={pathname === '/' ? `space-x-2 active flex bgchange py-2 px-3 rounded-[36px] items-center justify-center tracking-widest uppercase readex ${ReadexProBold.className}` : `space-x-2 flex bgchange py-2 px-3 rounded-[36px] items-center justify-center tracking-widest uppercase  readex ${ReadexProBold.className}`} >
+                    <div className="h-[32px] lg:h-[56.85px] flex text-white bg-[#0075FF] lg:bg-black rounded-[36px] items-center justify-between lg:px-2 lg:pr-6 space-x-4">
+                        <div className={pathname === '/' ? `space-x-2 active flex bgchange py-2 lg:px-6 px-3 rounded-[36px] items-center justify-center tracking-widest uppercase readex ${ReadexProBold.className}` : `space-x-2 flex bgchange py-2 lg:px-6 px-3  rounded-[36px] items-center justify-center tracking-widest uppercase  readex ${ReadexProBold.className}`} >
                             <Image src={NEXUS_LOGO} alt="Nexus Logo" className='w-[14.16px] h-[14.56px]' />
                             <a href='/'><h1 className='text-base'>Nexus</h1></a>
                         </div>
@@ -121,8 +131,8 @@ export const Navbar: React.FC = () => {
                     </div>
 
                     <div className='flex items-center justify-center space-x-2'>
-                        <div className='bg-black anireverse hidden lg:flex lg:w-[55px] lg:h-[50px] w-[32px] h-[32px] rounded-[50%] items-center justify-center'>
-                            <Image onClick={ShowModal} src={USER_ICON} alt="User Icon" className='w-[15.28px] hidden lg:block h-[19.65px]' />
+                        <div onClick={ShowModal} className={`bg-${blueBg ? '[#0075FF]' : 'black'} anireverse hidden lg:flex lg:w-[55px] lg:h-[50px] w-[32px] h-[32px] rounded-[50%] items-center justify-center`}>
+                            <Image  src={USER_ICON} alt="User Icon" className='w-[19.28px] hidden lg:block h-[19.65px]' />
                         </div>
                         <div onClick={navbarToggle} style={{
                             zIndex: 1000,
@@ -130,7 +140,7 @@ export const Navbar: React.FC = () => {
                             <Image src={HAMBURGER_ICON} alt="Hamburger Icon" className='w-[8.76px] h-[8.73px]' />
                         </div>
                         <div className='bg-black hidden anireverse lg:flex w-[55px] h-[50px] rounded-full items-center justify-center'>
-                            <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' />
+                            <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[19.28px] h-[19.65px]' />
                         </div>
                         <div style={{
                             backgroundColor: BLUE,
@@ -148,7 +158,8 @@ export const Navbar: React.FC = () => {
     )
 }
 
-const NavbarMobile = () => {
+const NavbarMobile = ({ closeNavbar }: { closeNavbar: () => void }) => {
+    
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     // const toggleModal = () => {
@@ -163,6 +174,10 @@ const NavbarMobile = () => {
         setIsModalOpen(false);
     }
 
+    const HandleProfile = () =>{
+        
+    }
+    console.log(isModalOpen,"modal open now")
     return (
         <>
             {isModalOpen && (
@@ -251,6 +266,22 @@ const NavbarMobile = () => {
                                     <h1> Nexus </h1>
                                 </div>
                             </a>
+
+                        </li>
+                        <li className='w-full '>
+                           
+                                <div  onClick={() => { closeNavbar();ShowModal();  }} className='bg-black px-4 py-2 space-x-8 flex w-full rounded-full items-center justify-center'>
+                                    {/* <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' /> */}
+                                    <h1> Profile </h1>
+                                </div>
+
+                        </li>
+                        <li className='w-full '>
+                           
+                                <div  className='bg-black px-4 py-2 space-x-8 flex w-full rounded-full items-center justify-center'>
+                                    {/* <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' /> */}
+                                    <h1> Notificatin </h1>
+                                </div>
 
                         </li>
                     </div>

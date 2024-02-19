@@ -177,7 +177,7 @@
   }
 
   .responsive-btn-size {
-    width: 150px !important;
+    width: 180px !important;
   }
 
   .responsive-padding {
@@ -196,10 +196,35 @@
     font-size: 1rem !important;
   }
 
+
+  .responsive-logo-size{
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .responsive-logo-container-margin{
+    margin-right: 0.5rem !important;
+  }
+  
+}
+
+@media screen and (min-width:1080px) and (max-width:1500px) {
   .responsive-hide {
     display: none !important;
   }
+  .responsive-card-width{
+    width: 40%;
+  }
 }
+
+@media screen and (min-width:1501px) {
+  .responsive-hide {
+    display: none !important;
+  }
+  .responsive-card-width{
+    width: 32%;
+  }
+}
+
 
 /* nexus responsive */
 

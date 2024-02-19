@@ -21,9 +21,9 @@ console.log(active)
                         <p className="text-center lg:mt-8 mt-4 font-medium lg:text-2xl text-sm">We provide straight forward tools that maximize <br></br> financial opportunities.</p>
                     </div>
 
-                    <div className="lg:flex relative z-30 lg:mt-16 mt-6 gap-6">
-                        <div  className={`lg:w-1/3 w-full rounded-[50px] bgchange  flex px-8 py-6 lg:px-8 lg:py-8`}>
-                            <div className="w-1/2 mr-3 responsive-hide flex justify-center items-center">
+                    <div className="lg:flex flex-wrap justify-center relative z-30 lg:mt-16 mt-6 gap-6">
+                        <div  className={`responsive-card-width w-full rounded-[50px] bgchange  flex px-8 py-6 lg:px-8 lg:py-8`}>
+                            <div className="w-1/2 mr-3  flex justify-center items-center">
                                 <img className="h-[75px] w-[75px]" src="/Images/forth1.png"></img>
                             </div>
                             <div>
@@ -31,8 +31,8 @@ console.log(active)
                             </div>
                         </div>
 
-                        <div  className={`lg:w-1/3 my-4 lg:my-0 w-full rounded-[50px] bgchange  flex px-8 py-6 lg:px-8 lg:py-8`}>
-                            <div className="w-1/2 responsive-hide mr-3 flex justify-center items-center">
+                        <div  className={`responsive-card-width my-4 lg:my-0 w-full rounded-[50px] bgchange  flex px-8 py-6 lg:px-8 lg:py-8`}>
+                            <div className="w-1/2  mr-3 flex justify-center items-center">
                                 <img className="h-[75px] w-[75px]" src="/Images/forth2.png"></img>
                             </div>
                             <div>
@@ -40,8 +40,8 @@ console.log(active)
                             </div>
                         </div>
 
-                        <div  className={`lg:w-1/3  w-full rounded-[50px] bgchange  flex px-8 py-6 lg:px-8 lg:py-8`}>
-                            <div className="w-1/2 responsive-hide mr-3 flex justify-center items-center">
+                        <div  className={`responsive-card-width  w-full rounded-[50px] bgchange  flex px-8 py-6 lg:px-8 lg:py-8`}>
+                            <div className="w-1/2  mr-3 flex justify-center items-center">
                                 <img className="h-[75px] w-[75px]" src="/Images/forth3.png"></img>
                             </div>
                             <div>

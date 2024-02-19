@@ -7,14 +7,14 @@ import Image from "next/image"
 
 import UPCOMING_CARD_1_BANNER from "@/assets/upcoming_card_1_banner.png"
 import UPCOMING_BACKGROUND from "@/assets/upcoming_background.png"
- 
+
 import RECT_IMAGE_UPCOMING_CARD from "@/assets/rect_image_upcoming_card.png"
 import ARROW_LEFT_ICON from "@/assets/arrow_left_icon.png"
 
 import TELEGRAM_ICON from "@/assets/telegram_icon.png"
 import TWITTER_ICON from "@/assets/twitter_icon.png"
 import DISCORD_ICON from "@/assets/discord_icon.png"
-import { useRef } from "react" 
+import { useRef } from "react"
 
 export const Upcoming = () => {
 
@@ -94,9 +94,12 @@ const UpcomingCards = () => {
                 <Image src={UPCOMING_CARD_1_BANNER} alt="upcoming card 1 banner" className="w-[378.56px] h-[218.44px] rounded-[26px]" />
                 <div className="absolute right-4 bottom-4 rounded-[36px] px-2 py-1 bg-black">
                     <div className="flex items-center justify-start">
-                        <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[28px] h-[28px]" />
-                        <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[28px] h-[28px]" />
-                        <Image src={DISCORD_ICON} alt="Discord Icon" className="w-[28px] h-[28px]" />
+                        {/* <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[28px] h-[28px]" /> */}
+                        <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="w-[28px] h-[28px]" />
+                        {/* <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[28px] h-[28px]" /> */}
+                        <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="w-[28px] h-[28px]" />
+                        {/* <Image src={DISCORD_ICON} alt="Discord Icon" className="w-[28px] h-[28px]" /> */}
+                        <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[28px] h-[28px]" />
                     </div></div>
             </div>
 

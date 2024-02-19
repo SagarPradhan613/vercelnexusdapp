@@ -85,9 +85,12 @@ const SalesCard = () => {
                 <div className="flex items-start px-4 justify-start w-full space-x-2 flex-col">
                     <h1 className={`${ReadexProBold.className} text-lg`}>Lorem Ipsum</h1>
                     <div className="flex items-center justify-start">
-                        <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[28px] h-[28px]" />
-                        <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[28px] h-[28px]" />
-                        <Image src={DISCROD_ICON} alt="Discord Icon" className="w-[28px] h-[28px]" />
+                        {/* <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[28px] h-[28px]" /> */}
+                        <img src="/Images/hdtelegramlogo.png" alt="telegram icon" className=" w-[28px] h-[28px]"/>
+                        {/* <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[28px] h-[28px]" /> */}
+                        <img src="/Images/hdtwitterlogo.png" alt="Twitter Icon" className="w-[28px] h-[28px]" />
+                        {/* <Image src={DISCROD_ICON} alt="Discord Icon" className="w-[28px] h-[28px]" /> */}
+                        <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[28px] h-[28px]" />
                     </div>
                 </div>
             </div>

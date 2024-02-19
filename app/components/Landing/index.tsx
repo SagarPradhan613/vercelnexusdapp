@@ -19,7 +19,7 @@ export const Landing: React.FC = () => {
         <div className='flex items-center relative z-20 w-full'>
             <section className='p-4  w-full '>
 
-                <div className='flex flex-col lg:flex-row w-full  lg:px-28 justify-between'>
+                <div className='flex flex-col lg:flex-row w-full  lg:px-20 justify-between'>
 
                     <div className='flex flex-col w-full items-start'>
 
@@ -30,12 +30,20 @@ export const Landing: React.FC = () => {
                             </div>
                         </div>
 
-                        <p className={`lg:text-8xl md:text-[50px] sm:text-[50px] text-4xl overflow-hidden w-full font-black sen `}>
+                        {/* <p className={`lg:text-8xl md:text-[50px] sm:text-[50px] text-4xl overflow-hidden w-full font-black sen `}>
                             Crypto
                             <Image src={STAR_ICON} alt="Star Icon" className='inline star mx-8' />
                             <br />
                             Launchpad
-                        </p>
+                        </p> */}
+
+                         <div className="flex items-center justify-start">
+                            <p className="text-black font-black sen text-6xl md:text-8xl responsive-heading-size">Crypto</p>
+                            <img className="ml-6" src="/Images/star.png"></img>
+                        </div>
+                        <div>
+                            <p className="text-black font-black sen text-6xl md:text-8xl responsive-heading-size">Launchpad</p>
+                        </div>
 
                         <div className='hidden overflow-visible lg:flex items-start space-x-4 my-16'>
                             {/* <div style={{
@@ -52,7 +60,9 @@ export const Landing: React.FC = () => {
                                     Know More
                                 </h1>
                             </div> */}
-                            <div className='flex gap-6'>
+
+
+                            {/* <div className='flex gap-6'>
                                 <div className='p-4 ani w-[210px] relative z-50 rounded-[40px] text-white bg-[#0075FF] flex justify-between items-center'>
                                     <div className='mx-6'>
                                         <p className='font-semibold text-base whitespace-nowrap'>Get Started</p>
@@ -62,6 +72,19 @@ export const Landing: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className='p-4 w-[210px] ani relative z-50 rounded-[40px] text-black bg-white border border-black flex text-center justify-center items-center'>
+                                    <p className='font-semibold text-base whitespace-nowrap'>Know More</p>
+                                </div>
+                            </div> */}
+                            <div className='flex gap-4'>
+                                <div className='px-4 responsive-padding responsive-btn-size py-2 ani w-[200px] relative z-50 rounded-[40px] text-white bg-[#0075FF] flex justify-between items-center'>
+                                    <div className='mx-3'>
+                                        <p className='font-semibold text-base whitespace-nowrap'>Get Started</p>
+                                    </div>
+                                    <div className='rounded-[50%] h-[39px] flex w-[39px] justify-center items-center bg-white'>
+                                        <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-1/2' />
+                                    </div>
+                                </div>
+                                <div className='px-4 responsive-btn-size py-2 w-[161px] ani relative z-50 rounded-[100px] text-black bg-white border border-black flex text-center justify-center items-center'>
                                     <p className='font-semibold text-base whitespace-nowrap'>Know More</p>
                                 </div>
                             </div>
@@ -90,12 +113,14 @@ export const Landing: React.FC = () => {
                         <div className='min-w-[50px] min-h-[50px] bg-white border-2 rounded-[36px] px-4 text-white flex items-center justify-center'>
                             <Image src={PLUS_ICON} alt="plus Icon" className='max-w-[14.16px] max-h-[14.56px]' />
                         </div>
-
-                        <div className='w-full h-[50px] max-w-[350px] rounded-[36px] px-4 text-white bg-black flex items-center justify-center'>
+                        <div className='w-full h-[50px] max-w-[350px] rounded-[36px]  text-white bg-black flex items-center justify-center'>
                             <div className="flex items-center space-x-2">
-                                <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[42px] h-[42px]" />
-                                <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[42px] h-[42px]" />
-                                <Image src={DISCROD_ICON} alt="Discord Icon" className="w-[42px] h-[42px]" />
+                                {/* <Image src={TELEGRAM_ICON} alt="Telegram Icon" className="w-[42px] h-[42px]" /> */}
+                                <img src='/Images/hdtelegramlogo.png' alt="Telegram Icon" className="w-[42px] h-[42px]" />
+                                {/* <Image src={TWITTER_ICON} alt="Twitter Icon" className="w-[42px] h-[42px]" /> */}
+                                <img src='/Images/hdtwitterlogo.png' alt="Twitter Icon" className="w-[42px] h-[42px]" />
+                                {/* <Image src={DISCROD_ICON} alt="Discord Icon" className="w-[42px] h-[42px]" /> */}
+                                <img src='/Images/hddiscordlogo.png' alt="Discord Icon" className="w-[42px] h-[42px]" />
                             </div>
                         </div>
 
