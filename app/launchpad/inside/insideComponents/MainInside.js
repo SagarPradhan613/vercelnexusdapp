@@ -573,12 +573,12 @@ const MainInside = () => {
                                                 <br /><br />
                                                 <span className='font-semibold lg:text-xl text-sm opacity-100'>Governance of the Protocol</span>
                                                 <br />
-                                                The token's governance utility allows holders to participate in decision-making processes related to the protocol's development. Token holders can vote and propose changes, upgrades, and other governance decisions.
+                                                The token&apos;s governance utility allows holders to participate in decision-making processes related to the protocol&apos;s development. Token holders can vote and propose changes, upgrades, and other governance decisions.
                                                 The active participation of token holders in governance enhances decentralization and community involvement. This engagement can attract more users and developers, contributing positively to the overall ecosystem.
                                                 <br /><br />
                                                 <span className='font-semibold lg:text-xl text-sm opacity-100'>Profit-Sharing (4% of Fees)</span>
                                                 <br></br>
-                                                The profit-sharing mechanism, where token holders receive a portion (4%) of the fees generated on the platform, directly ties the token's value to the success and growth of the business. As the project gains traction and more users utilize its services, the total fees generated increase.
+                                                The profit-sharing mechanism, where token holders receive a portion (4%) of the fees generated on the platform, directly ties the token&apos;s value to the success and growth of the business. As the project gains traction and more users utilize its services, the total fees generated increase.
                                                 <br></br><br></br>
 
                                                 Token holders benefit from a share of these: trading fees on dex for buyback, incentives for stakers and NFT holders, trading competitions.
@@ -1094,7 +1094,7 @@ const MainInside = () => {
 
                                                 <div className=' ml-5 '>
                                                     <p className='font-medium mt-1  lg:font-normal text-xs lg:text-sm text-white lg:opacity-60 opacity-50'>14th Dec 10:00 - 18th Dec 10:00 UTC</p>
-                                                    <p className='font-medium mt-3 text-xs lg:font-medium lg:text-base text-white opacity-50 lg:opacity-90'>Ape Launchpad uses a smart contract to randomly select tickets, making it fair for all applicants to win token allocations. At this time, you'll be able to check your participation to see if you're a winner. You can only use USDC to invest. Remember to engage on Twitter/X to increase your chances.</p>
+                                                    <p className='font-medium mt-3 text-xs lg:font-medium lg:text-base text-white opacity-50 lg:opacity-90'>Ape Launchpad uses a smart contract to randomly select tickets, making it fair for all applicants to win token allocations. At this time, you&apos;ll be able to check your participation to see if you&apos;re a winner. You can only use USDC to invest. Remember to engage on Twitter/X to increase your chances.</p>
                                                 </div>
 
                                             </div>
