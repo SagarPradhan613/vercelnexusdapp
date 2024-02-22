@@ -17,14 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ReadexProMedium.className}>
+      <body className={ReadexProMedium.className} style={{minHeight:"100vh"}}>
         <div className="relative">
-          <div className="absolute top-0 left-0">
-            <img src="/Images/masktopleft.png"></img>
+          <div className="absolute top-0 left-0 h-full">
+            <img src="/Images/masktopleft.png" className="h-full hidden lg:block"></img>
           </div>
           {/* <Navbar /> */}
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </body>
     </html>

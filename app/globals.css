@@ -27,6 +27,7 @@
   padding: 0;
   box-sizing: border-box;
   /* overflow-x: hidden; */
+  scrollbar-width: thin;
 }
 
 
@@ -161,7 +162,7 @@
   }
 }
 
-.moveup{
+.moveup {
   animation: moveup 1s ease-out;
 }
 
@@ -218,9 +219,10 @@
     font-size: 1rem !important;
   }
 
-.responsive-planet{
-  left:-2rem !important;
-}
+  .responsive-planet {
+    left: -2rem !important;
+  }
+
   .responsive-logo-size {
     width: 40px !important;
     height: 40px !important;
@@ -268,7 +270,8 @@
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
-  .responsive-salescard-width{
+
+  .responsive-salescard-width {
     min-width: 315px !important;
   }
 }
@@ -283,6 +286,17 @@
 
 .glow:hover {
   transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(45, 255, 196, 0.57);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(45, 255, 196, 0.57);
+  box-shadow: 0px 0px 24px 0px rgba(104, 157, 255, 0.57);
+}
+
+.cardglow {
+  transition: all 0.6s ease-in-out;
+}
+
+.cardglow:hover {
+  transform: scale(0.95);
   -webkit-box-shadow: 0px 0px 24px 0px rgba(45, 255, 196, 0.57);
   -moz-box-shadow: 0px 0px 24px 0px rgba(45, 255, 196, 0.57);
   box-shadow: 0px 0px 24px 0px rgba(104, 157, 255, 0.57);
@@ -309,7 +323,7 @@
   .responsive-absolute-btn-pos {
     left: 10.5vw !important;
   }
- 
+
 }
 
 @media screen and (min-width:1900px) {
@@ -333,24 +347,29 @@
 }
 
 @media screen and (min-width:1500px) {
- .responsive-feature{
-  max-width: 1200px !important;
- }
- .responsive-upcoming-width{
-  width: 1200px !important;
- }
- .responsive-featureRight-img{
-  width: 700px !important;
- }
- .responsive-planet{
-  left: 2% !important;
- }
- .responsive-salescard-height{
-  min-height: 385px;
- }
- .responsive-salescard-width{
-  min-width: 385px !important;
-}
+  .responsive-feature {
+    max-width: 1200px !important;
+  }
+
+  .responsive-upcoming-width {
+    width: 1200px !important;
+  }
+
+  .responsive-featureRight-img {
+    width: 700px !important;
+  }
+
+  .responsive-planet {
+    left: 2% !important;
+  }
+
+  .responsive-salescard-height {
+    min-height: 385px;
+  }
+
+  .responsive-salescard-width {
+    min-width: 385px !important;
+  }
 }
 
 @media screen and (min-width:1800px) {
@@ -398,9 +417,123 @@
 }
 
 .transition-effect {
-  transition: opacity 0.5s ease; /* Adjust duration and easing */
-  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease;
+  /* Adjust duration and easing */
+  opacity: 0;
+  /* Initially hidden */
 }
+
 .transition-effect.visible {
-  opacity: 1; /* Visible when active */
+  opacity: 1;
+  /* Visible when active */
+}
+
+* {
+  user-select: auto !important;
+}
+
+/* dapp css */
+
+@media (min-width: 1080px) and (max-width: 1500px) {
+  .responsive-notification-card {
+    width: 48%;
+  }
+
+  .responsive-notification-cat {
+    gap: 12px !important;
+  }
+  .responsive-inside-path-head{
+    font-size: 1rem !important;
+  }
+  .responsive-inside-path-para{
+    font-size: 0.8rem !important;
+  }
+  .responsive-inside-path-padding{
+    padding-left: 0.8rem !important;
+    padding-right: 1rem !important;
+  }
+  .responsive-inside-path-img{
+    height: 25px;
+    width: 25px;
+  }
+  .responsive-inside-switch-text{
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (min-width: 1500px) {
+  .responsive-notification-card {
+    width: 49%;
+  }
+}
+
+html {
+  --scrollbarBG: #12161A;
+  --thumbBG: #023571;
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+::-webkit-scrollbar-track {
+  background: #12161A !important;
+  /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #023571 !important;
+  /* Color of the scrollbar handle */
+  border-radius: 25px !important;
+  /* Radius of the scrollbar handle */
+}
+
+.btnanimation{
+  background-color: #191F2552 !important;
+  transition: all 0.5s ease;
+}
+.btnanimation:hover{
+  background-color: #0075FF !important;
+  border: none !important;
+
+}
+.insidebtn{
+  background-color: black !important;
+  transition: all 0.5s ease;
+}
+
+.btnanimation:hover .insidebtn {
+  background-color: white !important;
+}
+
+.arrowbg{
+  background-color: #0075FF !important;
+  transition: all 0.5s ease;
+}
+
+.btnanimation:hover .arrowbg{
+  background-color: white !important;
+}
+.btnanimation:hover .mainarrow {
+  stroke: black; /* Change the stroke color to white */
+}
+.mainarrow{
+  stroke: white;
+  transition: all 0.5s ease;
+  width: 20px;
 }

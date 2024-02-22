@@ -35,7 +35,7 @@ export const Featured = () => {
             </h1>
 
 
-            <h1 className={`text-center block lg:hidden ${Sen.className} my-8 font-bold text-4xl  g:text-7xl`}>
+            <h1 className={`text-center block lg:hidden ${Sen.className}   my-8 font-bold text-4xl  g:text-7xl`}>
                 Makes Us
                 <span style={{
                     color: BLUE,

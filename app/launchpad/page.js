@@ -15,20 +15,24 @@ import { Upcoming } from '../components/Upcoming'
 import { CompletedSales } from '../components/CompletedSales'
 import UpperFooter from '../components/UpperFooter'
 import { Navbar } from '../components/Navbar'
-
+import { Footer } from '../components/Footer'
 
 
 const Launchpad = () => {
     return (
         <>
             <AnimatePresence>
-            <Navbar></Navbar>
-                <Image src={ELLIPSE_TOP_LEFT} alt="Ellipse Top Left" className='absolute z-10 -top-36 -left-36' />
-                <Landing />
-                <Featured />
-                <Upcoming />
-                <CompletedSales />
-                <UpperFooter />
+                <div className='pb-16'>
+                    <Navbar></Navbar>
+                    <Image src={ELLIPSE_TOP_LEFT} alt="Ellipse Top Left" className='absolute z-10 -top-36 -left-36' />
+                    <Landing />
+                    <Featured />
+                    <Upcoming />
+                    <CompletedSales />
+                    <UpperFooter />
+                    <Footer></Footer>
+                </div>
+
             </AnimatePresence>
         </>
     )

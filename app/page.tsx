@@ -14,18 +14,23 @@ import ForthSection from './landing/landingcomp/ForthSection'
 import FifthSection from './landing/landingcomp/FifthSection'
 import SixthSection from './landing/landingcomp/SixthSection'
 import { Navbar } from "./components/Navbar"
+import { Footer } from "./components/Footer"
 
 export default function Home() {
 
   return (
     <>
-      <Navbar></Navbar>
+    <div className="pb-16">
+        <Navbar></Navbar>
       <HeroSection></HeroSection>
       <SecondSection></SecondSection>
       <ThirdSection></ThirdSection>
       <ForthSection></ForthSection>
       <FifthSection></FifthSection>
       <SixthSection></SixthSection>
+      <Footer></Footer>
+    </div>
+    
     </>
   )
 }

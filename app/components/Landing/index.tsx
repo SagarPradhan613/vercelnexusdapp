@@ -37,7 +37,7 @@ export const Landing: React.FC = () => {
                             Launchpad
                         </p> */}
 
-                         <div className="flex items-center justify-start">
+                        <div className="flex items-center justify-start">
                             <p className="text-black font-black sen text-6xl md:text-8xl responsive-heading-size">Crypto</p>
                             <img className="ml-6" src="/Images/star.png"></img>
                         </div>
@@ -76,14 +76,18 @@ export const Landing: React.FC = () => {
                                 </div>
                             </div> */}
                             <div className='flex gap-4'>
-                                <div className='px-4 responsive-padding responsive-btn-size py-2 ani w-[200px] relative z-50 rounded-[40px] text-white bg-[#0075FF] flex justify-between items-center'>
-                                    <div className='mx-3'>
-                                        <p className='font-semibold text-base whitespace-nowrap'>Get Started</p>
+                                <a href='/launchpad/inside'>
+                                    <div className='px-4 responsive-padding responsive-btn-size py-2 ani w-[200px] relative z-50 rounded-[40px] text-white bg-[#0075FF] flex justify-between items-center'>
+
+                                        <div className='mx-3'>
+                                            <p className='font-semibold text-base whitespace-nowrap'>Get Started</p>
+                                        </div>
+
+                                        <div className='rounded-[50%] h-[39px] flex w-[39px] justify-center items-center bg-white'>
+                                            <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-1/2' />
+                                        </div>
                                     </div>
-                                    <div className='rounded-[50%] h-[39px] flex w-[39px] justify-center items-center bg-white'>
-                                        <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-1/2' />
-                                    </div>
-                                </div>
+                                </a>
                                 <div className='px-4 responsive-btn-size py-2 w-[161px] ani relative z-50 rounded-[100px] text-black bg-white border border-black flex text-center justify-center items-center'>
                                     <p className='font-semibold text-base whitespace-nowrap'>Know More</p>
                                 </div>
@@ -100,16 +104,16 @@ export const Landing: React.FC = () => {
                     </div>
 
                     <div className='flex lg:hidden items-center justify-center space-x-1'>
-
-                        <div style={{
-                            backgroundColor: BLUE,
-                        }} className='w-full max-w-[350px] h-[50px] rounded-[36px] px-2 text-white flex items-center justify-between'>
-                            <h1 className={`${Poppins.className}  mx-3 text-sm inline-block whitespace-nowrap font-semibold`}>Get Started</h1>
-                            <div className='bg-white relative z-30 rounded-[50%] ani w-[28px] h-[28px] flex items-center justify-center'>
-                                <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[14.16px] h-[14.56px] ' />
+                        <a href='/launchpad/inside'>
+                            <div style={{
+                                backgroundColor: BLUE,
+                            }} className='w-full max-w-[350px] h-[50px] rounded-[36px] px-2 text-white flex items-center justify-between'>
+                                <h1 className={`${Poppins.className}  mx-3 text-sm inline-block whitespace-nowrap font-semibold`}>Get Started</h1>
+                                <div className='bg-white relative z-30 rounded-[50%] ani w-[28px] h-[28px] flex items-center justify-center'>
+                                    <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[14.16px] h-[14.56px] ' />
+                                </div>
                             </div>
-                        </div>
-
+                        </a>
                         <div className='min-w-[50px] min-h-[50px] bg-white border-2 rounded-[36px] px-4 text-white flex items-center justify-center'>
                             <Image src={PLUS_ICON} alt="plus Icon" className='max-w-[14.16px] max-h-[14.56px]' />
                         </div>

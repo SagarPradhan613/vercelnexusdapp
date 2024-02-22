@@ -33,7 +33,7 @@ const SixthSection = () => {
                         </div>
                         <div className="flex w-1/2 justify-center items-center">
                             <div className="bg-[#191F25] p-4 text-[#84BCFF] rounded-[20px]">
-                                <p>If you don’t generate yield, the transaction doesn’t go through.</p>
+                                <p>If you don&apos;t generate yield, the transaction doesn&apos;t go through.</p>
                             </div>
                         </div>
                     </div>

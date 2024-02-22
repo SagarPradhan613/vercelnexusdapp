@@ -17,7 +17,7 @@ console.log(active)
                 </div>
                 <div className="  lg:mt-16  w-full lg:gap-7 px-4 lg:px-28">
                     <div className="flex flex-col w-full justify-center items-center">
-                        <p className="text-black sen font-bold text-3xl lg:text-7xl text-center">Makes us <span className="text-[#0075FF]">Better</span> </p>
+                        <p className="text-black relative z-30 sen font-bold text-3xl lg:text-7xl text-center">Makes us <span className="text-[#0075FF]">Better</span> </p>
                         <p className="text-center lg:mt-8 mt-4 font-medium lg:text-2xl text-sm">We provide straight forward tools that maximize <br></br> financial opportunities.</p>
                     </div>
 
