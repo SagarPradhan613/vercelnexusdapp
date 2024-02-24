@@ -190,6 +190,20 @@
   }
 }
 
+/* body reposnive */
+
+@media screen and (min-width:1080px) and (max-width:1300px) {
+ .responsive-body-padding{
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+ }
+ .responsive-cutting-edge-margin{
+  margin-left: 1rem !important;
+ }
+ .responsive-cat-text{
+  font-size: 0.5rem !important;
+ }
+}
 
 /* landing responsive */
 
@@ -464,6 +478,12 @@
 @media (min-width: 1500px) {
   .responsive-notification-card {
     width: 49%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .hide-responsive-img{
+    display:none;
   }
 }
 

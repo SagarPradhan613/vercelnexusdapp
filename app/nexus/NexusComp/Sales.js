@@ -1,7 +1,7 @@
 const Sales = () => {
     return (
         <>
-            <div className="MainContainer lg:mb-32 lg:flex block px-4 lg:px-20">
+            <div className="MainContainer lg:mb-32 lg:flex block px-4  lg:px-20">
                 <div className="w-full mt-6 lg:mt-24 flex flex-col justify-center items-center">
                     <p className="font-semibold text-[#0075FF] text-3xl lg:text-7xl "><span className="text-black readex  mr-3 lg:mr-6">Completed</span>Sales Report</p>
 
@@ -22,11 +22,11 @@ const Sales = () => {
                             </div>
 
                             <div className="flex justify-center items-center">
-                                <div className="hidden ani border text-base font-semibold border-black rounded-[36px] px-10 py-3 lg:flex justify-center items-center">
+                                <div className="hidden relative z-30 ani border text-base font-semibold border-black rounded-[36px] px-10 py-3 lg:flex justify-center items-center">
                                     Proof
                                 </div>
 
-                                <div className="ml-4 ani">
+                                <div className="ml-4 ani relative z-30">
                                     <img className="h-[45px] w-[45px]" src="/Images/faqarrow.png"></img>
                                 </div>
                             </div>

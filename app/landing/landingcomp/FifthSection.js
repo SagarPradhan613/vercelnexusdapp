@@ -1,124 +1,3 @@
-
-
-// const FifthSection = () => {
-//     return (
-//         <>
-//             <div className="mt-6 lg:mt-32 w-full lg:gap-7 px-4 lg:px-20">
-//                 <div className="flex flex-col w-full justify-center items-center">
-//                     <p className="text-black sen font-bold text-3xl lg:text-7xl text-center">Easy &<span className="text-[#0075FF] ml-6">Cutting Edge</span> </p>
-//                     <p className="text-center lg:mt-8 mt-2 font-medium lg:text-2xl text-sm">We provide straight forward tools that maximize <br></br> financial opportunities.</p>
-//                 </div>
-
-//                 <div className="MainContainer mt-8 lg:mt-16 lg:mb-16  lg:flex block">
-//                     <div className="LeftContainer flex flex-col mr-6  lg:pt-20  lg:w-1/2 w-full">
-//                         <div className="flex px-4 ">
-//                             <div className="lg:w-[20%] w-[50%] flex flex-col justify-center items-center">
-//                                 <div className="flex mob-width flex-col justify-center items-center">
-//                                     <img className="h-full w-full" src="/Images/fifthleftlogo.png"></img>
-//                                 </div>
-//                                 <div className="lg:mt-6 mt-3 w-[2px] lg:h-[90px] h-[50px] bg-[#C1C1C1]">
-
-//                                 </div>
-//                                 {/* <div className="hidden lg:flex  items-center flex-col">
-//                                     <div className="flex">
-//                                         <p className="font-black text-6xl">.</p>
-
-//                                     </div>
-
-//                                 </div> */}
-//                             </div>
-
-//                             <div className="ml-6">
-//                                 <p className="lg:text-4xl font-semibold text-xl text-[#0075FF] readex">Sandwich Automation</p>
-//                                 <p className="text-xs mt-2 lg:text-xl font-bold text-black">Put all your idle coins to work.</p>
-
-//                                 <p className="lg:mt-8 mt-4 font-medium lg:text-base text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s</p>
-
-
-//                             </div>
-
-//                         </div>
-//                         <div className="hidden lg:flex mt-4  items-center ">
-//                             <div className="flex lg:w-[6vw] justify-center mr-2   h-full items-center">
-//                                 <p className="font-black text-6xl mb-[33px]">.</p>
-//                             </div>
-
-
-//                             <div className="flex justify-start   text-start  ">
-//                                 <p className="font-semibold text-3xl readex">Presale Sniping</p>
-//                             </div>
-
-//                         </div>
-//                         <div className="hidden lg:flex   items-center ">
-//                             <div className="flex lg:w-[6vw] justify-center mr-2   h-full items-center">
-//                                 <p className="font-black text-6xl mb-[33px]">.</p>
-//                             </div>
-
-
-//                             <div className="flex justify-start   text-start  ">
-//                                 <p className="font-semibold text-3xl readex">Copy Trading</p>
-//                             </div>
-
-//                         </div>
-//                         <div className="hidden lg:flex  items-center ">
-//                             <div className="flex lg:w-[6vw] justify-center mr-2   h-full items-center">
-//                                 <p className="font-black text-6xl mb-[33px]">.</p>
-//                             </div>
-
-
-//                             <div className="flex justify-start   text-start  ">
-//                                 <p className="font-semibold text-3xl readex">Limits, DCA, Stop-Loss</p>
-//                             </div>
-
-//                         </div>
-//                     </div>
-//                     <div className="RightContainer mt-6 lg:mt-0 flex justify-center items-center relative lg:w-1/2 w-full">
-//                         <div className=" w-full h-full p-4 flex justify-center items-center rounded-[30px] bg-[#0075FF]">
-//                             <img src="/Images/fifthright.png" alt="bg img" className="h-full w-full"></img>
-//                         </div>
-//                     </div>
-//                     <div className="ml-4 lg:hidden h-[20px] flex mt-6  items-center ">
-//                         <div className="flex lg:w-[6vw] justify-center mr-2   h-full items-center">
-//                             <p className="font-black text-4xl mb-[20px]">.</p>
-//                         </div>
-
-
-//                         <div className="flex justify-start   text-start  ">
-//                             <p className="font-semibold text-lg readex">Presale Sniping</p>
-//                         </div>
-
-//                     </div>
-//                     <div className="ml-4 lg:hidden flex my-[20px] h-[20px] items-center ">
-//                         <div className="flex lg:w-[6vw] justify-center mr-2   h-full items-center">
-//                             <p className="font-black text-4xl mb-[20px]">.</p>
-//                         </div>
-
-
-//                         <div className="flex justify-start   text-start  ">
-//                             <p className="font-semibold text-lg readex">Copy Trading</p>
-//                         </div>
-
-//                     </div>
-//                     <div className="ml-4 lg:hidden flex h-[20px]  items-center ">
-//                         <div className="flex lg:w-[6vw] justify-center mr-2   h-full items-center">
-//                             <p className="font-black text-4xl mb-[20px]">.</p>
-//                         </div>
-
-
-//                         <div className="flex justify-start   text-start  ">
-//                             <p className="font-semibold text-lg readex">Limits, DCA, Stop-Loss</p>
-//                         </div>
-
-//                     </div>
-//                 </div>
-//             </div>
-//         </>
-//     )
-// }
-
-// export default FifthSection;
-
-
 'use client'
 
 import React, { useState, useEffect } from "react";
@@ -173,13 +52,13 @@ const FifthSection = () => {
     useEffect(() => {
         // Logic to set the current image based on state changes
         if (state1) {
-            setCurrentImage("https://nexusprotocol.s3.eu-north-1.amazonaws.com/NexusImages/pin-section-main.png");
+            setCurrentImage("/Images/Engage.png");
         } else if (state2) {
-            setCurrentImage("https://nexusprotocol.s3.eu-north-1.amazonaws.com/NexusImages/pinned-section-snapshot.png");
+            setCurrentImage("/Images/Snapshot.png");
         } else if (state3) {
-            setCurrentImage("https://nexusprotocol.s3.eu-north-1.amazonaws.com/NexusImages/pinned-section-lottery.png");
+            setCurrentImage("/Images/Lottery.png");
         } else if (state4) {
-            setCurrentImage("https://nexusprotocol.s3.eu-north-1.amazonaws.com/NexusImages/pinned-section-contribution.png");
+            setCurrentImage("/Images/Contribution.png");
         } else {
             setCurrentImage(null);
         }
@@ -191,7 +70,7 @@ const FifthSection = () => {
     };
     return (
         <>
-            <div className="mt-6 lg:mt-32 w-full lg:gap-7 px-4 lg:px-20">
+            <div className="mt-6 lg:mt-32 w-full lg:gap-7 px-4 responsive-body-padding lg:px-20">
                 <div className="flex flex-col w-full justify-center items-center">
                     <p className="text-black sen font-bold text-3xl lg:text-7xl text-center">Easy &<span className="text-[#0075FF] ml-6">Cutting Edge</span> </p>
                     <p className="text-center lg:mt-8 mt-2 font-medium lg:text-2xl text-sm">We provide straight forward tools that maximize <br></br> financial opportunities.</p>
@@ -222,15 +101,28 @@ const FifthSection = () => {
                                 }
                             </div>
 
-                            <div className={`ml-4 lg:ml-0 flex flex-col ${state1 ? '' : 'justify-center'}`}>
+                            <div className={`ml-4 lg:ml-0 responsive-cutting-edge-margin flex flex-col ${state1 ? '' : 'justify-center'}`}>
                                 <p onMouseEnter={() => { State1Fun() }} className={`font-semibold relative z-30 text-xl lg:text-4xl readex ${state1 ? 'text-[#0075FF]' : 'text-black'}`}>Engage</p>
                                 {state1 ? <><p className="font-medium moveup text-xs lg:text-base opacity-60 mt-6">Engage with Nexus community and compete with others in sharing the upcoming launches for a chance to win a spot.</p></> : <></>}
 
 
                             </div>
 
+
+
+
                         </div>
 
+                        {state1 ?
+                            <>
+                                <div className="w-full py-2 moveup lg:hidden flex flex-col mt-3 justify-center items-center bg-[#0075FF]  rounded-[36px]">
+                                    <img className="w-[250px] " src="/Images/Engage.png"></img>
+                                </div>
+                            </>
+                            :
+                            <>
+                            </>
+                        }
 
                         <div className="flex mt-6">
                             <div className="w-[20%]">
@@ -264,6 +156,18 @@ const FifthSection = () => {
 
                         </div>
 
+                        {state2 ?
+                            <>
+                                <div className="w-full py-2 moveup lg:hidden flex flex-col mt-3 justify-center items-center bg-[#0075FF]  rounded-[36px]">
+                                    <img className="w-[250px] " src="/Images/Snapshot.png"></img>
+                                </div>
+                            </>
+                            :
+                            <>
+                            </>
+                        }
+
+
                         <div className="flex mt-6">
                             <div className="w-[20%]">
                                 {state3 ?
@@ -296,6 +200,18 @@ const FifthSection = () => {
 
                         </div>
 
+                        {state3 ?
+                            <>
+                                <div className="w-full py-2 moveup lg:hidden flex flex-col mt-3 justify-center items-center bg-[#0075FF]  rounded-[36px]">
+                                    <img className="w-[250px] " src="/Images/Lottery.png"></img>
+                                </div>
+                            </>
+                            :
+                            <>
+                            </>
+                        }
+
+
                         <div className="flex mt-6">
                             <div className="w-[20%]">
                                 {state4 ?
@@ -319,7 +235,7 @@ const FifthSection = () => {
                                 }
                             </div>
 
-                            <div className={`ml-4 lg:ml-0 flex flex-col ${state4 ? '' : 'justify-center'}`}>
+                            <div className={`ml-4 responsive-cutting-edge-margin lg:ml-0 flex flex-col ${state4 ? '' : 'justify-center'}`}>
                                 <p onMouseEnter={() => { State4Fun() }} className={`font-semibold relative z-30 text-xl lg:text-4xl readex ${state4 ? 'text-[#0075FF]' : 'text-black'}`}>Contribution</p>
                                 {state4 ? <><p className="font-medium text-xs lg:text-base opacity-60 mt-6 moveup">Selected profiles and wallets invest their funds into the sale and claim purchased tokens according to the vesting period.</p></> : <></>}
 
@@ -327,9 +243,21 @@ const FifthSection = () => {
                             </div>
 
                         </div>
+
+                        {state4 ?
+                            <>
+                                <div className="w-full py-2 moveup lg:hidden flex flex-col mt-3 justify-center items-center bg-[#0075FF]  rounded-[36px]">
+                                    <img className="w-[250px] " src="/Images/Contribution.png"></img>
+                                </div>
+                            </>
+                            :
+                            <>
+                            </>
+                        }
+
                     </div>
 
-                    <div className="bg-[#0075FF]  flex justify-center items-center rounded-[36px]  lg:h-[500px] lg:w-1/2 w-full">
+                    <div className="bg-[#0075FF] py-4 hidden lg:flex justify-center items-center rounded-[36px]  lg:h-[500px] lg:w-1/2 w-full">
                         {/* {state1 ? <img className="moveup" src="https://nexusprotocol.s3.eu-north-1.amazonaws.com/NexusImages/pin-section-main.png" />
                             :
                             state2 ? <img className="moveup" src="https://nexusprotocol.s3.eu-north-1.amazonaws.com/NexusImages/pinned-section-snapshot.png" />
@@ -341,7 +269,7 @@ const FifthSection = () => {
                                         null
                         } */}
                         {currentImage && (
-                            <img className={animateImage ? "moveup" : ""} src={currentImage} alt="Your image" />
+                            <img className={animateImage ? "moveup md:h-[400px] md:w-[550px] h-[250px] " : "h-[250px]  md:h-[400px] md:w-[550px]"} src={currentImage} alt="Your image" />
                         )}
                     </div>
                 </div>

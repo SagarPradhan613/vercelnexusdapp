@@ -15,7 +15,7 @@ const NexusFaq = () => {
     };
     return (
         <>
-            <div className="flex flex-col justify-center font-semibold text-3xl lg:text-7xl items-center w-full mt-10 lg:mt-0 lg:px-48 px-4">
+            <div className="flex flex-col justify-center font-semibold text-3xl lg:text-7xl items-center w-full mt-10 lg:mt-0 lg:px-28 px-4">
                 <p><span className="text-[#0075FF] readex ">Nexus</span> FAQ</p>
 
                 <div class="relative lg:mt-16 mt-4 ac-container h-full rounded-[25px] bg-white py-3 transition-all duration-300 ease-in border border-[rgba(0,0,0,0.3)] my-3 sm:mx-40 lg:py-5">

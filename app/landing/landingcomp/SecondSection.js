@@ -6,7 +6,7 @@ import ARROW_LEFT_ICON from '@/assets/arrow_left_icon.png';
 const SecondSection = () => {
     return (
         <>
-            <div className="lg:flex mt-10 lg:mt-0 w-full lg:gap-7 px-4 lg:px-20">
+            <div className="lg:flex mt-10 lg:mt-0 w-full lg:gap-7 responsive-body-padding px-4 lg:px-20">
                 <div className="lg:w-[45%] w-full rounded-[50px] h-[80px] md:h-[140px] px-5 py-3 pb-5 bg-black items-center text-white flex justify-between ">
                     <div>
                         <div className="flex items-center gap-6">

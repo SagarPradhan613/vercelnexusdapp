@@ -76,9 +76,9 @@ const MainNotification = () => {
 
                                                 <div className="flex items-center justify-between ">
                                                     <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                        <p className="font-medium responsive-cat-text text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                        <p className="font-medium responsive-cat-text text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
                                                     </div>
 
                                                     <div>
@@ -95,9 +95,9 @@ const MainNotification = () => {
 
                                                 <div className="flex items-center justify-between ">
                                                     <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                        <p className="font-medium responsive-cat-text text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                        <p className="font-medium responsive-cat-text text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
                                                     </div>
 
                                                     <div>
@@ -124,9 +124,9 @@ const MainNotification = () => {
 
                                                 <div className="flex items-center justify-between ">
                                                     <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                        <p className="font-medium text-xs responsive-cat-text text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">12:04 UTC</p>
                                                     </div>
 
                                                     <div>
@@ -143,9 +143,9 @@ const MainNotification = () => {
 
                                                 <div className="flex items-center justify-between ">
                                                     <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                        <p className="font-medium text-xs responsive-cat-text text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">12:04 UTC</p>
                                                     </div>
 
                                                     <div>
@@ -162,9 +162,9 @@ const MainNotification = () => {
 
                                                 <div className="flex items-center justify-between ">
                                                     <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                        <p className="font-medium text-xs responsive-cat-text text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">12:04 UTC</p>
                                                     </div>
 
                                                     <div>
@@ -181,9 +181,9 @@ const MainNotification = () => {
 
                                                 <div className="flex items-center justify-between ">
                                                     <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                        <p className="font-medium text-xs responsive-cat-text text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">12:04 UTC</p>
                                                     </div>
 
                                                     <div>
@@ -210,9 +210,9 @@ const MainNotification = () => {
 
                                                 <div className="flex items-center justify-between ">
                                                     <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                        <p className="font-medium text-xs responsive-cat-text text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">12:04 UTC</p>
                                                     </div>
 
                                                     <div>
@@ -229,9 +229,9 @@ const MainNotification = () => {
 
                                                 <div className="flex items-center justify-between ">
                                                     <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                        <p className="font-medium text-xs responsive-cat-text text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">12:04 UTC</p>
                                                     </div>
 
                                                     <div>
@@ -248,9 +248,9 @@ const MainNotification = () => {
 
                                                 <div className="flex items-center justify-between ">
                                                     <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                        <p className="font-medium text-xs responsive-cat-text text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">12:04 UTC</p>
                                                     </div>
 
                                                     <div>
@@ -267,9 +267,9 @@ const MainNotification = () => {
 
                                                 <div className="flex items-center justify-between ">
                                                     <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                        <p className="font-medium text-xs responsive-cat-text text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">12:04 UTC</p>
                                                     </div>
 
                                                     <div>
@@ -286,9 +286,9 @@ const MainNotification = () => {
 
                                                 <div className="flex items-center justify-between ">
                                                     <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                        <p className="font-medium text-xs responsive-cat-text text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">12:04 UTC</p>
                                                     </div>
 
                                                     <div>
@@ -305,9 +305,9 @@ const MainNotification = () => {
 
                                                 <div className="flex items-center justify-between ">
                                                     <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                        <p className="font-medium text-xs responsive-cat-text text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                        <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">12:04 UTC</p>
                                                     </div>
 
                                                     <div>
@@ -343,8 +343,8 @@ const MainNotification = () => {
                                             <div className="px-4 pb-4">
                                                 <p className="font-semibold lg:text-lg text-sm text-white readex">Lorem Ipsum is simply</p>
                                                 <div className="flex mt-2">
-                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50 ">24th Mar 2024</p>
-                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50 ml-4">12:04 UTC </p>
+                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">24th Mar 2024</p>
+                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text ml-4">12:04 UTC </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -355,9 +355,9 @@ const MainNotification = () => {
 
                                             <div className="flex items-center justify-between ">
                                                 <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                    <p className="font-medium text-xs responsive-cat-text text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">12:04 UTC</p>
                                                 </div>
 
                                                 <div>
@@ -374,9 +374,9 @@ const MainNotification = () => {
 
                                             <div className="flex items-center justify-between ">
                                                 <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                    <p className="font-medium text-xs responsive-cat-text text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">12:04 UTC</p>
                                                 </div>
 
                                                 <div>
@@ -393,9 +393,9 @@ const MainNotification = () => {
 
                                             <div className="flex items-center justify-between ">
                                                 <div className="flex justify-between responsive-notification-cat gap-4 rounded-[13px] bg-[#191F25] px-3 py-2 ">
-                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50">24th Mar 2024</p>
+                                                    <p className="font-medium text-xs responsive-cat-text text-[#FFFFFF] opacity-50">24th Mar 2024</p>
 
-                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50">12:04 UTC</p>
+                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">12:04 UTC</p>
                                                 </div>
 
                                                 <div>
@@ -414,8 +414,8 @@ const MainNotification = () => {
                                             <div className="px-4 pb-4">
                                                 <p className="font-semibold lg:text-lg text-sm text-white readex">Lorem Ipsum is simply</p>
                                                 <div className="flex mt-2">
-                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50 ">24th Mar 2024</p>
-                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50 ml-4">12:04 UTC </p>
+                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text">24th Mar 2024</p>
+                                                    <p className="font-medium text-xs text-[#FFFFFF] opacity-50 responsive-cat-text ml-4">12:04 UTC </p>
                                                 </div>
                                             </div>
                                         </div>

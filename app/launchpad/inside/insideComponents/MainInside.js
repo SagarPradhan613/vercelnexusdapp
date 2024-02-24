@@ -37,7 +37,7 @@ const MainInside = () => {
     useEffect(() => {
         if (reachMarket) {
             setReachFeatures(false);
-            console.log("done")
+            // console.log("done")
         }
     }, [reachMarket])
 
@@ -278,8 +278,8 @@ const MainInside = () => {
         setIdo(true);
     }
 
-    console.log("reve", reachRevenue);
-    console.log("metrics", reachMetrics);
+    // console.log("reve", reachRevenue);
+    // console.log("metrics", reachMetrics);
     return (
         <>
             <div className="  lg:px-20   w-full">

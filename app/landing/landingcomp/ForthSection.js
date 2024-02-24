@@ -7,15 +7,15 @@ const ForthSection = () => {
 
     const [active, setActive] = useState(1);
 
-console.log(active)
+// console.log(active)
 
     return (
         <>
             <div className="relative mt-6 lg:mt-10 w-full">
-                <div className="absolute right-0 z-10 -top-[70rem] w-full">
+                <div className="absolute hide-responsive-img right-0 z-10 -top-[70rem] w-full">
                     <img src="/Images/forthright.png" className="w-full"></img>
                 </div>
-                <div className="  lg:mt-16  w-full lg:gap-7 px-4 lg:px-28">
+                <div className="  lg:mt-16  w-full lg:gap-7 px-4 responsive-body-padding lg:px-28">
                     <div className="flex flex-col w-full justify-center items-center">
                         <p className="text-black relative z-30 sen font-bold text-3xl lg:text-7xl text-center">Makes us <span className="text-[#0075FF]">Better</span> </p>
                         <p className="text-center lg:mt-8 mt-4 font-medium lg:text-2xl text-sm">We provide straight forward tools that maximize <br></br> financial opportunities.</p>

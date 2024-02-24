@@ -19,7 +19,7 @@ const UpperFooter = () => {
                 </div>
             </div> */}
 
-            <div className="flex  items-center relative justify-center w-full p-8 lg:px-20">
+            <div className="flex  items-center relative justify-center w-full p-8  lg:px-20">
                 <div className='absolute z-30 responsive-absolute-btn-pos left-[9vw] top-[64%]'>
                     <div className='px-4 responsive-padding responsive-btn-size py-1 ani w-[200px] responsive-absolute-btn-width relative z-50 rounded-[40px] text-[#0075FF] bg-white flex justify-between items-center'>
                         <div className='mx-3'>

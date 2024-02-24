@@ -2,7 +2,7 @@ const SixthSection = () => {
     return (
         <>
             <div className="mt-6 lg:mt-32 w-full lg:gap-7 px-4 lg:px-20">
-                <div className="bg-[#000000] lg:pb-10 lg:px-20 px-8 lg:pt-10 pt-2 lg:rounded-[50px] rounded-[20px] w-full">
+                <div className="bg-[#000000] lg:pb-10 responsive-body-padding lg:px-20 px-8 lg:pt-10 pt-2 lg:rounded-[50px] rounded-[20px] w-full">
                     <div className="lg:flex w-full">
                         <div className="lg:w-1/2 lg:mt-12 mt-6 w-full text-xs lg:text-lg text-white">
                             <div>

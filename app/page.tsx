@@ -20,17 +20,17 @@ export default function Home() {
 
   return (
     <>
-    <div className="pb-16">
+      <div className="pb-16">
         <Navbar></Navbar>
-      <HeroSection></HeroSection>
-      <SecondSection></SecondSection>
-      <ThirdSection></ThirdSection>
-      <ForthSection></ForthSection>
-      <FifthSection></FifthSection>
-      <SixthSection></SixthSection>
-      <Footer></Footer>
-    </div>
-    
+        <HeroSection></HeroSection>
+        <SecondSection></SecondSection>
+        <ThirdSection></ThirdSection>
+        <ForthSection></ForthSection>
+        <FifthSection></FifthSection>
+        <SixthSection></SixthSection>
+        <Footer></Footer>
+      </div>
+
     </>
   )
 }

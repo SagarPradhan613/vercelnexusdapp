@@ -12,7 +12,7 @@ import PLUS_ICON from '@/assets/plus_icon.png'
 const HeroSection = () => {
     return (
         <>
-            <div className="MainContainer lg:mb-10 lg:flex block px-4 lg:px-20">
+            <div className="MainContainer lg:mb-10 lg:flex block px-4 responsive-body-padding lg:px-20">
                 <div className="LeftContainer flex flex-col mr-6 justify-between lg:pt-20  lg:w-1/2 w-full">
                     <div>
                         <div>

@@ -14,7 +14,7 @@ import NEXUS_LOGO from '@/assets/nexus_logo.png'
 const NexusHeroSection = () => {
     return (
         <>
-            <div className="MainContainer lg:mb-32 lg:flex block px-4 lg:px-20">
+            <div className="MainContainer lg:mb-32 lg:flex block px-4 lg:px-20 responsive-body-padding">
                 <div className="LeftContainer flex flex-col mr-6 justify-between  lg:w-1/2 w-full">
                     <div>
                         <div className="h-[43.4px]  w-[180px] ani relative z-50  hidden lg:flex text-white my-4 bg-[#0075FF] rounded-[36px] items-center justify-center px-10 space-x-4">

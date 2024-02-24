@@ -19,7 +19,7 @@ export const Landing: React.FC = () => {
         <div className='flex items-center relative z-20 w-full'>
             <section className='p-4  w-full '>
 
-                <div className='flex flex-col lg:flex-row w-full  lg:px-20 justify-between'>
+                <div className='flex flex-col lg:flex-row w-full  responsive-body-padding lg:px-20 justify-between'>
 
                     <div className='flex flex-col w-full items-start'>
 

@@ -40,7 +40,7 @@ export const Navbar: React.FC = () => {
     }, [isNavbarOpen])
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    console.log(isModalOpen, "modal open now")
+    // console.log(isModalOpen, "modal open now")
     // const toggleModal = () => {
     //     setIsModalOpen((prev) => !prev);
     // };
@@ -111,7 +111,7 @@ export const Navbar: React.FC = () => {
                 </Modal>
             )}
             <div className='flex relative z-50 items-center justify-center w-full'>
-                <nav className="w-screen max-w-[2660px] h-[68.6px] lg:h-[144.55px] flex items-center px-4 lg:px-20 justify-between">
+                <nav className="w-screen max-w-[2660px] h-[68.6px] lg:h-[144.55px] flex items-center px-4 lg:px-20 responsive-body-padding justify-between">
 
                     {isNavbarOpen && <NavbarMobile closeNavbar={closeNavbar} />}
 
@@ -132,16 +132,18 @@ export const Navbar: React.FC = () => {
 
                     <div className='flex items-center justify-center space-x-2'>
                         <div onClick={ShowModal} className={`bg-${blueBg ? '[#0075FF]' : 'black'} anireverse hidden lg:flex lg:w-[60px] lg:h-[50px] w-[32px] h-[32px] rounded-[50%] items-center justify-center`}>
-                            <Image src={USER_ICON} alt="User Icon" className='w-[19.28px] hidden lg:block h-[19.65px]' />
+                            <Image src={USER_ICON} alt="User Icon" className='w-[19.28px] hidden lg:block ' />
                         </div>
                         <div onClick={navbarToggle} style={{
                             zIndex: 1000,
                         }} className='bg-black lg:w-[50px]  cursor-pointer flex lg:hidden lg:h-[48px] w-[32px] h-[32px] rounded-full items-center justify-center'>
-                            <Image src={HAMBURGER_ICON} alt="Hamburger Icon" className='w-[8.76px] h-[8.73px]' />
+
+
+                            {isNavbarOpen ? <img src='/Images/cancelbtn.png' className=''></img> : <Image src={HAMBURGER_ICON} alt="Hamburger Icon" className='w-[8.76px] h-[8.73px]' />}
                         </div>
                         <a href='/notification'>
-                            <div className={pathname === '/notification' ? `bg-black hidden anireverse lg:flex w-[55px] h-[50px] rounded-[50%] items-center justify-center active` : `bg-black hidden anireverse lg:flex w-[55px] h-[50px] rounded-full items-center justify-center`}>
-                                <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[19.28px] h-[19.65px]' />
+                            <div className={pathname === '/notification' ? `bg-black hidden anireverse lg:flex w-[50px] h-[50px] rounded-[50%] items-center justify-center active` : `bg-black hidden anireverse lg:flex w-[50px] h-[50px] rounded-full items-center justify-center`}>
+                                <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[23px] ' />
                             </div>
                         </a>
 
@@ -180,7 +182,7 @@ const NavbarMobile = ({ closeNavbar }: { closeNavbar: () => void }) => {
     const HandleProfile = () => {
 
     }
-    console.log(isModalOpen, "modal open now")
+    // console.log(isModalOpen, "modal open now")
     return (
         <>
             {isModalOpen && (
@@ -240,13 +242,12 @@ const NavbarMobile = ({ closeNavbar }: { closeNavbar: () => void }) => {
                 animate={{ y: 0 }}
                 exit={{ y: '-100%' }}
                 transition={{ duration: 0.5, type: 'tween' }}
-                className='fixed top-0 text-white flex lg:hidden left-0 w-screen h-screen bg-black z-[100] flex-col items-center justify-start py-16'>
-
-
-                <div className='w-full h-full '>
-                    <ul className='w-full space-y-4 px-6 py-8 flex flex-col h-full justify-between'>
-                        <div className='space-y-3'>
-                            {/* <li className='w-full'>
+                className='fixed top-0 text-white flex lg:hidden left-0 w-screen h-screen bg-black z-[100] flex-col items-center justify-start p-2'>
+                <div className='pt-16 border border-[#979797] rounded-[25px] h-full w-full border-opacity-50'>
+                    <div className='w-full h-full '>
+                        <ul className='w-full space-y-4 px-6 py-8 flex flex-col h-full justify-between'>
+                            <div className='space-y-3'>
+                                {/* <li className='w-full'>
                                 <a href='/'>
                                     <div className='bg-black px-4 py-2 relative z-50 space-x-8 flex w-full rounded-full items-center justify-center'>
                                         <h1> Home </h1>
@@ -255,68 +256,90 @@ const NavbarMobile = ({ closeNavbar }: { closeNavbar: () => void }) => {
 
                             </li> */}
 
-                            <li className='w-full btnanimation border border-white border-opacity-50 rounded-[28px]'>
-                                <a href='/launchpad'>
-                                    <div className='bg-[#191F2552] flex justify-between px-4 py-3  w-full rounded-full items-center '>
-                                        {/* <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' /> */}
-                                        <div className='flex items-center'>
-                                            <div className='h-[30px] w-[30px] flex justify-center items-center insidebtn rounded-[50%] p-2'>
-                                                <img src='/Images/launchpadlogo.png' className=''></img>
+                                <li className='w-full btnanimation border border-[#979797] border-opacity-50 rounded-[28px]'>
+                                    <a href='/launchpad'>
+                                        <div className='bg-[#0D0F13] flex justify-between px-4 py-3  w-full rounded-full items-center '>
+                                            {/* <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' /> */}
+                                            <div className='flex items-center'>
+                                                <div className='h-[30px] w-[30px] flex justify-center items-center insidebtn rounded-[50%] p-2'>
+                                                    <img src='/Images/launchpadlogo.png' className=''></img>
+                                                </div>
+
+                                                <h1 className='ml-2'> Launchpad </h1>
                                             </div>
 
-                                            <h1 className='ml-2'> Launchpad </h1>
-                                        </div>
-
-                                        <div>
-                                            <div className='h-[30px] w-[30px] arrowbg flex justify-center items-center rounded-[50%] '>
-                                                <svg className='mainarrow' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </a>
-
-                            </li>
-                            <li className='w-full btnanimation border border-white border-opacity-50 rounded-[28px]'>
-                                <a href='/nexus'>
-                                    <div className='bg-[#191F2552] flex justify-between px-4 py-3  w-full rounded-full items-center '>
-                                        {/* <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' /> */}
-                                        <div className='flex items-center'>
-                                            <div className='h-[30px] w-[30px] flex justify-center items-center insidebtn rounded-[50%] p-2'>
-                                                <img src='/Images/aboutlogo.png' className=''></img>
+                                            <div>
+                                                <div className='h-[30px] w-[30px] arrowbg flex justify-center items-center rounded-[50%] '>
+                                                    <svg className='mainarrow' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                                </div>
                                             </div>
 
-                                            <h1 className='ml-2'> About Nexus </h1>
                                         </div>
+                                    </a>
 
-                                        <div>
-                                            <div className='h-[30px] w-[30px] arrowbg flex justify-center items-center rounded-[50%] '>
-                                                <svg className='mainarrow' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </li>
+                                <li className='w-full btnanimation border border-[#979797] border-opacity-50 rounded-[28px]'>
+                                    <a href='/nexus'>
+                                        <div className='bg-[#0D0F13]  flex justify-between px-4 py-3  w-full rounded-full items-center '>
+                                            {/* <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' /> */}
+                                            <div className='flex items-center'>
+                                                <div className='h-[30px] w-[30px] flex justify-center items-center insidebtn rounded-[50%] p-2'>
+                                                    <img src='/Images/aboutlogo.png' className=''></img>
+                                                </div>
+
+                                                <h1 className='ml-2'> About Nexus </h1>
                                             </div>
+
+                                            <div>
+                                                <div className='h-[30px] w-[30px] arrowbg flex justify-center items-center rounded-[50%] '>
+                                                    <svg className='mainarrow' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                                </div>
+                                            </div>
+
                                         </div>
+                                    </a>
 
-                                    </div>
-                                </a>
+                                </li>
+                                {/* <li className='w-full bg-[#0D0F13] border border-[#979797] border-opacity-50  rounded-[28px]'>
 
-                            </li>
-                            {/* <li className='w-full bg-[#191F2552] border border-white border-opacity-50  rounded-[28px]'>
-
-                                <div onClick={() => { closeNavbar(); ShowModal(); }} className='bg-[#191F2552] px-4 py-3 space-x-8 flex w-full rounded-full items-center justify-center'>
+                                <div onClick={() => { closeNavbar(); ShowModal(); }} className='bg-[#0D0F13] px-4 py-3 space-x-8 flex w-full rounded-full items-center justify-center'>
                                   
                                     <h1> Profile </h1>
                                 </div>
 
                             </li> */}
-                            <li className='w-full btnanimation  border border-white border-opacity-50  rounded-[28px]'>
-                                <a href='/notification'>
-                                    <div className='bg-[#191F2552] flex justify-between px-4 py-3  w-full rounded-full items-center '>
+                                <li className='w-full btnanimation  border border-[#979797] border-opacity-50  rounded-[28px]'>
+                                    <a href='/notification'>
+                                        <div className='bg-[#0D0F13] flex justify-between px-4 py-3  w-full rounded-full items-center '>
+                                            {/* <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' /> */}
+                                            <div className='flex items-center'>
+                                                <div className='h-[30px] w-[30px] flex justify-center items-center insidebtn rounded-[50%] p-2'>
+                                                    <img src='/Images/notificationlogo.png' className=''></img>
+                                                </div>
+
+                                                <h1 className='ml-2'> Notification </h1>
+                                            </div>
+
+                                            <div>
+                                                <div className='h-[30px] w-[30px] arrowbg flex justify-center items-center rounded-[50%] '>
+                                                    <svg className='mainarrow' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li className='w-full btnanimation border border-[#979797] border-opacity-50  rounded-[28px]'>
+
+                                    <div className='bg-[#0D0F13] flex justify-between px-4 py-3  w-full rounded-full items-center '>
                                         {/* <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' /> */}
                                         <div className='flex items-center'>
                                             <div className='h-[30px] w-[30px] flex justify-center items-center insidebtn rounded-[50%] p-2'>
                                                 <img src='/Images/notificationlogo.png' className=''></img>
                                             </div>
 
-                                            <h1 className='ml-2'> Notification </h1>
+                                            <h1 className='ml-2'> Connect Wallet </h1>
                                         </div>
 
                                         <div>
@@ -324,68 +347,49 @@ const NavbarMobile = ({ closeNavbar }: { closeNavbar: () => void }) => {
                                                 <svg className='mainarrow' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                                             </div>
                                         </div>
-
                                     </div>
-                                </a>
-                            </li>
 
-                            <li className='w-full btnanimation border border-white border-opacity-50  rounded-[28px]'>
 
-                                <div className='bg-[#191F2552] flex justify-between px-4 py-3  w-full rounded-full items-center '>
-                                    {/* <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' /> */}
-                                    <div className='flex items-center'>
-                                        <div className='h-[30px] w-[30px] flex justify-center items-center insidebtn rounded-[50%] p-2'>
-                                            <img src='/Images/notificationlogo.png' className=''></img>
+                                </li>
+                            </div>
+
+                            <div className='flex justify-between'>
+                                <li className='w-[40%] '>
+                                    <div onClick={() => { closeNavbar(); ShowModal(); }} className='bg-[#0075FF] ani px-2 py-2 justify-between flex w-full rounded-full items-center '>
+                                        <div>
+
                                         </div>
-
-                                        <h1 className='ml-2'> Connect Wallet </h1>
-                                    </div>
-
-                                    <div>
-                                        <div className='h-[30px] w-[30px] arrowbg flex justify-center items-center rounded-[50%] '>
-                                            <svg className='mainarrow' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        <h1 className={`${Poppins.className} text-sm font-bold`}>Login</h1>
+                                        <div className='bg-white rounded-full w-[28px] h-[28px] flex items-center justify-center'>
+                                            <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[14.16px] h-[14.56px]' />
                                         </div>
                                     </div>
-                                </div>
+                                </li>
 
 
-                            </li>
-                        </div>
-
-                        <div className='flex justify-between'>
-                            <li className='w-1/3 '>
-                                <div onClick={() => { closeNavbar(); ShowModal(); }} className='bg-[#0075FF] ani px-2 py-2 justify-between flex w-full rounded-full items-center '>
-                                    <div>
+                                <div>
+                                    <div className='gap-2 flex w-full'>
+                                        <div className='w-[35px] h-[35px] anilogo  flex justify-center items-center'>
+                                            <img src='/Images/hdtelegramlogo.png'></img>
+                                        </div>
+                                        <div className='w-[35px] h-[35px] anilogo  flex justify-center items-center'>
+                                            <img src='/Images/hdtwitterlogo.png'></img>
+                                        </div>
+                                        <div className='w-[35px] h-[35px] anilogo  flex justify-center items-center'>
+                                            <img src='/Images/hddiscordlogo.png'></img>
+                                        </div>
 
                                     </div>
-                                    <h1 className={`${Poppins.className} text-sm font-bold`}>Login</h1>
-                                    <div className='bg-white rounded-full w-[28px] h-[28px] flex items-center justify-center'>
-                                        <Image src={ARROW_LEFT_ICON} alt="Arrow Left Icon" className='w-[14.16px] h-[14.56px]' />
-                                    </div>
-                                </div>
-                            </li>
-
-
-                            <div>
-                                <div className='gap-2 flex w-full'>
-                                    <div className='w-[35px] h-[35px] anilogo  flex justify-center items-center'>
-                                        <img src='/Images/hdtelegramlogo.png'></img>
-                                    </div>
-                                    <div className='w-[35px] h-[35px] anilogo  flex justify-center items-center'>
-                                        <img src='/Images/hdtwitterlogo.png'></img>
-                                    </div>
-                                    <div className='w-[35px] h-[35px] anilogo  flex justify-center items-center'>
-                                        <img src='/Images/hddiscordlogo.png'></img>
-                                    </div>
-
                                 </div>
                             </div>
-                        </div>
 
 
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
+
+
 
             </motion.div>
         </>
