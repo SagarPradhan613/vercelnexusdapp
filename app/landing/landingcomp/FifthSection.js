@@ -102,7 +102,7 @@ const FifthSection = () => {
                             </div>
 
                             <div className={`ml-4 lg:ml-0 responsive-cutting-edge-margin flex flex-col ${state1 ? '' : 'justify-center'}`}>
-                                <p onMouseEnter={() => { State1Fun() }} className={`font-semibold relative z-30 text-xl lg:text-4xl readex ${state1 ? 'text-[#0075FF]' : 'text-black'}`}>Engage</p>
+                                <p onClick={() => { State1Fun() }} className={`font-semibold cursor-default relative z-30 text-xl lg:text-4xl readex ${state1 ? 'text-[#0075FF]' : 'text-black'}`}>Engage</p>
                                 {state1 ? <><p className="font-medium moveup text-xs lg:text-base opacity-60 mt-6">Engage with Nexus community and compete with others in sharing the upcoming launches for a chance to win a spot.</p></> : <></>}
 
 
@@ -148,7 +148,7 @@ const FifthSection = () => {
                             </div>
 
                             <div className={`ml-4 lg:ml-0 flex flex-col ${state2 ? '' : 'justify-center'}`}>
-                                <p onMouseEnter={() => { State2Fun() }} className={`font-semibold relative z-30 text-xl lg:text-4xl readex ${state2 ? 'text-[#0075FF]' : 'text-black'}`}>Snapshot</p>
+                                <p onClick={() => { State2Fun() }} className={`font-semibold relative z-30 text-xl lg:text-4xl readex cursor-default ${state2 ? 'text-[#0075FF]' : 'text-black'}`}>Snapshot</p>
                                 {state2 ? <><p className="font-medium text-xs lg:text-base opacity-60 mt-6 moveup">Snapshots are taken of all the competing profiles and wallets.</p></> : <></>}
 
 
@@ -192,7 +192,7 @@ const FifthSection = () => {
                             </div>
 
                             <div className={`ml-4 lg:ml-0 flex flex-col ${state3 ? '' : 'justify-center'}`}>
-                                <p onMouseEnter={() => { State3Fun() }} className={`font-semibold relative z-30 text-xl lg:text-4xl readex ${state3 ? 'text-[#0075FF]' : 'text-black'}`}>Lottery</p>
+                                <p onClick={() => { State3Fun() }} className={`font-semibold relative z-30 text-xl lg:text-4xl readex cursor-default ${state3 ? 'text-[#0075FF]' : 'text-black'}`}>Lottery</p>
                                 {state3 ? <><p className="font-medium moveup text-xs lg:text-base opacity-60 mt-6">Nexus smart contract withdraws a lottery for each launch and selects limited random profiles which will be investing.</p></> : <></>}
 
 
@@ -236,7 +236,7 @@ const FifthSection = () => {
                             </div>
 
                             <div className={`ml-4 responsive-cutting-edge-margin lg:ml-0 flex flex-col ${state4 ? '' : 'justify-center'}`}>
-                                <p onMouseEnter={() => { State4Fun() }} className={`font-semibold relative z-30 text-xl lg:text-4xl readex ${state4 ? 'text-[#0075FF]' : 'text-black'}`}>Contribution</p>
+                                <p onClick={() => { State4Fun() }} className={`font-semibold relative z-30 text-xl lg:text-4xl readex cursor-default ${state4 ? 'text-[#0075FF]' : 'text-black'}`}>Contribution</p>
                                 {state4 ? <><p className="font-medium text-xs lg:text-base opacity-60 mt-6 moveup">Selected profiles and wallets invest their funds into the sale and claim purchased tokens according to the vesting period.</p></> : <></>}
 
 
