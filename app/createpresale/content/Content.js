@@ -11,11 +11,11 @@ function Content() {
   const [viewItem, setViewItem] = useState(false);
   return (
     <div className="w-full flex justify-center items-center gap-4 flex-col relative min-h-[200px]">
-      <div className="flex w-full gap-4">
+      <div className="flex flex-col lg:flex-row w-full gap-2">
         <Input placeholder={"token address"} label={"PAST TOKEN ADDRESS"} />
         {!viewItem && (
           <div
-            className={`anireverse mt-5 bg-[#0075FF] text-white w-[200px] relative z-30 cursor-pointer py-3 font-semibold responsive-inside-switch-text text-base rounded-[36px] flex items-center justify-center`}
+            className={`anireverse mt-5 bg-[#0075FF] text-white w-full lg:w-[200px] relative z-30 cursor-pointer py-3 font-semibold responsive-inside-switch-text text-base rounded-[36px] flex items-center justify-center`}
             onClick={() => setViewItem(true)}
           >
             Create Presale

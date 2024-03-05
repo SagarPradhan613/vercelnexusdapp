@@ -20,7 +20,7 @@ function Input({
         className="input"
       ></input>
       <div className="tag">{tag}</div>
-      <label className="ml-2">{afterLabel}</label>
+      <label className="ml-2 hidden lg:block">{afterLabel}</label>
     </div>
   );
 }
