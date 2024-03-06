@@ -30,8 +30,17 @@
   border-radius: 30px;
   padding: 0.5rem 1.5rem;
   background-color: #0075ff;
-  border: none;
+  border: 1px solid white;
   color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+.button-disabled {
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  background-color: white;
+  border: 1px solid #0075ff;
+  color: black;
   cursor: pointer;
   z-index: 100;
 }
@@ -44,6 +53,11 @@
   position: relative;
   z-index: 10;
   resize: none;
+
+}
+
+.text-area::placeholder{
+
 }
 
 .launch {

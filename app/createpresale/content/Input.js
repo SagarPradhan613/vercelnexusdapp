@@ -3,12 +3,15 @@ import React from "react";
 function Input({
   type = "text",
   placeholder,
-  onChange,
   value,
+  setValue,
   label,
   afterLabel,
   tag,
 }) {
+  const onChange = (e) => {
+    setValue(e.target.value);
+  };
   return (
     <div className="flex justify-center items-start flex-col w-full relative">
       <label className="ml-2">{label}</label>

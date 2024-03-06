@@ -9,10 +9,21 @@ import "./content.css";
 function Content() {
   const [tablecount, setTablecount] = useState([1]);
   const [viewItem, setViewItem] = useState(false);
+  const [vesting, setVesting] = useState("No");
+  const [token, setToken] = useState("");
+  const [features, setFeatures] = useState([1]);
+  const [tranction, setTranction] = useState([1]);
+  const [utility, setUtility] = useState([1]);
+  const [revenue, setRevenue] = useState([1]);
   return (
     <div className="w-full flex justify-center items-center gap-4 flex-col relative min-h-[200px]">
       <div className="flex flex-col lg:flex-row w-full gap-2">
-        <Input placeholder={"token address"} label={"PAST TOKEN ADDRESS"} />
+        <Input
+          placeholder={"token address"}
+          label={"PAST TOKEN ADDRESS"}
+          value={token}
+          setValue={setToken}
+        />
         {!viewItem && (
           <div
             className={`anireverse mt-5 bg-[#0075FF] text-white w-full lg:w-[200px] relative z-30 cursor-pointer py-3 font-semibold responsive-inside-switch-text text-base rounded-[36px] flex items-center justify-center`}
@@ -95,8 +106,16 @@ function Content() {
             <Selector
               options={["No", "Daily", "Weekly", "Monthly", "Yearly"]}
               label={"VESTING ?"}
+              setState={setVesting}
             />
           </div>
+          {vesting !== "No" && (
+            <div className="flex-container">
+              <Input placeholder={"0"} label={"Initial Vesting Percentage"} />
+              <Input placeholder={"0"} label={"Regular Vesting Percentage"} />
+            </div>
+          )}
+
           <div className="flex-container">
             <Input placeholder={""} label={"PROJECT NAME"} />
             <Input placeholder={""} label={"PROJECT WEBSITE"} />
@@ -129,47 +148,49 @@ function Content() {
           <div className="flex-container">
             <div className="flex justify-start items-start w-full flex-col gap-3">
               <label className="ml-2 text-lg mb-2">Key Features</label>
-              <Input
-                placeholder={"Enter title"}
-                label={"Title  (use # if not applicable)"}
-              />
               <TextArea
-                placeholder={"Enter points"}
-                label={"Points (use # if not applicable)"}
+                placeholder={
+                  features.includes(5) ? "Enter points" : "Enter text"
+                }
+                label={"Description"}
+                controller={features}
               />
+              <OptionSelector state={features} setState={setFeatures} />
             </div>
             <div className="flex justify-start items-start w-full flex-col gap-3">
               <label className="ml-2 text-lg mb-2">Market Traction</label>
-              <Input
-                placeholder={"Enter title"}
-                label={"Title  (use # if not applicable)"}
-              />
               <TextArea
-                placeholder={"Enter points"}
-                label={"Points (use # if not applicable)"}
+                placeholder={
+                  tranction.includes(5) ? "Enter points" : "Enter text"
+                }
+                label={"Description"}
+                controller={tranction}
               />
+              <OptionSelector state={tranction} setState={setTranction} />
             </div>
+          </div>
+          <div className="flex-container">
             <div className="flex justify-start items-start w-full flex-col gap-3">
               <label className="ml-2 text-lg mb-2">Token Utility</label>
-              <Input
-                placeholder={"Enter title"}
-                label={"Title  (use # if not applicable)"}
-              />
               <TextArea
-                placeholder={"Enter points"}
-                label={"Points (use # if not applicable)"}
+                placeholder={
+                  utility.includes(5) ? "Enter points" : "Enter text"
+                }
+                label={"Description"}
+                controller={utility}
               />
+              <OptionSelector state={utility} setState={setUtility} />
             </div>
             <div className="flex justify-start items-start w-full flex-col gap-3">
               <label className="ml-2 text-lg mb-2">Revenue</label>
-              <Input
-                placeholder={"Enter title"}
-                label={"Title  (use # if not applicable)"}
-              />
               <TextArea
-                placeholder={"Enter points"}
-                label={"Points (use # if not applicable)"}
+                placeholder={
+                  revenue.includes(5) ? "Enter points" : "Enter text"
+                }
+                label={"Description"}
+                controller={revenue}
               />
+              <OptionSelector state={revenue} setState={setRevenue} />
             </div>
           </div>
 
@@ -241,3 +262,64 @@ const TableContents = () => {
     </div>
   );
 };
+
+const OptionSelector = ({ state, setState }) => {
+  const handle = (key) => {
+    let values = [...state];
+
+    // Check if the key being added is 1 or 4
+    if (key === 1 || key === 4) {
+      // Remove the opposite value if present
+      const oppositeKey = key === 1 ? 4 : 1;
+      values = values.filter((value) => value !== oppositeKey);
+
+    }
+
+    if (values.includes(key)) {
+      values = values.filter((value) => value !== key);
+      setState(values);
+    } else {
+      setState([...values, key]);
+    }
+  };
+
+  const check = (key) => {
+    return state.includes(key);
+  };
+
+  return (
+    <div className="flex-container">
+      <button
+        className={`${check(1) ? "button" : "button-disabled"} anireverse`}
+        onClick={() => handle(1)}
+      >
+        Text
+      </button>
+      <button
+        className={`${check(2) ? "button" : "button-disabled"} anireverse`}
+        onClick={() => handle(2)}
+      >
+        Bold
+      </button>
+      <button
+        className={`${check(3) ? "button" : "button-disabled"} anireverse`}
+        onClick={() => handle(3)}
+      >
+        Italic
+      </button>
+      <button
+        className={`${check(4) ? "button" : "button-disabled"} anireverse`}
+        onClick={() => handle(4)}
+      >
+        Numbering
+      </button>
+      <button
+        className={`${check(5) ? "button" : "button-disabled"} anireverse`}
+        onClick={() => handle(5)}
+      >
+        Bullet Points
+      </button>
+    </div>
+  );
+};
+
