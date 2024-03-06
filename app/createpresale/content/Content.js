@@ -5,16 +5,29 @@ import Input from "./Input";
 import Selector from "./Selector";
 import TextArea from "./Textarea";
 import "./content.css";
+import { features } from "process";
 
 function Content() {
   const [tablecount, setTablecount] = useState([1]);
   const [viewItem, setViewItem] = useState(false);
   const [vesting, setVesting] = useState("No");
   const [token, setToken] = useState("");
-  const [features, setFeatures] = useState([1]);
-  const [tranction, setTranction] = useState([1]);
-  const [utility, setUtility] = useState([1]);
-  const [revenue, setRevenue] = useState([1]);
+  
+  const [features, setFeatures] = useState([]);
+  const [tranction, setTranction] = useState([]);
+  const [utility, setUtility] = useState([]);
+  const [revenue, setRevenue] = useState([]);
+
+  const [featuresText, setFeaturesText] = useState("");
+  const [tranctionText, setTranctionText] = useState("");
+  const [utilityText, setUtilityText] = useState("");
+  const [revenueText, setRevenueText] = useState("");
+
+  const [featuresType, setFeaturesType] = useState("Title");
+  const [tranctionType, setTranctionType] = useState("Title");
+  const [utilityType, setUtilityType] = useState("Title");
+  const [revenueType, setRevenueType] = useState("Title");
+
   return (
     <div className="w-full flex justify-center items-center gap-4 flex-col relative min-h-[200px]">
       <div className="flex flex-col lg:flex-row w-full gap-2">
@@ -148,49 +161,45 @@ function Content() {
           <div className="flex-container">
             <div className="flex justify-start items-start w-full flex-col gap-3">
               <label className="ml-2 text-lg mb-2">Key Features</label>
-              <TextArea
-                placeholder={
-                  features.includes(5) ? "Enter points" : "Enter text"
-                }
-                label={"Description"}
-                controller={features}
+              <TextCreator
+                type={featuresType}
+                setType={setFeaturesType}
+                setSave={setFeatures}
+                text={featuresText}
+                setText={setFeaturesText}
               />
-              <OptionSelector state={features} setState={setFeatures} />
             </div>
             <div className="flex justify-start items-start w-full flex-col gap-3">
               <label className="ml-2 text-lg mb-2">Market Traction</label>
-              <TextArea
-                placeholder={
-                  tranction.includes(5) ? "Enter points" : "Enter text"
-                }
-                label={"Description"}
-                controller={tranction}
+              <TextCreator
+                type={tranctionType}
+                setType={setTranctionType}
+                setSave={setTranction}
+                text={tranctionText}
+                setText={setTranctionText}
               />
-              <OptionSelector state={tranction} setState={setTranction} />
             </div>
           </div>
           <div className="flex-container">
             <div className="flex justify-start items-start w-full flex-col gap-3">
               <label className="ml-2 text-lg mb-2">Token Utility</label>
-              <TextArea
-                placeholder={
-                  utility.includes(5) ? "Enter points" : "Enter text"
-                }
-                label={"Description"}
-                controller={utility}
+              <TextCreator
+                type={utilityType}
+                setType={setUtilityType}
+                setSave={setUtility}
+                text={utilityText}
+                setText={setUtilityText}
               />
-              <OptionSelector state={utility} setState={setUtility} />
             </div>
             <div className="flex justify-start items-start w-full flex-col gap-3">
               <label className="ml-2 text-lg mb-2">Revenue</label>
-              <TextArea
-                placeholder={
-                  revenue.includes(5) ? "Enter points" : "Enter text"
-                }
-                label={"Description"}
-                controller={revenue}
+              <TextCreator
+                type={revenueType}
+                setType={setRevenueType}
+                setSave={setRevenue}
+                text={revenueText}
+                setText={setRevenueText}
               />
-              <OptionSelector state={revenue} setState={setRevenue} />
             </div>
           </div>
 
@@ -249,6 +258,38 @@ export default Content;
 
 <div className="flex-container"></div>;
 
+const handleSave = (setSave, type, text, setText, save) => {
+  if (text.length === 0) return false;
+  setSave((prev) => [...prev, { [type]: text }]);
+  setText("");
+};
+
+const TextCreator = ({ type, setType, setSave, text, setText }) => {
+  return (
+    <div className="flex flex-col w-full">
+      <TextArea
+        placeholder={`Enter ${type}`}
+        label={type}
+        value={text}
+        setValue={setText}
+      />
+      <div className="flex-container">
+        <Selector
+          options={["Title", "Text", "Points"]}
+          label={"Type"}
+          setState={setType}
+        />
+        <button
+          className={`w-1/2 mt-5 button anireverse`}
+          onClick={() => handleSave(setSave, type, text, setText)}
+        >
+          Enter more
+        </button>
+      </div>
+    </div>
+  );
+};
+
 const TableContents = () => {
   return (
     <div className="flex-container">
@@ -262,64 +303,3 @@ const TableContents = () => {
     </div>
   );
 };
-
-const OptionSelector = ({ state, setState }) => {
-  const handle = (key) => {
-    let values = [...state];
-
-    // Check if the key being added is 1 or 4
-    if (key === 1 || key === 4) {
-      // Remove the opposite value if present
-      const oppositeKey = key === 1 ? 4 : 1;
-      values = values.filter((value) => value !== oppositeKey);
-
-    }
-
-    if (values.includes(key)) {
-      values = values.filter((value) => value !== key);
-      setState(values);
-    } else {
-      setState([...values, key]);
-    }
-  };
-
-  const check = (key) => {
-    return state.includes(key);
-  };
-
-  return (
-    <div className="flex-container">
-      <button
-        className={`${check(1) ? "button" : "button-disabled"} anireverse`}
-        onClick={() => handle(1)}
-      >
-        Text
-      </button>
-      <button
-        className={`${check(2) ? "button" : "button-disabled"} anireverse`}
-        onClick={() => handle(2)}
-      >
-        Bold
-      </button>
-      <button
-        className={`${check(3) ? "button" : "button-disabled"} anireverse`}
-        onClick={() => handle(3)}
-      >
-        Italic
-      </button>
-      <button
-        className={`${check(4) ? "button" : "button-disabled"} anireverse`}
-        onClick={() => handle(4)}
-      >
-        Numbering
-      </button>
-      <button
-        className={`${check(5) ? "button" : "button-disabled"} anireverse`}
-        onClick={() => handle(5)}
-      >
-        Bullet Points
-      </button>
-    </div>
-  );
-};
-
