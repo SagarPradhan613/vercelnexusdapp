@@ -4,7 +4,7 @@
 import { BLUE } from '@/app/constants'
 import { Inter, Poppins, ReadexProBold } from '@/app/fonts'
 import Image from 'next/image'
-import Modal from './Modal'
+import Modal, { Profile } from './Modal'
 import NEXUS_LOGO from '@/assets/nexus_logo.png'
 import ARROW_LEFT_ICON from '@/assets/arrow_left_icon.png'
 import USER_ICON from '@/assets/user_icon.png'
@@ -13,6 +13,11 @@ import HAMBURGER_ICON from '@/assets/hamburger_icon.png'
 import { use, useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { usePathname } from "next/navigation";
+import { FaArrowLeft } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
+import ProfileBg from '@/assets/profile-bg.svg'
+import ProfileIcon from '@/assets/profile.svg'
+import { FaPlus } from "react-icons/fa";
 
 export const Navbar: React.FC = () => {
     const pathname = usePathname();
@@ -40,20 +45,30 @@ export const Navbar: React.FC = () => {
     }, [isNavbarOpen])
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    // console.log(isModalOpen, "modal open now")
-    // const toggleModal = () => {
-    //     setIsModalOpen((prev) => !prev);
-    // };
 
     const ShowModal = () => {
         setIsModalOpen(true);
-        setBlueBg(true);
+
     }
 
     const HideModal = () => {
         setIsModalOpen(false);
+
+    }
+
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+    const ShowProfile = () => {
+        setIsProfileOpen(true);
+        setBlueBg(true);
+    }
+
+    const HideProfile = () => {
+        setIsProfileOpen(false);
         setBlueBg(false);
     }
+
+
 
     return (
         <>
@@ -110,6 +125,58 @@ export const Navbar: React.FC = () => {
                     </>
                 </Modal>
             )}
+
+            {
+                isProfileOpen && (
+                    <Profile>
+                        <div className='m-5'>
+                            <div className='profile-header'>
+                                <div className='profile-head-content'>
+                                    <div className='flex gap-2 '>
+                                        <button className='icon-button anireverse' onClick={HideProfile}><FaArrowLeft /></button>
+                                        <button className='edit-button '><FaEdit /> <h1 className='text-black '>Edit </h1>  <span className='hidden md:block text-black'>profile</span></button>
+                                    </div>
+                                    <p className='text-xl lg:text-3xl'>Profile</p>
+                                    <div className='profile-bg'>
+                                        <Image src={ProfileBg} alt='bg' width={485} />
+                                    </div>
+                                    <div className='profile-wrap'>
+                                        <div className='profile-image'>
+                                            <Image src={ProfileIcon} width={0} alt='icon' />
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div className='input-container'>
+                                <div className='input-wrapp'>
+                                    <div className='flex gap-4 items-center justify-center w-full flex-col md:flex-row'>
+                                        <input className='profile-input w-full' placeholder='First Name' />
+                                        <input className='profile-input w-full' placeholder='Second Name' />
+                                    </div>
+                                    <div className='flex gap-4 items-center justify-center w-full flex-col md:flex-row'>
+                                        <input className='profile-input w-full' placeholder='Email' />
+                                        <input className='profile-input w-full' placeholder='Phone' />
+                                    </div>
+                                    <div className='flex flex-col md:flex-row gap-4 items-center justify-center w-full'>
+                                        <div className='flex  gap-4 w-full'>
+                                            <input className='profile-input lg:w-2/3 w-full' placeholder='DOB' />
+                                            <input className='profile-input lg:w-2/3 w-full' placeholder='Gender' />
+                                        </div>
+                                        <input className='profile-input lg:w-1/3 w-full' placeholder='Country' />
+                                    </div>
+
+                                    <button className='done-button anireverse'>Done</button>
+                                </div>
+                            </div>
+                        </div>
+                    </Profile>
+                )
+            }
+
+
+
             <div className='flex relative z-50 items-center justify-center w-full'>
                 <nav className="w-screen max-w-[2660px] h-[68.6px] lg:h-[144.55px] flex items-center px-4 lg:px-20 responsive-body-padding justify-between">
 
@@ -130,8 +197,8 @@ export const Navbar: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className='flex items-center justify-center space-x-2'>
-                        <div onClick={ShowModal} className={`bg-${blueBg ? '[#0075FF]' : 'black'} anireverse hidden lg:flex lg:w-[60px] lg:h-[50px] w-[32px] h-[32px] rounded-[50%] items-center justify-center`}>
+                    <div className='flex items-center justify-center space-x-2' >
+                        <div onClick={ShowProfile} className={`bg-${blueBg ? '[#0075FF]' : 'black'} anireverse hidden lg:flex lg:w-[60px] lg:h-[50px] w-[32px] h-[32px] rounded-[50%] items-center justify-center`}>
                             <Image src={USER_ICON} alt="User Icon" className='w-[19.28px] hidden lg:block ' />
                         </div>
                         <div onClick={navbarToggle} style={{
@@ -147,7 +214,7 @@ export const Navbar: React.FC = () => {
                             </div>
                         </a>
 
-                        <div style={{
+                        <div onClick={ShowModal} style={{
                             backgroundColor: BLUE,
                         }} className='max-w-[215.1px] h-[56.85px] z-10 anireverse cursor-pointer w-full rounded-[36px] px-4 text-white p-2 hidden lg:flex items-center justify-between'>
                             <h1 className={`${Poppins.className} w-full whitespace-nowrap text-base font-bold`}>Connect Wallet</h1>
@@ -179,9 +246,7 @@ const NavbarMobile = ({ closeNavbar }: { closeNavbar: () => void }) => {
         setIsModalOpen(false);
     }
 
-    const HandleProfile = () => {
 
-    }
     // console.log(isModalOpen, "modal open now")
     return (
         <>
@@ -237,6 +302,8 @@ const NavbarMobile = ({ closeNavbar }: { closeNavbar: () => void }) => {
                     </>
                 </Modal>
             )}
+
+
             <motion.div
                 initial={{ y: '-100%' }}
                 animate={{ y: 0 }}

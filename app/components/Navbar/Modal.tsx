@@ -6,7 +6,7 @@ interface ModalProps {
     children: ReactNode;
 }
 
-const Modal: React.FC<ModalProps> = ({  children }) => {
+const Modal: React.FC<ModalProps> = ({ children }) => {
     return (
         <div className="modal-overlay">
             <div className="modal">
@@ -20,3 +20,18 @@ const Modal: React.FC<ModalProps> = ({  children }) => {
 };
 
 export default Modal;
+
+
+export const Profile: React.FC<ModalProps> = ({ children }) => {
+    return (
+        <div className="modal-overlay">
+            <div className="profile-modal">
+                {/* <button  className="modal-close-button">
+                    Close
+                </button> */}
+                {children}
+            </div>
+        </div>
+    );
+};
+
