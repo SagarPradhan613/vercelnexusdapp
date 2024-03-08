@@ -18,6 +18,8 @@ import { FaEdit } from "react-icons/fa";
 import ProfileBg from '@/assets/profile-bg.svg'
 import ProfileIcon from '@/assets/profile.svg'
 import { FaPlus } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
+import { HiOutlineWallet } from "react-icons/hi2";
 
 export const Navbar: React.FC = () => {
     const pathname = usePathname();
@@ -35,6 +37,11 @@ export const Navbar: React.FC = () => {
         setIsNavbarOpen(false);
         ShowModal();
     };
+
+    const closeNavForProfile = () => {
+        setIsNavbarOpen(false);
+        ShowProfile();
+    }
 
     useEffect(() => {
         if (isNavbarOpen) {
@@ -68,8 +75,23 @@ export const Navbar: React.FC = () => {
         setBlueBg(false);
     }
 
+    const [contries, setContries] = useState([])
 
 
+    useEffect(() => {
+        fetch('https://restcountries.com/v3.1/all')
+            .then(response => response.json())
+            .then(data => {
+                const countryNames = data.map((country: any) => country.name.common);
+                const sortedCountryNames = countryNames.sort((a: string, b: string) => a.localeCompare(b));
+                console.log(sortedCountryNames);
+                setContries(sortedCountryNames)
+            })
+            .catch(error => console.error('Error fetching country data:', error));
+    }, [])
+
+
+    const [dob, setDob] = useState('')
     return (
         <>
 
@@ -129,16 +151,18 @@ export const Navbar: React.FC = () => {
             {
                 isProfileOpen && (
                     <Profile>
-                        <div className='m-5'>
+                        <div className='m-4'>
                             <div className='profile-header'>
                                 <div className='profile-head-content'>
+
                                     <div className='flex gap-2 '>
                                         <button className='icon-button anireverse' onClick={HideProfile}><FaArrowLeft /></button>
                                         <button className='edit-button '><FaEdit /> <h1 className='text-black '>Edit </h1>  <span className='hidden md:block text-black'>profile</span></button>
                                     </div>
-                                    <p className='text-xl lg:text-3xl'>Profile</p>
+                                    <p className='text-xl lg:text-3xl ml-10 lg:ml-0'>Profile</p>
+                                    <button className='icon-button-mob anireverse' onClick={HideProfile}><FaArrowLeft /></button>
                                     <div className='profile-bg'>
-                                        <Image src={ProfileBg} alt='bg' width={485} />
+                                        <Image src={ProfileBg} alt='bg' width={640} />
                                     </div>
                                     <div className='profile-wrap'>
                                         <div className='profile-image'>
@@ -153,7 +177,7 @@ export const Navbar: React.FC = () => {
                                 <div className='input-wrapp'>
                                     <div className='flex gap-4 items-center justify-center w-full flex-col md:flex-row'>
                                         <input className='profile-input w-full' placeholder='First Name' />
-                                        <input className='profile-input w-full' placeholder='Second Name' />
+                                        <input className='profile-input w-full' placeholder='Last Name' />
                                     </div>
                                     <div className='flex gap-4 items-center justify-center w-full flex-col md:flex-row'>
                                         <input className='profile-input w-full' placeholder='Email' />
@@ -161,10 +185,21 @@ export const Navbar: React.FC = () => {
                                     </div>
                                     <div className='flex flex-col md:flex-row gap-4 items-center justify-center w-full'>
                                         <div className='flex  gap-4 w-full'>
-                                            <input className='profile-input lg:w-2/3 w-full' placeholder='DOB' />
-                                            <input className='profile-input lg:w-2/3 w-full' placeholder='Gender' />
+                                            <input className='profile-input lg:w-2/3 w-full' placeholder='DOB' type={dob} onClick={() => { setDob('date') }} />
+                                            <select className='profile-input lg:w-2/3 w-full'>
+                                                <option value={'male'}>Male</option>
+                                                <option value={'female'}>Female</option>
+                                            </select>
                                         </div>
-                                        <input className='profile-input lg:w-1/3 w-full' placeholder='Country' />
+
+                                        <select className='profile-input lg:w-1/3 w-full'>
+                                            <option >Country</option>
+                                            {
+                                                contries.map((name, i) => (
+                                                    <option key={i} value={name}>{name}</option>
+                                                ))
+                                            }
+                                        </select>
                                     </div>
 
                                     <button className='done-button anireverse'>Done</button>
@@ -180,7 +215,7 @@ export const Navbar: React.FC = () => {
             <div className='flex relative z-50 items-center justify-center w-full'>
                 <nav className="w-screen max-w-[2660px] h-[68.6px] lg:h-[144.55px] flex items-center px-4 lg:px-20 responsive-body-padding justify-between">
 
-                    {isNavbarOpen && <NavbarMobile closeNavbar={closeNavbar} />}
+                    {isNavbarOpen && <NavbarMobile closeNavbar={closeNavbar} closeNavForProfile={closeNavForProfile} />}
 
                     <div className="h-[32px] lg:h-[56.85px] flex text-white bg-[#0075FF] lg:bg-black rounded-[36px] items-center justify-between lg:px-2 lg:pr-6 space-x-4">
                         <div style={{ zIndex: 1000, }} className={pathname === '/' ? `space-x-2 active flex bgchange py-2 lg:px-6 px-3 rounded-[36px] items-center justify-center tracking-widest uppercase readex ${ReadexProBold.className}` : `space-x-2 flex bgchange py-2 lg:px-6 px-3  rounded-[36px] items-center justify-center tracking-widest uppercase  readex ${ReadexProBold.className}`} >
@@ -230,7 +265,7 @@ export const Navbar: React.FC = () => {
     )
 }
 
-const NavbarMobile = ({ closeNavbar }: { closeNavbar: () => void }) => {
+const NavbarMobile = ({ closeNavbar, closeNavForProfile }: { closeNavbar: () => void, closeNavForProfile: () => void }) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -246,63 +281,69 @@ const NavbarMobile = ({ closeNavbar }: { closeNavbar: () => void }) => {
         setIsModalOpen(false);
     }
 
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+    const ShowProfile = () => {
+        setIsProfileOpen(true);
+
+    }
+
+    const HideProfile = () => {
+        setIsProfileOpen(false);
+
+    }
+
 
     // console.log(isModalOpen, "modal open now")
     return (
         <>
-            {isModalOpen && (
-                <Modal>
-                    {/* <button onClick={HideModal}>Close</button>
-                    <h1>This is the modal content</h1> */}
-                    <>
-                        <div className='bg-[#000000] text-white sem px-10 py-8 rounded-[50px] w-full'>
-                            <div className='flex justify-between items-center'>
-                                <p className='text-xl lg:text-3xl'>Sign in</p>
-                                <img src='/Images/modalarrow.png' onClick={HideModal} className='w-[40px] h-[40px]'></img>
-                            </div>
-                            <div className='w-full mt-10 flex justify-center items-center'>
-                                <p className='font-medium lg:text-base text-sm text-white opacity-55 readex'>Your Nexus wallet in one click</p>
-                            </div>
 
-                            <div className='mt-6 rounded-[40px] py-4 bg-[#111928] flex justify-center items-center'>
-                                <img src='/Images/google.png'></img>
-                            </div>
-                            <div className='mt-4 gap-2 flex w-full'>
-                                <div className='w-1/3 bg-[#111928] py-2 rounded-[40px] flex justify-center items-center'>
-                                    <img src='/Images/twitter.png'></img>
+            {isProfileOpen && (
+                <Profile>
+                    <div className='m-5'>
+                        <div className='profile-header'>
+                            <div className='profile-head-content'>
+                                <div className='flex gap-2 '>
+                                    <button className='icon-button anireverse' onClick={HideProfile}><FaArrowLeft /></button>
+                                    <button className='edit-button '><FaEdit /> <h1 className='text-black '>Edit </h1>  <span className='hidden md:block text-black'>profile</span></button>
                                 </div>
-                                <div className='w-1/3 bg-[#111928] py-2 rounded-[40px] flex justify-center items-center'>
-                                    <img src='/Images/fb.png'></img>
+                                <p className='text-xl lg:text-3xl'>Profile</p>
+                                <div className='profile-bg'>
+                                    <Image src={ProfileBg} alt='bg' width={485} />
                                 </div>
-                                <div className='w-1/3 bg-[#111928] py-2 rounded-[40px] flex justify-center items-center'>
-                                    <img src='/Images/discord.png'></img>
+                                <div className='profile-wrap'>
+                                    <div className='profile-image'>
+                                        <Image src={ProfileIcon} width={0} alt='icon' />
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className='input-container'>
+                            <div className='input-wrapp'>
+                                <div className='flex gap-4 items-center justify-center w-full flex-col md:flex-row'>
+                                    <input className='profile-input w-full' placeholder='First Name' />
+                                    <input className='profile-input w-full' placeholder='Second Name' />
+                                </div>
+                                <div className='flex gap-4 items-center justify-center w-full flex-col md:flex-row'>
+                                    <input className='profile-input w-full' placeholder='Email' />
+                                    <input className='profile-input w-full' placeholder='Phone' />
+                                </div>
+                                <div className='flex flex-col md:flex-row gap-4 items-center justify-center w-full'>
+                                    <div className='flex  gap-4 w-full'>
+                                        <input className='profile-input lg:w-2/3 w-full' placeholder='DOB' />
+                                        <input className='profile-input lg:w-2/3 w-full' placeholder='Gender' />
+                                    </div>
+                                    <input className='profile-input lg:w-1/3 w-full' placeholder='Country' />
                                 </div>
 
-                            </div>
-                            <div className='mt-6 font-medium readex border-[#263043] border lg:text-lg text-[#0075FF] text-base rounded-[40px] py-4 flex justify-center items-center'>
-                                View More Options
-                            </div>
-                            <div className='w-full mt-10 flex justify-center items-center'>
-                                <p className='font-medium lg:text-base text-sm text-white opacity-55 readex'>We do not store any data related to social login</p>
-                            </div>
-
-                            <div className='bg-[#FFFFFF40] w-full h-[1px] bg-white opacity-40 mt-10'>
-
-                            </div>
-
-                            <input type='text' placeholder='name@email.com' className='mt-6 px-8 rounded-[40px] py-4 bg-[#49505F] w-full  flex justify-center items-center'>
-
-                            </input>
-
-                            <div className='mt-6 px-8 rounded-[40px] py-4 bg-[#0075FF] w-full  flex justify-between items-center'>
-                                <p>Continue</p>
-                                <img src='/Images/continue.png'></img>
+                                <button className='done-button anireverse'>Done</button>
                             </div>
                         </div>
-                    </>
-                </Modal>
+                    </div>
+                </Profile>
             )}
-
 
             <motion.div
                 initial={{ y: '-100%' }}
@@ -397,13 +438,36 @@ const NavbarMobile = ({ closeNavbar }: { closeNavbar: () => void }) => {
                                     </a>
                                 </li>
 
-                                <li className='w-full btnanimation border border-[#979797] border-opacity-50  rounded-[28px]'>
 
-                                    <div className='bg-[#0D0F13] flex justify-between px-4 py-3  w-full rounded-full items-center '>
+                                <li className='w-full btnanimation border border-[#979797] border-opacity-50  rounded-[28px]' >
+
+                                    <div className='bg-[#0D0F13] flex justify-between px-4 py-3  w-full rounded-full items-center ' onClick={() => { closeNavForProfile() }}>
                                         {/* <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' /> */}
                                         <div className='flex items-center'>
                                             <div className='h-[30px] w-[30px] flex justify-center items-center insidebtn rounded-[50%] p-2'>
-                                                <img src='/Images/notificationlogo.png' className=''></img>
+                                                <CgProfile className='text-blue-500' />
+                                            </div>
+
+                                            <h1 className='ml-2'> Profile </h1>
+                                        </div>
+
+                                        <div>
+                                            <div className='h-[30px] w-[30px] arrowbg flex justify-center items-center rounded-[50%] '>
+                                                <svg className='mainarrow' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </li>
+                                <li className='w-full btnanimation border border-[#979797] border-opacity-50  rounded-[28px]' >
+
+                                    <div className='bg-[#0D0F13] flex justify-between px-4 py-3  w-full rounded-full items-center ' >
+                                        {/* <Image src={NOTIFICATION_BELL_ICON} alt="Notification Bell Icon" className='w-[15.28px] h-[19.65px]' /> */}
+                                        <div className='flex items-center'>
+                                            <div className='h-[30px] w-[30px] flex justify-center items-center insidebtn rounded-[50%] p-2'>
+                                                <  HiOutlineWallet className='text-blue-500' />
+
                                             </div>
 
                                             <h1 className='ml-2'> Connect Wallet </h1>
@@ -422,7 +486,7 @@ const NavbarMobile = ({ closeNavbar }: { closeNavbar: () => void }) => {
 
                             <div className='flex justify-between'>
                                 <li className='w-[40%] '>
-                                    <div onClick={() => { closeNavbar(); ShowModal(); }} className='bg-[#0075FF] ani px-2 py-2 justify-between flex w-full rounded-full items-center '>
+                                    <div onClick={() => { closeNavbar(); }} className='bg-[#0075FF] ani px-2 py-2 justify-between flex w-full rounded-full items-center '>
                                         <div>
 
                                         </div>
