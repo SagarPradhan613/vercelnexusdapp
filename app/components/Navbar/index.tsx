@@ -159,7 +159,9 @@ export const Navbar: React.FC = () => {
                                         <button className='icon-button anireverse' onClick={HideProfile}><FaArrowLeft /></button>
                                         <button className='edit-button '><FaEdit /> <h1 className='text-black '>Edit </h1>  <span className='hidden md:block text-black'>profile</span></button>
                                     </div>
-                                    <p className='text-xl lg:text-3xl ml-10 lg:ml-0'>Profile</p>
+                                    <div className='relative z-50'>
+                                    <p className='text-xl lg:text-3xl ml-10 lg:ml-0 '>Profile</p>
+                                    </div>
                                     <button className='icon-button-mob anireverse' onClick={HideProfile}><FaArrowLeft /></button>
                                     <div className='profile-bg'>
                                         <Image src={ProfileBg} alt='bg' width={640} />
