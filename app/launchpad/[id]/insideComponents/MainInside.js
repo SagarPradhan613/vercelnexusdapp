@@ -1,5 +1,7 @@
 'use client'
 import { useMediaQuery } from '@react-hook/media-query';
+import axios from 'axios';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { document } from 'postcss';
 import React, { useState, useEffect, useRef } from "react";
 
@@ -14,8 +16,13 @@ const MainInside = () => {
     const [reachToken, setReachToken] = useState(false);
     const [reachRevenue, setReachRevenue] = useState(false);
     const [reachMetrics, setReachMetrics] = useState(false);
+    const [tokenInfo, setTokenInfo] = useState({});
+    const [raiseTokenInfo, setRaiseTokenInfo] = useState({});
+    const [project, setProject] = useState({});
 
-
+    const {id} = useParams(); 
+  
+    // const id = router.
 
     const [idoTimeline, setIdoTimeline] = useState(false);
     const [idoTerms, setIdoTerms] = useState(false);
@@ -40,6 +47,127 @@ const MainInside = () => {
             // console.log("done")
         }
     }, [reachMarket])
+
+    useEffect(() => {
+        if(project?.raiseToken == "0x0000000000000000000000000000000000000000" || project?.raiseToken == ""){
+          setRaiseTokenInfo({
+            symbol: "ETH"
+          })
+        }else{
+          fetchRaiseToken()
+        }
+        fetchToken()
+      },[project])
+    useEffect(() => {
+        fetchProject() 
+    },[])
+
+    const API_URL = process.env.NEXT_PUBLIC_API_URL ;
+    const access_token = localStorage.getItem("access_token");
+
+
+
+ 
+  const fetchToken = () => {
+    
+
+    try {
+      let config = {
+        method: "get",
+        url: API_URL + `/get/token/${project?.token}?token=${access_token}`,
+        maxBodyLength: Infinity,
+        headers: {
+          "Content-Type": "application/json"
+        }
+      };
+
+      axios
+        .request(config)
+        .then((response) => {
+          if (response.data.status === "OK") {
+            //  setViewItem(true);
+             setTokenInfo(response.data.data)
+             
+          }
+          if (response.data.status === "NOT OK") {
+            setErrorText(response.data.message)
+          }
+        })
+        .catch((error) => {
+          console.log("axios", error);
+        });
+    } catch (e) {
+      console.log(e);
+
+    }
+  }
+
+  const fetchRaiseToken = () => {
+    
+
+    try {
+      let config = {
+        method: "get",
+        url: API_URL + `/get/token/${project?.raiseToken}?token=${access_token}`,
+        maxBodyLength: Infinity,
+        headers: {
+          "Content-Type": "application/json"
+        }
+      };
+
+      axios
+        .request(config)
+        .then((response) => {
+          if (response.data.status === "OK") {
+            //  setViewItem(true);
+             setRaiseTokenInfo(response.data.data)
+             
+          }
+          if (response.data.status === "NOT OK") {
+            setErrorText(response.data.message)
+          }
+        })
+        .catch((error) => {
+          console.log("axios", error);
+        });
+    } catch (e) {
+      console.log(e);
+
+    }
+  }
+
+  const fetchProject = () => {
+ 
+
+    try {
+      let config = {
+        method: "get",
+        url: API_URL + `/get/project/${id}?token=${access_token}`,
+        maxBodyLength: Infinity,
+        headers: {
+          "Content-Type": "application/json"
+        }
+      };
+
+      axios
+        .request(config)
+        .then((response) => {
+          if (response.data.status === "OK") {
+             setProject(response.data.data);
+            //  setTokenInfo(response.data.data)
+          }
+          if (response.data.status === "NOT OK") {
+             
+          }
+        })
+        .catch((error) => {
+          console.log("axios", error);
+        });
+    } catch (e) {
+      console.log(e);
+
+    }
+  }
 
 
     // overref
@@ -415,7 +543,7 @@ const MainInside = () => {
                                 </div>
                                 <div className='flex text-white flex-col ml-4 justify-between h-full'>
                                     <p className='font-semibold responsive-inside-path-head text-xl'>Subscription</p>
-                                    <p className='responsive-inside-path-para opacity-50 font-medium text-sm'>27th Dec 8.00 UTC</p>
+                                    <p className='responsive-inside-path-para opacity-50 font-medium text-sm'>{project?.subscriptionStartDate}</p>
                                 </div>
                             </div>
 
@@ -429,7 +557,7 @@ const MainInside = () => {
                                 </div>
                                 <div className='flex text-white flex-col ml-4 justify-between h-full'>
                                     <p className='font-semibold responsive-inside-path-head text-xl'>Snapshot</p>
-                                    <p className='responsive-inside-path-para opacity-50 font-medium text-sm'>27th Dec 8.00 UTC</p>
+                                    <p className='responsive-inside-path-para opacity-50 font-medium text-sm'>{project?.snapshotStartDate}</p>
                                 </div>
                             </div>
 
@@ -443,7 +571,7 @@ const MainInside = () => {
                                 </div>
                                 <div className='flex text-white flex-col ml-4 justify-between h-full'>
                                     <p className='font-semibold responsive-inside-path-head text-xl'>Lottery</p>
-                                    <p className='responsive-inside-path-para opacity-50 font-medium text-sm'>27th Dec 8.00 UTC</p>
+                                    <p className='responsive-inside-path-para opacity-50 font-medium text-sm'>{project?.lotteryStartDate}</p>
                                 </div>
                             </div>
 
@@ -457,7 +585,7 @@ const MainInside = () => {
                                 </div>
                                 <div className='flex text-white flex-col ml-4 justify-between h-full'>
                                     <p className='font-semibold responsive-inside-path-head text-xl'>Redemption</p>
-                                    <p className='responsive-inside-path-para opacity-50 font-medium text-sm'>27th Dec 8.00 UTC</p>
+                                    <p className='responsive-inside-path-para opacity-50 font-medium text-sm'>{project?.redemptionStartDate}</p>
                                 </div>
                             </div>
                         </div>
@@ -468,31 +596,46 @@ const MainInside = () => {
                                     <div ref={keyRef} className='flex lg:flex-row flex-col justify-center items-center lg:justify-between w-full'>
                                         <div className='flex items-center'>
                                             <div className='bg-black p-1 rounded-[17px]'>
-                                                <img src='/Images/insidepp.png' className='h-[40px] w-[40px]'></img>
+                                                <img src={project?.projectLogo} className='h-[40px] w-[40px]'></img>
                                             </div>
 
                                             <div >
-                                                <p className='font-semibold text-2xl lg:text-4xl text-white ml-4'>Lorem Ipsum</p>
+                                                <p className='font-semibold text-2xl lg:text-4xl text-white ml-4'>{project?.projectName}</p>
                                             </div>
                                         </div>
 
                                         <div ref={overRef} className='flex items-center'>
-                                            <div className='h-[45px] w-[45px] anilogo'>
+                                            {
+                                                (project?.projectTelegram && project?.projectTelegram != "#")  &&
+                                                <a target='_blank' href={project?.projectTelegram} >
+                                                <div className='h-[45px] w-[45px] anilogo'>
                                                 <img src='/Images/hdtelegramlogo.png' className='h-full w-full'></img>
                                             </div>
+                                            </a>
+                                            }
+                                            {
+                                                (project?.projectTwitter && project?.projectTwitter != "#") &&
+                                                <a target='_blank' href={project?.projectTwitter} >
                                             <div className='h-[45px] w-[45px] anilogo'>
                                                 <img src='/Images/hdtwitterlogo.png' className='h-full w-full'></img>
                                             </div>
+                                             </a>
+                                            }
+                                            {
+                                                (project?.projectDiscord && project?.projectDiscord != "#")  &&
+                                                <a target='_blank' href={project?.projectDiscord} > 
                                             <div className='h-[45px] w-[45px] anilogo'>
                                                 <img src='/Images/hddiscordlogo.png' className='h-full w-full'></img>
                                             </div>
+                                             </a>
+                                            }
                                         </div>
                                     </div>
 
-                                    <div className='px-4 lg:px-0'>
+                                    {/* <div className='px-4 lg:px-0'>
                                         <p className='text-white font-normal lg:text-base opacity-60 lg:opacity-100 text-sm mt-4 lg:mt-6'>AIT Protocol is being incubated by PAAL AI which has over 2M group members and dozens of partnerships who already use personalized AI solutions.
                                         </p>
-                                    </div>
+                                    </div> */}
 
                                     <div className='mt-6 px-4 lg:px-0 py-4 lg:py-0 border rounded-[36px] border-white border-opacity-20 lg:border-none w-full'>
 
@@ -514,30 +657,30 @@ const MainInside = () => {
 
                                             <div className='flex flex-col bg-[#24282D] cardglow justify-center items-center text-center lg:rounded-[23px] rounded-[20px] px-6 py-4  border border-white border-opacity-15'>
                                                 <p className='font-normal text-xs lg:text-sm text-white opacity-50' >Initial Market Cap</p>
-                                                <p className='font-medium text-white text-sm lg:text-xl'>$900,000</p>
+                                                <p className='font-medium text-white text-sm lg:text-xl'>{project?.initialMcap} {raiseTokenInfo?.symbol}</p>
                                             </div>
 
                                             <div className='flex flex-col bg-[#24282D] cardglow justify-center items-center text-center lg:rounded-[23px] rounded-[20px] px-6 py-4  border border-white border-opacity-15'>
                                                 <p className='font-normal text-xs lg:text-sm text-white opacity-50' >Hard Cap</p>
-                                                <p className='font-medium text-white text-sm lg:text-xl'>$400,000</p>
+                                                <p className='font-medium text-white text-sm lg:text-xl'>{project?.totalHardCap} {raiseTokenInfo?.symbol}</p>
                                             </div>
 
                                             <div className='flex flex-col bg-[#24282D] cardglow justify-center items-center text-center lg:rounded-[23px] rounded-[20px] px-6 py-4  border border-white border-opacity-15'>
                                                 <p className='font-normal text-xs lg:text-sm text-white opacity-50' >Project Valuation</p>
-                                                <p className='font-medium text-white text-sm lg:text-xl'>$15,000,000</p>
+                                                <p className='font-medium text-white text-sm lg:text-xl'>{project?.projectValuation} {raiseTokenInfo?.symbol}</p>
                                             </div>
 
                                             <div className='flex flex-col bg-[#24282D] cardglow justify-center items-center text-center lg:rounded-[23px] rounded-[20px] px-6 py-4  border border-white border-opacity-15'>
                                                 <p className='font-normal text-xs lg:text-sm text-white opacity-50' >Platform Raise</p>
-                                                <p className='font-medium text-white text-sm lg:text-xl'>$100,000</p>
+                                                <p className='font-medium text-white text-sm lg:text-xl'>{project?.platformCap} {raiseTokenInfo?.symbol}</p>
                                             </div>
 
                                         </div>
 
-                                        <p className='lg:text-2xl mt-6 font-semibold text-base text-[#0075FF]'>Overview</p>
+                                        {/* <p className='lg:text-2xl mt-6 font-semibold text-base text-[#0075FF]'>Overview</p>
                                         <p className='text-white font-normal lg:text-base opacity-60 lg:opacity-100 text-sm mt-4 lg:mt-6'>AIT Protocol is the first-ever decentralized machine learning protocol that empowers AI development leveraging blockchain for scalability and efficiency of AI model training.
                                             <br /><br />
-                                            It rewards community members to participate in the AI training via an innovative Train-to-Earn model providing AI solutions and millions of jobs for Web users.</p>
+                                            It rewards community members to participate in the AI training via an innovative Train-to-Earn model providing AI solutions and millions of jobs for Web users.</p> */}
                                         <div ref={marketRef}>
                                             <p id="your-paragraph-id" className='lg:text-2xl mt-6 font-semibold text-base text-[#0075FF]'>Key Features</p>
                                         </div>
